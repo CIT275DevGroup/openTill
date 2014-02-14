@@ -1,8 +1,6 @@
 openTill
 ========
 
-openTill
-
 openTill is an open source Point of Sales System developed around a user friendly environment for easy management of sales and inventory. Included is a database used for data collection and a User interface meant to be clean and easy to use.
 
 >Copyright (C) &lt;2014&gt;  &lt;NMC Student Developer Consortium&gt;
