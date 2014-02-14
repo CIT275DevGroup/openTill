@@ -1,9 +1,9 @@
-Quagga
-======
+openTill
+========
 
-Project Quagga
+openTill
 
-Quagga is a Point of Sales System developed around a user friendly environment for easy management of convenience store checkout and inventory. Included is a database used for data collection and a User interface meant to be clean and easy to use.
+openTill is an open source Point of Sales System developed around a user friendly environment for easy management of sales and inventory management. Included is a database used for data collection and a User interface meant to be clean and easy to use.
 
 >Copyright (C) &lt;2014&gt;  &lt;NMC Student Developer Consortium&gt;
 
