@@ -9,7 +9,7 @@
 ####These are to be used until a set style is decided upon then they will be reviewed and updated and will then overrule the generic rules of style as tests may need special rules
 - In any instance where you could go without using braces "{}" such as an "if" with only one outcome you **Will** use them anyway
 - Braces "{}" are to start on the originating line and end on an emtpy line
- - The exception to this rule is if you are fully stating an array for a test in which case it starts right at the start and ends at the last variable
+ - The exception to this rule is if you are fully stating an array in which case it starts right at the start and ends at the last variable
 ```
 bool[] b = new bool[2] { true, false };
 If (b[0]) {
@@ -17,5 +17,26 @@ If (b[0]) {
 }
 else {
 	b[0] = true;
+}
+```
+- Variables will be fully named, no shortcuts such as calling your int 'i' and use camel case
+ - An exception to the not using short variable names is with "for" loops where you may use something like i for an int
+ - camel case in this instance refers to the lower camel case varient
+- Always set your veriables to something when you create them
+ - it is a lot harder to track down why your intiger is some random number when you let the system set it to whatever it wants
+```
+int exampleTestInt = 0;
+for (int i = 0; i < 10; i++) {
+	exampleTestInt++;
+}
+```
+- Methods will be descriptively named and use camel case
+ - If you can't tell what the method is doing by its name you either need to name it better or you need to split it into more tests
+ - camel case in this instance refers to the upper camel case varient
+- All test methods are public and you will state as much, no leaving it off
+```
+[TestMethod]
+public void CheckingTrueIsTrue() {
+	Assert.AreEqual(true, true);
 }
 ```
