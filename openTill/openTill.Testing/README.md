@@ -9,11 +9,13 @@
 ####These are to be used until a set style is decided upon then they will be reviewed and updated and will then overrule the generic rules of style as tests may need special rules
 - In any instance where you could go without using braces "{}" such as an "if" with only one outcome you **Will** use them anyway
 - Braces "{}" are to start on the originating line and end on an emtpy line
+ - The exception to this rule is if you are fully stating an array for a test in which case it starts right at the start and ends at the last variable
 ```
-If (b) {
-	b = false;
+bool[] b = new bool[2] { true, false };
+If (b[0]) {
+	b[0] = false;
 }
 else {
-	b = true;
+	b[0] = true;
 }
 ```
