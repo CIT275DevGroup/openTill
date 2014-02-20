@@ -19,24 +19,22 @@ else {
 	b[0] = true;
 }
 ```
-- Variables will be fully named, no shortcuts such as calling your int 'i' and use camel case
+- Variables will be fully named, no shortcuts such as calling your int 'i' and use lower camel case
  - An exception to the not using short variable names is with "for" loops where you may use something like i for an int
- - camel case in this instance refers to the lower camel case varient
 - Always set your veriables to something when you create them
- - it is a lot harder to track down why your intiger is some random number when you let the system set it to whatever it wants
+ - it is a lot harder to track down why your integer is some random number when you let the system set it to whatever it wants
 ```
 int exampleTestInt = 0;
 for (int i = 0; i < 10; i++) {
 	exampleTestInt++;
 }
 ```
-- Methods will be descriptively named and use camel case
+- Methods will be descriptively named and use upper camel case
  - If you can't tell what the method is doing by its name you either need to name it better or you need to split it into more tests
- - camel case in this instance refers to the upper camel case varient
 - All test methods are public and you will state as much, no leaving it off
 ```
 [TestMethod]
-public void CheckingTrueIsTrue() {
+public void checkingThatTrueEqualsTrue() {
 	Assert.AreEqual(true, true);
 }
 ```
