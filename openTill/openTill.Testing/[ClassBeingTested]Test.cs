@@ -1,8 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace openTill.Testing
-{
+namespace openTill.Testing {
     [TestClass]
     public class ClassBeingTestedTest {
         [TestMethod]
