@@ -5,7 +5,7 @@ namespace openTill.Testing {
     [TestClass]
     public class ClassBeingTestedTest {
         [TestMethod]
-        public void BeDescriptiveAsIn_checkingThatTrueEqualsTrue_BeingLongHereDoesNotMatter() {
+        public void BeDescriptiveAsIn_CheckingThatTrueEqualsTrue_BeingLongHereDoesNotMatter() {
             Assert.AreEqual(true, true);
         }
 

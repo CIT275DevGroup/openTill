@@ -38,3 +38,9 @@ public void checkingThatTrueEqualsTrue() {
 	Assert.AreEqual(true, true);
 }
 ```
+- openTill.Testing should only contain tests
+ - if you can't do it with just that your testing the wrong thing or something needs to be added to the code itself
+- Tests methods should only be asserting one thing unless atleast one other person agrees you need to assert multiple things
+ - Having to duplicate code is not a reason for having multiple asserts to a method
+ - If you use multiple asserts then comments explaining exactly why it they are needed is required
+ - I [Zak T] Reserve the right to change any test with multiple asserts so as to make it so there are not irrespective of my current job
