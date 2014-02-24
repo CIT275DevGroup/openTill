@@ -21,7 +21,7 @@ namespace openTill.GUI
 	{
 		public ManageInventory()
 		{
-			InitializeComponent();
+            InitializeComponent();
 		}
 	}
 }
