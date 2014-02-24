@@ -24,5 +24,12 @@ namespace openTill.GUI
 		{
 			InitializeComponent();
 		}
+
+		private void btnInventory_Click(object sender, RoutedEventArgs e)
+		{
+			ManageInventory mi = new ManageInventory();
+
+			mi.ShowDialog();
+		}
 	}
 }
