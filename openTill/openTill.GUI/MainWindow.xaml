@@ -100,7 +100,7 @@
 					<GradientStop Color="#FF0E02FF" Offset="1"/>
 				</LinearGradientBrush>
 			</Button.Background>
-			<Image Source="C:\Users\Steve\Desktop\Project\wpf_test\wpf_test\wpf_test\search_glass.png"></Image>
+			<Image Source="search_glass.png"></Image>
 		</Button>
 		<Button Grid.Row="0" Grid.Column="2" Width="20px" Margin="0,3,2,0" Name="btnSettings" VerticalAlignment="Top" HorizontalAlignment="Right">
 			<Button.Background>
@@ -111,9 +111,9 @@
 					<GradientStop Color="#FF0E02FF" Offset="1"/>
 				</LinearGradientBrush>
 			</Button.Background>
-			<Image Source="C:\Users\Steve\Desktop\Project\wpf_test\wpf_test\wpf_test\gear.png" VerticalAlignment="Top" HorizontalAlignment="Right"/>
+			<Image Source="gear.png" VerticalAlignment="Top" HorizontalAlignment="Right"/>
 		</Button>
-		<Image Grid.Column="1" Height="145" Margin="10,10,0,0" Grid.Row="1" Name="imgItem" Width="152" Source="C:\Users\Steve\Desktop\Project\wpf_test\wpf_test\wpf_test\pringles.jpg" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+		<Image Grid.Column="1" Height="145" Margin="10,10,0,0" Grid.Row="1" Name="imgItem" Width="152" Source="pringles.jpg" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 		<TextBox Grid.Column="1" Height="56" Margin="59,0,62,10" Grid.Row="1" TextWrapping="Wrap" Text="01" VerticalAlignment="Bottom" Width="51" FontSize="36" HorizontalAlignment="Center"/>
 		<Button Content="+" Grid.Column="1" Margin="127,0,10,10" Grid.Row="1" Name="btnAddQty" VerticalAlignment="Bottom" Width="35" Height="56" FontSize="36" HorizontalAlignment="Center" Foreground="White">
 			<Button.Background>
