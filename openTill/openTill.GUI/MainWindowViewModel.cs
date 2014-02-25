@@ -1,4 +1,5 @@
 ﻿using openTill.Domain;
+using openTill.Domain.Services;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -15,11 +16,11 @@ namespace openTill.GUI
         {
             throw new NotImplementedException();
         }
-        public MainWindowViewModel(IProductService productService)
+        public MainWindowViewModel(ProductService productService)
         {
             _productService = productService;
         }
-        private IProductService _productService;
+        private ProductService _productService;
         private ObservableCollection<TransactionItem> _transactionProducts;
 
         public ObservableCollection<TransactionItem> TransactionProducts
