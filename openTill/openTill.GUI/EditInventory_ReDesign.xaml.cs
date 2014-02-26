@@ -14,21 +14,15 @@ using System.Windows.Shapes;
 
 namespace openTill.GUI
 {
-	/// <summary>
-	/// Interaction logic for ManageInventory.xaml
-	/// </summary>
-	public partial class ManageInventory : Window
-	{
-		public ManageInventory()
-		{
-            InitializeComponent();
-		}
-
-        private void btnEditInv_Click(object sender, RoutedEventArgs e)
+    /// <summary>
+    /// Interaction logic for EditInventory.xaml
+    /// </summary>
+    public partial class EditInventory : Window
+    {
+        public EditInventory()
         {
-            EditInventory ei = new EditInventory();
-
-            ei.ShowDialog();
+            InitializeComponent();
         }
-	}
+
+    }
 }

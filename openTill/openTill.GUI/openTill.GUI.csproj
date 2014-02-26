@@ -55,6 +55,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="EditInventory_ReDesign.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -63,16 +67,26 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="EditInventory_ReDesign.xaml.cs">
+      <DependentUpon>EditInventory_ReDesign.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="ManageInventory - Copy.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="ManageInventory.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ManageInventory - Copy.xaml.cs">
+      <DependentUpon>ManageInventory - Copy.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ManageInventory.xaml.cs">
       <DependentUpon>ManageInventory.xaml</DependentUpon>
     </Compile>
@@ -101,6 +115,20 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="GUI_Images\gear.png" />
+    <Resource Include="Inventory_Images\pringles.jpg" />
+    <Resource Include="GUI_Images\search_glass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pringles.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="gear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="search_glass.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

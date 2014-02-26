@@ -21,7 +21,7 @@ namespace openTill.GUI
 	{
 		public ManageInventory()
 		{
-            InitializeComponent();
+			InitializeComponent();
 		}
 
         private void btnEditInv_Click(object sender, RoutedEventArgs e)
