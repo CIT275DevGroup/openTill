@@ -74,19 +74,12 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="ManageInventory - Copy.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="ManageInventory.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ManageInventory - Copy.xaml.cs">
-      <DependentUpon>ManageInventory - Copy.xaml</DependentUpon>
-    </Compile>
     <Compile Include="ManageInventory.xaml.cs">
       <DependentUpon>ManageInventory.xaml</DependentUpon>
     </Compile>
