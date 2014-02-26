@@ -1,89 +1,148 @@
 ﻿<Window x:Class="openTill.GUI.ManageInventory"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="ManageInventory" MinHeight="350" Height="350" Width="570"
+        Title="ManageInventory" MinHeight="350" Height="487" Width="570"
 		MinWidth="570">
-	<Grid>
-		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="2*">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*">
 
-			</ColumnDefinition>
-			<ColumnDefinition>
+            </ColumnDefinition>
+            <ColumnDefinition>
 
-			</ColumnDefinition>
-		</Grid.ColumnDefinitions>
-		<Grid.RowDefinitions>
-			<RowDefinition>
+            </ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition>
 
-			</RowDefinition>
-		</Grid.RowDefinitions>
+            </RowDefinition>
+        </Grid.RowDefinitions>
 
 
-		<Button Grid.Column="1" Content="Add to Inventory" Width="150px" Height="30px" Name="btnAddInv" HorizontalAlignment="Right" VerticalAlignment="Top" ToolTip="Add Item to Inventory" Margin="0,50,10,0" Foreground="White">
-			<Button.Background>
-				<LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
-					<GradientStop Color="#FFF3F3F3" Offset="0"/>
-					<GradientStop Color="#FFEBEBEB"/>
-					<GradientStop Color="#FFDDDDDD" Offset="0.021"/>
-					<GradientStop Color="#FF0E02FF" Offset="1"/>
-				</LinearGradientBrush>
-			</Button.Background>
-		</Button>
-		<Button Grid.Column="1" Content="Remove from Inventory" Width="150px" Height="30px" Name="btnRemoveInv" HorizontalAlignment="Right" VerticalAlignment="Top" ToolTip="Remove Item from Inventory" Margin="0,111,10,0" Foreground="White">
-			<Button.Background>
-				<LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
-					<GradientStop Color="#FFF3F3F3" Offset="0"/>
-					<GradientStop Color="#FFEBEBEB"/>
-					<GradientStop Color="#FFDDDDDD" Offset="0.021"/>
-					<GradientStop Color="#FF0E02FF" Offset="1"/>
-				</LinearGradientBrush>
-			</Button.Background>
-		</Button>
-		<Button Grid.Column="1" Content="Edit Inventory Item" Width="150px" Height="30px" Name="btnEditInv" HorizontalAlignment="Right" VerticalAlignment="Top" ToolTip="Edit Item in Inventory" Margin="0,178,10,0" Foreground="White">
-			<Button.Background>
-				<LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
-					<GradientStop Color="#FFF3F3F3" Offset="0"/>
-					<GradientStop Color="#FFEBEBEB"/>
-					<GradientStop Color="#FFDDDDDD" Offset="0.021"/>
-					<GradientStop Color="#FF0E02FF" Offset="1"/>
-				</LinearGradientBrush>
-			</Button.Background>
-		</Button>
-		<Button Grid.Column="1" Content="Find in Inventory" Width="150px" Height="30px" Name="btnFindItem" HorizontalAlignment="Right" VerticalAlignment="Top" ToolTip="Find Item in Inventory" Margin="0,243,10,0" Foreground="White">
-			<Button.Background>
-				<LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
-					<GradientStop Color="#FFF3F3F3" Offset="0"/>
-					<GradientStop Color="#FFEBEBEB"/>
-					<GradientStop Color="#FFDDDDDD" Offset="0.021"/>
-					<GradientStop Color="#FF0E02FF" Offset="1"/>
-				</LinearGradientBrush>
-			</Button.Background>
-		</Button>
-		<TextBox Grid.Column="0" Height="20px" Text="Item Name" Name="txtItemName" Margin="10,10,161,290"/>
-		<TextBox Grid.Column="0" Text="Item Description" Name="txtItemDescription" Margin="10,35,10,205"/>
+        <Button Grid.Column="1" Content="Add to Inventory" Width="150px" Height="30px" Name="btnAddInv" HorizontalAlignment="Right" VerticalAlignment="Top" ToolTip="Add Item to Inventory" Margin="0,50,10,0" Foreground="White">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.021"/>
+                    <GradientStop Color="#FF0E02FF" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Grid.Column="1" Content="Remove from Inventory" Width="150px" Height="30px" Name="btnRemoveInv" HorizontalAlignment="Right" VerticalAlignment="Top" ToolTip="Remove Item from Inventory" Margin="0,111,10,0" Foreground="White">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.021"/>
+                    <GradientStop Color="#FF0E02FF" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Grid.Column="1" Content="Edit Inventory Item" Width="150px" Height="30px" Name="btnEditInv" HorizontalAlignment="Right" VerticalAlignment="Top" ToolTip="Edit Item in Inventory" Margin="0,178,10,0" Foreground="White" Click="btnEditInv_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.021"/>
+                    <GradientStop Color="#FF0E02FF" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Grid.Column="1" Content="Find in Inventory" Width="150px" Height="30px" Name="btnFindItem" HorizontalAlignment="Right" VerticalAlignment="Top" ToolTip="Find Item in Inventory" Margin="0,243,10,0" Foreground="White">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.021"/>
+                    <GradientStop Color="#FF0E02FF" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBox Grid.Column="0" Height="20px" Text="Item Name" Name="txtItemName" Margin="10,51,161.333,386.333"/>
+        <TextBox Grid.Column="0" Text="Item Description" Name="txtItemDescription" Margin="10,76,10.333,302.333"/>
 
-		<Label Content="Type of Item:" Grid.Column="0" Margin="10,123,277,166" />
+        <Label Content="Brand:&#xD;&#xA;" Grid.Column="0" Margin="10,240,298.333,152.333" />
 
-		<ComboBox Grid.Column="0" Name="cboItemType" HorizontalAlignment="Left" Margin="10,148,0,0" VerticalAlignment="Top" Width="120" ToolTip="Select  type of item">
-			<ComboBox.Background>
-				<LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
-					<GradientStop Color="#FFF3F3F3" Offset="0"/>
-					<GradientStop Color="#FFEBEBEB" Offset="0.016"/>
-					<GradientStop Color="#FFDDDDDD"/>
-					<GradientStop Color="#FF0E02FF" Offset="1"/>
-				</LinearGradientBrush>
-			</ComboBox.Background>
-		</ComboBox>
-		<Button Content="Browse" Width="106" Height="20" x:Name="btnAddInv_Copy" HorizontalAlignment="Right" VerticalAlignment="Top" ToolTip="Browse Items in Inventory" Margin="0,10,44,0" Foreground="White">
-			<Button.Background>
-				<LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
-					<GradientStop Color="#FFF3F3F3" Offset="0"/>
-					<GradientStop Color="#FFEBEBEB"/>
-					<GradientStop Color="#FFDDDDDD" Offset="0.021"/>
-					<GradientStop Color="#FF0E02FF" Offset="1"/>
-				</LinearGradientBrush>
-			</Button.Background>
-		</Button>
+        <ComboBox Grid.Column="0" x:Name="cboItem_Category" HorizontalAlignment="Left" Margin="91,205,0,0" VerticalAlignment="Top" Width="215" ToolTip="Select  type of item">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.016"/>
+                    <GradientStop Color="#FFDDDDDD"/>
+                    <GradientStop Color="#FF0E02FF" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+        </ComboBox>
+        <Button Content="Browse" Width="106" Height="20" x:Name="btnAddInv_Copy" HorizontalAlignment="Right" VerticalAlignment="Top" ToolTip="Browse Items in Inventory" Margin="0,50,44.333,0" Foreground="White">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.021"/>
+                    <GradientStop Color="#FF0E02FF" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Label Content="EDIT ITEM" HorizontalAlignment="Center" Margin="154,10,151.333,0" VerticalAlignment="Top" Width="70" FontWeight="Bold"/>
+        <Label x:Name="Lb_UPC_" Content="UPC #:" HorizontalAlignment="Left" Margin="10,170,0,0" VerticalAlignment="Top" Width="81"/>
+        <TextBox x:Name="txtUPC" HorizontalAlignment="Left" Height="23" Margin="91,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="151"/>
+        <Label x:Name="Lb_Category" Content="Category:" HorizontalAlignment="Left" Margin="10,202,0,0" VerticalAlignment="Top" Width="81"/>
+        <TextBox x:Name="txtMinAge" HorizontalAlignment="Left" Height="23" Margin="103,375,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78"/>
+        <ComboBox Grid.Column="0" x:Name="cboItem_Brand" HorizontalAlignment="Left" Margin="91,240,0,0" VerticalAlignment="Top" Width="215" ToolTip="Select  type of item">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.016"/>
+                    <GradientStop Color="#FFDDDDDD"/>
+                    <GradientStop Color="#FF0E02FF" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+        </ComboBox>
+        <Label x:Name="Lb_StorePrice" Content="Store Price:" HorizontalAlignment="Left" Margin="10,274,0,0" VerticalAlignment="Top" Width="81"/>
+        <TextBox x:Name="txtStorePrice" HorizontalAlignment="Left" Height="23" Margin="91,276,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75"/>
+        <Label x:Name="Lb_SellingPrice" Content="Selling Price:" HorizontalAlignment="Left" Margin="189,276,0,0" VerticalAlignment="Top" Width="81"/>
+        <TextBox x:Name="txtOnHand" HorizontalAlignment="Left" Height="23" Margin="91,313,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="151"/>
+        <TextBox x:Name="txtSellingPrice" HorizontalAlignment="Left" Height="23" Margin="270,275,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75"/>
+        <Label x:Name="Lb_OnHand" Content="On Hand:" HorizontalAlignment="Left" Margin="10,312,0,0" VerticalAlignment="Top" Width="81"/>
+        <Label x:Name="Lb_UPC__Copy3" Content="Is Taxable:" HorizontalAlignment="Left" Margin="204,344,0,0" VerticalAlignment="Top" Width="66"/>
+        <Label x:Name="Lb_HasDeposit" Content="Has Deposit:" HorizontalAlignment="Left" Margin="10,344,0,0" VerticalAlignment="Top" Width="81"/>
+        <Label x:Name="Lb_MinimumAge" Content="Minimum Age:" HorizontalAlignment="Left" Margin="10,375,0,0" VerticalAlignment="Top" Width="99"/>
+        <RadioButton x:Name="Radbtn_YesDeposit" Content="Yes" HorizontalAlignment="Left" Margin="92,351,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="Radbtn_NoDeposit_Copy" Content="No" HorizontalAlignment="Left" Margin="137,351,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="Radbtn_YesTaxble" Content="Yes" HorizontalAlignment="Left" Margin="270,351,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="Radbtn_NoTaxble" Content="No" HorizontalAlignment="Left" Margin="315,351,0,0" VerticalAlignment="Top"/>
+        <Label Content="ADD NEW ITEM" HorizontalAlignment="Center" Margin="154,10,105.333,0" VerticalAlignment="Top" Width="116" FontWeight="Bold" Visibility="Hidden"/>
+        <Button Content="Save" Width="66" Height="20" x:Name="btnInvSave" HorizontalAlignment="Right" VerticalAlignment="Top" ToolTip="Browse Items in Inventory" Margin="0,419,26.333,0" Foreground="White">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.021"/>
+                    <GradientStop Color="#FF0E02FF" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Content="Cancel" Width="66" Height="20" x:Name="btnInvCancel" HorizontalAlignment="Right" VerticalAlignment="Top" ToolTip="Browse Items in Inventory" Margin="0,419,105.333,0" Foreground="White">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.021"/>
+                    <GradientStop Color="#FF0E02FF" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Content="Clear" Width="66" Height="20" x:Name="btnInvClear" HorizontalAlignment="Right" VerticalAlignment="Top" ToolTip="Browse Items in Inventory" Margin="0,419,186.333,0" Foreground="White">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.021"/>
+                    <GradientStop Color="#FF0E02FF" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
 
-	</Grid>
+    </Grid>
 </Window>

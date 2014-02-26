@@ -1,0 +1,93 @@
+﻿<Window x:Class="openTill.GUI.EditInventory"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Edit Inventory" Height="800
+        " MinHeight="350" Width="1000" MinWidth="570" >
+    <Grid Margin="0,0,2,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="29*"></RowDefinition>
+            <RowDefinition Height="742*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200*">
+
+            </ColumnDefinition>
+            <ColumnDefinition Width="839*">
+
+            </ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <!--ROW 0, COLUMN 2 -->
+        <!--TOP NAVIGATION BLUE BAR -->
+        <!--BLUE BAR-->
+        <Rectangle Fill="#FF358F05" HorizontalAlignment="Left" Height="23" Stroke="Transparent" VerticalAlignment="Top" Width="993" Grid.ColumnSpan="2" Margin="0,0,-1.667,0"/>
+
+        <!--USER NAME -->
+        <Label Grid.Row="0" Content="User Name  |  " Name="UserName" Foreground="white" Width="72" Height="25" HorizontalAlignment="Left" Margin="0,-2,0,0" VerticalAlignment="Top" FontSize="11" />
+
+        <!-- GEAR BUTTON -->
+        <Image Source="gear.png" 
+                   VerticalAlignment="Top" 
+                   HorizontalAlignment="Right" 
+                   Margin="-785,0,975.667,0" Height="0" Width="0"/>
+        <!--ROW 1, COLUMN 0 -->
+        <!--LEFT NAVIGATION -->
+        <Button Grid.Row="1" Grid.Column="0" 
+                Content="Add new item to Inventory" 
+                Width="175
+                px" Height="30px" 
+                Name="btnAddInv" 
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Top" 
+                ToolTip="Add Item to Inventory" 
+                Margin="13,48.333,2.667,0" 
+                Foreground="White">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.021"/>
+                    <GradientStop Color="#FF0E02FF" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Grid.Row="1" Grid.Column="0" Content="Remove from Inventory" Width="175px" Height="30px" Name="btnRemoveInv" HorizontalAlignment="Center" VerticalAlignment="Top" ToolTip="Remove Item from Inventory" Margin="13,109.333,2.667,0" Foreground="White">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.021"/>
+                    <GradientStop Color="#FF0E02FF" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Content="Find in Inventory" Width="175" Height="30px" Name="btnFindItem" HorizontalAlignment="Right" VerticalAlignment="Top" ToolTip="Find Item in Inventory" Margin="0,167.333,2.667,0" Foreground="White" Grid.Row="1">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.021"/>
+                    <GradientStop Color="#FF0E02FF" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Label x:Name="Label_InventoryTitle" Content="OPENTILL INVENTORY " Grid.Column="1" HorizontalAlignment="Left" Margin="290.333,10.333,0,0" Grid.Row="1" VerticalAlignment="Top" Width="261" FontSize="24"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="32,230.333,0,0" Grid.Row="1" VerticalAlignment="Top" Width="139"/>
+        <TextBox Grid.Column="1" Text="Item Name or Barcode" x:Name="txtItemName" Margin="64.333,109.333,405.333,611.667" Grid.Row="1"/>
+        <Button Content="Browse" Width="73" Height="20" x:Name="btnAddInv_Copy" HorizontalAlignment="Right" VerticalAlignment="Top" ToolTip="Browse Items in Inventory" Margin="0,110.333,315.333,0" Foreground="#FF0B0B0B" Grid.Column="1" Grid.Row="1" BorderBrush="#FF358F05">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.021"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Label Grid.Row="0" Content="Data &amp; Tme" x:Name="UserName_Copy" Foreground="white" Width="72" Height="25" HorizontalAlignment="Left" Margin="70,-1,0,0" VerticalAlignment="Top" FontSize="11" />
+        <Label Content="LOG OUT" x:Name="UserName_Copy1" Foreground="white" Width="72" Height="25" HorizontalAlignment="Left" Margin="696.333,-3,0,0" VerticalAlignment="Top" FontSize="11" Grid.Column="1" />
+        <Image Source="gear.png" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Margin="774.333,3,10.333,9.667"/>
+        <Label Content="|" x:Name="UserName_Copy2" Foreground="white" Width="21" Height="25" HorizontalAlignment="Left" Margin="753.333,-4,0,0" VerticalAlignment="Top" FontSize="11" Grid.Column="1" />
+        <Label Content="SEARCH FOR ITEM" Grid.Column="1" HorizontalAlignment="Left" Margin="64.333,83.333,0,0" Grid.Row="1" VerticalAlignment="Top" Width="140"/>
+        <DataGrid Grid.Column="1" HorizontalAlignment="Left" Margin="64.333,167.333,0,0" Grid.Row="1" VerticalAlignment="Top" Height="290" Width="695"/>
+    </Grid>
+</Window>
