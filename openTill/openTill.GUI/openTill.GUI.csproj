@@ -59,6 +59,8 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Compile Include="ObservableObject.cs" />
+    <Compile Include="TransactionItem.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -80,6 +82,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MainWindowViewModel.cs" />
     <Compile Include="ManageInventory.xaml.cs">
       <DependentUpon>ManageInventory.xaml</DependentUpon>
     </Compile>
@@ -122,6 +125,10 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="search_glass.png" />
+    <ProjectReference Include="..\openTill.Domain\openTill.Domain.csproj">
+      <Project>{3be0e974-d39f-4a68-8b61-20da78b023d1}</Project>
+      <Name>openTill.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
