@@ -1,5 +1,5 @@
 #Basic Guidlines
-- Each Class that needs testing gets its own testing class in its own file which will be named FooTest.cs where Foo is the class being tested
+- Each Class that needs testing gets its own testing class in its own file which will be named S.FooTest.cs where S is the section (this would be the testing section) and Foo is the class being tested
 - Test Methods are to have very descriptive names as length doesn’t matter since they won’t be called elsewhere and when tests are run all it shows is the tests name
  - It is easier to figure out that foo is returning a null and why when you see what failed is checkOutputOfFooIfPassedNull rather than FooTest04
 - The file called [ClassBeingTested]Test.cs is an example of how it should look as well as a container for any test methods that needed to be reaserched.
