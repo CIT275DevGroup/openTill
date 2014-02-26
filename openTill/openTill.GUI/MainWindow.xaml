@@ -125,6 +125,7 @@
 				</LinearGradientBrush>
 			</Button.Background>
 		</Button>
+		
 		<Button Content="-" Grid.Column="1" Margin="10,0,131,10" Grid.Row="1" Name="btnSubtractQty" VerticalAlignment="Bottom" Width="31" Height="56" FontSize="36" HorizontalAlignment="Center" Foreground="White">
 			<Button.Background>
 				<LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
