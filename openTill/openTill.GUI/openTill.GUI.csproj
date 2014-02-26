@@ -72,7 +72,6 @@
     <Compile Include="EditInventory_ReDesign.xaml.cs">
       <DependentUpon>EditInventory_ReDesign.xaml</DependentUpon>
     </Compile>
-    <Compile Include="IProductService.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
