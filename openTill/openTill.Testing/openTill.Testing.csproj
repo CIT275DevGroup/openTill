@@ -50,11 +50,23 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="[ClassBeingTested]Test.cs" />
+    <Compile Include="Domain.BrandTest.cs" />
+    <Compile Include="Domain.CategoryTest.cs" />
+    <Compile Include="[Section].[ClassBeingTested]Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\openTill.Domain\openTill.Domain.csproj">
+      <Project>{3be0e974-d39f-4a68-8b61-20da78b023d1}</Project>
+      <Name>openTill.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\openTill.GUI\openTill.GUI.csproj">
+      <Project>{30f43254-4be8-41b2-9846-8179116b1de0}</Project>
+      <Name>openTill.GUI</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

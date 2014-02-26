@@ -1,5 +1,5 @@
 #Basic Guidlines
-- Each Class that needs testing gets its own testing class in its own file which will be named FooTest.cs where Foo is the class being tested
+- Each Class that needs testing gets its own testing class in its own file which will be named S.FooTest.cs where S is the section (this would be the testing section) and Foo is the class being tested
 - Test Methods are to have very descriptive names as length doesn’t matter since they won’t be called elsewhere and when tests are run all it shows is the tests name
  - It is easier to figure out that foo is returning a null and why when you see what failed is checkOutputOfFooIfPassedNull rather than FooTest04
 - The file called [ClassBeingTested]Test.cs is an example of how it should look as well as a container for any test methods that needed to be reaserched.
@@ -44,3 +44,5 @@ public void checkingThatTrueEqualsTrue() {
  - Having to duplicate code is not a reason for having multiple asserts to a method
  - If you use multiple asserts then comments explaining exactly why it they are needed is required
  - I [Zak T] Reserve the right to change any test with multiple asserts so as to make it so there are not irrespective of my current job
+- While not required it is advised that you wrap all tests for a specific part of a class in a region
+ - This is only not required because if a part only has one test it would be silly to wrap it in a region and I can't just make a rule that would always work
