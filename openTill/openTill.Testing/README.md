@@ -44,3 +44,5 @@ public void checkingThatTrueEqualsTrue() {
  - Having to duplicate code is not a reason for having multiple asserts to a method
  - If you use multiple asserts then comments explaining exactly why it they are needed is required
  - I [Zak T] Reserve the right to change any test with multiple asserts so as to make it so there are not irrespective of my current job
+- While not required it is advised that you wrap all tests for a specific part of a class in a region
+ - This is only not required because if a part only has one test it would be silly to wrap it in a region and I can't just make a rule that would always work
