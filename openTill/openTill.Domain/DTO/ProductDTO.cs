@@ -4,6 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//Author:  Morgan W. Davis III
+//Project:  openTill Point of Sale System
+//Date:  24 Feb 2014
+//Revisions:
+
 namespace openTill.Domain.DTO
 {
     public class ProductDTO
@@ -22,7 +27,7 @@ namespace openTill.Domain.DTO
         public bool IsTaxable;
         public int MinimumAge;
         public Brand Brand;
-        public List<CategoryList> CategoryList;
+        public List<ProductCategory> CategoryList;
         public List<SaleItem> SaleItem;
         #endregion
     }

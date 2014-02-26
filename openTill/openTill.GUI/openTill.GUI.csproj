@@ -125,6 +125,8 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="search_glass.png" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\openTill.Domain\openTill.Domain.csproj">
       <Project>{3be0e974-d39f-4a68-8b61-20da78b023d1}</Project>
       <Name>openTill.Domain</Name>

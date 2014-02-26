@@ -1,4 +1,5 @@
 ﻿using openTill.Domain;
+using openTill.Domain.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +10,9 @@ namespace openTill.GUI
 {
     class TransactionItem : ObservableObject
     {
-        private Product _item;
+        private ProductDTO _item;
 
-        public Product Item
+        public ProductDTO Item
         {
             get { return _item; }
             set 
@@ -31,7 +32,7 @@ namespace openTill.GUI
                 RaisePropertyChanged("Quantity");
             }
         }
-        public TransactionItem(Product item)
+        public TransactionItem(ProductDTO item)
         {
             _item = item;
         }

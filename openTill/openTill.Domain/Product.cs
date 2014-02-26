@@ -4,6 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//Author:  Morgan W. Davis III
+//Project:  openTill Point of Sale System
+//Date:  24 Feb 2014
+//Revisions:
+
 namespace openTill.Domain
 {
     public class Product
@@ -22,7 +27,7 @@ namespace openTill.Domain
         private bool _isTaxable;
         private int _minimumAge;
         private Brand _brand;
-        private List<CategoryList> _categoryList;
+        private List<ProductCategory> _categoryList;
         private List<SaleItem> _saleItem;
 
         
@@ -109,7 +114,7 @@ namespace openTill.Domain
             set { _brand = value; }
         }
 
-        public List<CategoryList> CategoryList
+        public List<ProductCategory> CategoryList
         {
             get { return _categoryList; }
             set { _categoryList = value; }

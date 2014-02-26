@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="662402616c234dfe990aa0afcdd0ded4" Name="Diagram1">
+        <EntityTypeShape EntityType="openTillModel.Address" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="openTillModel.Brand" Width="1.5" PointX="5.25" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="openTillModel.Category" Width="1.5" PointX="7.5" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="openTillModel.Employee" Width="1.5" PointX="5.25" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="openTillModel.Phone" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="openTillModel.Position" Width="1.5" PointX="3" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="openTillModel.Product" Width="1.5" PointX="7.5" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="openTillModel.ProductCategory" Width="1.5" PointX="9.75" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="openTillModel.Sale" Width="1.5" PointX="7.5" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="openTillModel.SaleItem" Width="1.5" PointX="9.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="openTillModel.State" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="openTillModel.ZipCode" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="openTillModel.FK_Address_State" ManuallyRouted="false" />
+        <AssociationConnector Association="openTillModel.FK_Address_ZipCode" ManuallyRouted="false" />
+        <AssociationConnector Association="openTillModel.FK_Employee_Address" ManuallyRouted="false" />
+        <AssociationConnector Association="openTillModel.FK_Product_Brand" ManuallyRouted="false" />
+        <AssociationConnector Association="openTillModel.FK_CategoryList_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="openTillModel.FK_Employee_Phone" ManuallyRouted="false" />
+        <AssociationConnector Association="openTillModel.FK_Employee_Position" ManuallyRouted="false" />
+        <AssociationConnector Association="openTillModel.FK_Sale_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="openTillModel.FK_CategoryList_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="openTillModel.FK_SaleItem_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="openTillModel.FK_SaleItem_Sale" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
