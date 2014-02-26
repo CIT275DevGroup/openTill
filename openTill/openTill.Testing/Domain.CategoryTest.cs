@@ -4,7 +4,7 @@ using openTill.Domain;
 
 namespace openTill.Testing {
     [TestClass]
-    public class BrandTest {
+    public class CategoryTest {
 
     }
 }
