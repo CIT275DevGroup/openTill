@@ -7,21 +7,23 @@ namespace openTill.Testing {
     public class CategoryRepositoryTest {
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
-        public void NullStringGetByNameException() {
+        public void NullStringCategoryGetByNameException() {
             CategoryRepository testCategoryRepository = new CategoryRepository();
             testCategoryRepository.GetByName(null);
         }
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
-        public void WhitespaceStringGetByNameException() {
+        public void WhitespaceStringCategoryGetByNameException()
+        {
             CategoryRepository testCategoryRepository = new CategoryRepository();
             testCategoryRepository.GetByName("   ");
         }
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
-        public void EmptyStringGetByNameException() {
+        public void EmptyStringCategoryGetByNameException()
+        {
             CategoryRepository testCategoryRepository = new CategoryRepository();
             testCategoryRepository.GetByName("");
         }
