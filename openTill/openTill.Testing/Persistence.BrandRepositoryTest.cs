@@ -7,21 +7,21 @@ namespace openTill.Testing {
     public class BrandRepositoryTest {
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
-        public void NullDTOInsertException() {
+        public void NullDTOBrandInsertException() {
             BrandRepository testBrandRepository = new BrandRepository();
             testBrandRepository.Insert(null);
         }
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
-        public void NullDTOUpdateException() {
+        public void NullDTOBrandUpdateException() {
             BrandRepository testBrandRepository = new BrandRepository();
             testBrandRepository.Update(null);
         }
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
-        public void NullDTODeleteException() {
+        public void NullDTOBrandDeleteException() {
             BrandRepository testBrandRepository = new BrandRepository();
             testBrandRepository.Delete(null);
         }
