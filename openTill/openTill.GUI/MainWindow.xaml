@@ -20,7 +20,7 @@
 			</ColumnDefinition>
 		</Grid.ColumnDefinitions>
 
-		<Button Grid.Row="1" Grid.Column="2" Content="No Scan" Width="90px" Height="30px" Name="btnNoScan" HorizontalAlignment="Right" VerticalAlignment="Top" ToolTip="If the item doesn't have a barcode, click here to key in amount" Margin="0,10,45,0" Foreground="White">
+		<Button Grid.Row="1" Grid.Column="2" Content="No Scan" Width="90px" Height="30px" Name="btnNoScan" HorizontalAlignment="Right" VerticalAlignment="Top" ToolTip="If the item doesn't have a barcode, click here to key in amount" Margin="0,10,45,0" Foreground="White" Click="btnNoScan_Click">
 			<Button.Background>
 				<LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
 					<GradientStop Color="#FFF3F3F3" Offset="0"/>
