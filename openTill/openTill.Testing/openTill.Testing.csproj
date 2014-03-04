@@ -50,8 +50,9 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Domain.BrandTest.cs" />
-    <Compile Include="Domain.CategoryTest.cs" />
+    <Compile Include="Persistence.BrandRepositoryTest.cs" />
+    <Compile Include="Persistence.CategoryRepositoryTest.cs" />
+    <Compile Include="Persistence.ProductRepositoryTest.cs" />
     <Compile Include="[Section].[ClassBeingTested]Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -66,6 +67,10 @@
     <ProjectReference Include="..\openTill.GUI\openTill.GUI.csproj">
       <Project>{30f43254-4be8-41b2-9846-8179116b1de0}</Project>
       <Name>openTill.GUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\openTill.Persistence\openTill.Persistence.csproj">
+      <Project>{e02e5be5-b386-483c-8590-26c6ac792d60}</Project>
+      <Name>openTill.Persistence</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>
