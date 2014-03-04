@@ -20,69 +20,16 @@
 			</ColumnDefinition>
 		</Grid.ColumnDefinitions>
 
-		<Button Grid.Row="1" Grid.Column="2" Content="No Scan" Width="90px" Height="30px" Name="btnNoScan" HorizontalAlignment="Right" VerticalAlignment="Top" ToolTip="If the item doesn't have a barcode, click here to key in amount" Margin="0,10,45,0" Foreground="White" Click="btnNoScan_Click">
-			<Button.Background>
-				<LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
-					<GradientStop Color="#FFF3F3F3" Offset="0"/>
-					<GradientStop Color="#FFEBEBEB"/>
-					<GradientStop Color="#FFDDDDDD" Offset="0.021"/>
-					<GradientStop Color="#FF0E02FF" Offset="1"/>
-				</LinearGradientBrush>
-			</Button.Background>
-		</Button>
+		<Button Grid.Row="1" Grid.Column="2" Content="No Scan" Width="90px" Height="30px" Name="btnNoScan" HorizontalAlignment="Right" VerticalAlignment="Top" ToolTip="If the item doesn't have a barcode, click here to key in amount" Margin="0,10,45,0" Foreground="White" Click="btnNoScan_Click" Background="#FF007ACF"/>
 
-		<Button Grid.Row="1" Grid.Column="2" Content="Price Override" Width="90px" Height="30px" Name="btnPriceOverride"  HorizontalAlignment="Right" VerticalAlignment="Top" ToolTip="Override the price of an item" Margin="0,54,45,0" Foreground="White">
-			<Button.Background>
-				<LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
-					<GradientStop Color="#FFF3F3F3" Offset="0"/>
-					<GradientStop Color="#FFEBEBEB" Offset="0.008"/>
-					<GradientStop Color="#FF0E02FF" Offset="1"/>
-				</LinearGradientBrush>
-			</Button.Background>
-		</Button>
+		<Button Grid.Row="1" Grid.Column="2" Content="Price Override" Width="90px" Height="30px" Name="btnPriceOverride"  HorizontalAlignment="Right" VerticalAlignment="Top" ToolTip="Override the price of an item" Margin="0,54,45,0" Foreground="White" Background="#FF007ACF"/>
 
-		<Button Grid.Row="1" Grid.Column="2" Content="Discount" Width="90px" Height="30px" Name="btnDiscount"  HorizontalAlignment="Right" VerticalAlignment="Top" ToolTip="Discount an item due to coupons or rewards" Margin="0,105,45,0" Foreground="White">
-			<Button.Background>
-				<LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
-					<GradientStop Color="#FFF3F3F3" Offset="0"/>
-					<GradientStop Color="#FFEBEBEB" Offset="0.033"/>
-					<GradientStop Color="#FFDDDDDD"/>
-					<GradientStop Color="#FF0E02FF" Offset="1"/>
-				</LinearGradientBrush>
-			</Button.Background>
-		</Button>
+		<Button Grid.Row="1" Grid.Column="2" Content="Discount" Width="90px" Height="30px" Name="btnDiscount"  HorizontalAlignment="Right" VerticalAlignment="Top" ToolTip="Discount an item due to coupons or rewards" Margin="0,105,45,0" Foreground="White" Background="#FF007ACF"/>
 
-		<Button Grid.Row="1" Grid.Column="2" Content="Void Item" Width="90px" Height="30px" Name="btnVoidItem"  HorizontalAlignment="Right" VerticalAlignment="Top" ToolTip="Cancel a transaction or remove an item from the total" Margin="0,157,45,0" Foreground="White">
-			<Button.Background>
-				<LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
-					<GradientStop Color="#FFF3F3F3" Offset="0"/>
-					<GradientStop Color="#FFEBEBEB" Offset="0.021"/>
-					<GradientStop Color="#FFDDDDDD"/>
-					<GradientStop Color="#FF0E02FF" Offset="1"/>
-				</LinearGradientBrush>
-			</Button.Background>
-		</Button>
+		<Button Grid.Row="1" Grid.Column="2" Content="Void Item" Width="90px" Height="30px" Name="btnVoidItem"  HorizontalAlignment="Right" VerticalAlignment="Top" ToolTip="Cancel a transaction or remove an item from the total" Margin="0,157,45,0" Foreground="White" Background="#FF007ACF"/>
 
-		<Button Grid.Row="1" Grid.Column="2" Content="Refund" Width="90px" Height="30px" Name="btnRefund" HorizontalAlignment="Right" VerticalAlignment="Top" ToolTip="Refund an amount based on previous sale" Margin="0,209,45,0" Foreground="White">
-			<Button.Background>
-				<LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
-					<GradientStop Color="#FFF3F3F3" Offset="0"/>
-					<GradientStop Color="#FFEBEBEB" Offset="0.013"/>
-					<GradientStop Color="#FFDDDDDD"/>
-					<GradientStop Color="#FF0E02FF" Offset="1"/>
-				</LinearGradientBrush>
-			</Button.Background>
-		</Button>
-		<Button Grid.Row="1" Grid.Column="2" Content="Inventory" Width="90px" Height="30px" Name="btnInventory" HorizontalAlignment="Right" VerticalAlignment="Top" ToolTip="Access Inventory Windows" Margin="0,255,45,0" Foreground="White" Click="btnInventory_Click">
-			<Button.Background>
-				<LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
-					<GradientStop Color="#FFF3F3F3" Offset="0"/>
-					<GradientStop Color="#FFEBEBEB" Offset="0.013"/>
-					<GradientStop Color="#FFDDDDDD"/>
-					<GradientStop Color="#FF0E02FF" Offset="1"/>
-				</LinearGradientBrush>
-			</Button.Background>
-		</Button>
+		<Button Grid.Row="1" Grid.Column="2" Content="Refund" Width="90px" Height="30px" Name="btnRefund" HorizontalAlignment="Right" VerticalAlignment="Top" ToolTip="Refund an amount based on previous sale" Margin="0,209,45,0" Foreground="White" Background="#FF007ACF"/>
+		<Button Grid.Row="1" Grid.Column="2" Content="Inventory" Width="90px" Height="30px" Name="btnInventory" HorizontalAlignment="Right" VerticalAlignment="Top" ToolTip="Access Inventory Windows" Margin="0,255,45,0" Foreground="White" Click="btnInventory_Click" Background="#FF007ACF"/>
 
 		<ListBox Grid.Row="1" Grid.Column="0" Name="lstReceipt" Margin="0,0,0,45"></ListBox>
 
@@ -91,50 +38,16 @@
 		<Label Grid.Row="1" Content="Total..." Name="lblTotal"
 		  Grid.Column="0" Width="50px" Height="30px" Margin="10,0,0,-3" HorizontalAlignment="Left" VerticalAlignment="Bottom"></Label>
 		<TextBox Grid.Row="0" Grid.Column="2" HorizontalAlignment="Right" Height="23" Margin="0,2,53,0" TextWrapping="Wrap" Text="Search..." Name="txtSearch" VerticalAlignment="Top" Width="93" Foreground="#FF0E02FF"/>
-		<Button Grid.Row="0" Grid.Column="2" Width="20px" Height="20px" Name="btnSearch" Margin="0,3,28,0" HorizontalAlignment="Right" VerticalAlignment="Top">
-			<Button.Background>
-				<LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-					<GradientStop Color="#FFF3F3F3"/>
-					<GradientStop Color="#FFEBEBEB" Offset="0.013"/>
-					<GradientStop Color="#FFDDDDDD"/>
-					<GradientStop Color="#FF0E02FF" Offset="1"/>
-				</LinearGradientBrush>
-			</Button.Background>
-			<Image Source="search_glass.png"></Image>
+		<Button Grid.Row="0" Grid.Column="2" Width="20px" Height="20px" Name="btnSearch" Margin="139,3,28,0" HorizontalAlignment="Center" VerticalAlignment="Top" OpacityMask="#FF007ACF" Background="#FF007ACF">
+			<Image Source="search_glass.png" OpacityMask="#FF007ACF"></Image>
 		</Button>
-		<Button Grid.Row="0" Grid.Column="2" Width="20px" Margin="0,3,2,0" Name="btnSettings" VerticalAlignment="Top" HorizontalAlignment="Right">
-			<Button.Background>
-				<LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-					<GradientStop Color="#FFF3F3F3"/>
-					<GradientStop Color="#FFEBEBEB" Offset="0.013"/>
-					<GradientStop Color="#FFDDDDDD"/>
-					<GradientStop Color="#FF0E02FF" Offset="1"/>
-				</LinearGradientBrush>
-			</Button.Background>
-			<Image Source="gear.png" VerticalAlignment="Top" HorizontalAlignment="Right"/>
+		<Button Grid.Row="0" Grid.Column="2" Width="20px" Margin="0,3,2,0" Name="btnSettings" VerticalAlignment="Top" HorizontalAlignment="Right" Background="#FF007ACF">
+			<Image Source="gear.png" VerticalAlignment="Top" HorizontalAlignment="Right" OpacityMask="#FF007ACF"/>
 		</Button>
 		<Image Grid.Column="1" Height="145" Margin="23.667,10.333,0,0" Grid.Row="1" Name="imgItem" Width="152" Source="pringles.jpg" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 		<TextBox Grid.Column="1" Height="56" Margin="59,0,62,10" Grid.Row="1" TextWrapping="Wrap" Text="01" VerticalAlignment="Bottom" Width="51" FontSize="36" HorizontalAlignment="Center"/>
-		<Button Content="+" Grid.Column="1" Margin="127,0,10,10" Grid.Row="1" Name="btnAddQty" VerticalAlignment="Bottom" Width="35" Height="56" FontSize="36" HorizontalAlignment="Center" Foreground="White">
-			<Button.Background>
-				<LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
-					<GradientStop Color="#FFF3F3F3" Offset="0"/>
-					<GradientStop Color="#FFEBEBEB" Offset="0.004"/>
-					<GradientStop Color="#FFDDDDDD"/>
-					<GradientStop Color="#FF0E02FF" Offset="1"/>
-				</LinearGradientBrush>
-			</Button.Background>
-		</Button>
-		
-		<Button Content="-" Grid.Column="1" Margin="10,0,131,10" Grid.Row="1" Name="btnSubtractQty" VerticalAlignment="Bottom" Width="31" Height="56" FontSize="36" HorizontalAlignment="Center" Foreground="White">
-			<Button.Background>
-				<LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
-					<GradientStop Color="#FFF3F3F3" Offset="0"/>
-					<GradientStop Color="#FF0E02FF" Offset="1"/>
-					<GradientStop Color="#FFDDDDDD"/>
-					<GradientStop Color="{DynamicResource OpenTill_Blue}" Offset="0.138"/>
-				</LinearGradientBrush>
-			</Button.Background>
-		</Button>
+		<Button Content="+" Grid.Column="1" Margin="127,0,10,10" Grid.Row="1" Name="btnAddQty" VerticalAlignment="Bottom" Width="35" Height="56" FontSize="36" HorizontalAlignment="Center" Foreground="White" Background="#FF007ACF"/>
+
+		<Button Content="-" Grid.Column="1" Margin="10,0,131,10" Grid.Row="1" Name="btnSubtractQty" VerticalAlignment="Bottom" Width="31" Height="56" FontSize="36" HorizontalAlignment="Center" Foreground="White" Background="#FF007ACF"/>
 	</Grid>
 </Window>
