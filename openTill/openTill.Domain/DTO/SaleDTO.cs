@@ -6,12 +6,16 @@ using System.Threading.Tasks;
 
 namespace openTill.Domain.DTO
 {
-    class SaleDTO
+    public class SaleDTO
     {
-        public int _id;
-        public decimal _total;
-        public int _employeeID;
-        public DateTime _dateOfSale;
-        public List<SaleItemDTO> _saleItems;
+        #region Properties
+
+        public int Id;
+        public decimal Total;
+        public int EmployeeID;
+        public DateTime DateOfSale;
+        public List<SaleItemDTO> SaleItems;
+
+        #endregion
     }
 }

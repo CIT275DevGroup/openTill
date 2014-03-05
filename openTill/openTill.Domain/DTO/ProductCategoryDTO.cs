@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace openTill.Domain.DTO
 {
-    class ProductCategoryDTO
+    public class ProductCategoryDTO
     {
         #region Properties
         public int ID;

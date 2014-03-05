@@ -75,6 +75,7 @@
     <Compile Include="Services\CategoryService.cs" />
     <Compile Include="Services\EmployeeService.cs" />
     <Compile Include="Services\ProductService.cs" />
+    <Compile Include="Services\SaleService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
