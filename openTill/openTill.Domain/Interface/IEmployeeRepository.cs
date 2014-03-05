@@ -14,11 +14,7 @@ namespace openTill.Domain.Interface
 {
     public interface IEmployeeRepository
     {
-        void Insert(EmployeeDTO employee);
-        void Delete(EmployeeDTO employee);
-        void Update(EmployeeDTO employee);
         IEnumerable<EmployeeDTO> GetAll();
-        IEnumerable<EmployeeDTO> GetByLastName(string lastName);
-        EmployeeDTO GetBySSN(string ssn);
+        bool ValidateUser(string userName, string passWord);
     }
 }
