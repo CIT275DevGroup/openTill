@@ -17,6 +17,7 @@ namespace openTill.Domain
         private int _id;
         private int _saleID;
         private int _productID;
+        private decimal _sellingPrice;
         private int _quantity;
         #endregion
 
@@ -37,6 +38,12 @@ namespace openTill.Domain
         {
             get { return _productID; }
             set { _productID = value; }
+        }
+
+        public decimal SellingPrice
+        {
+            get { return _sellingPrice; }
+            set { _sellingPrice = value; }
         }
 
         public int Quantity

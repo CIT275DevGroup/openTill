@@ -3,7 +3,7 @@ using openTill.Domain.DTO;
 
 namespace openTill.Domain.Interface.Repository
 {
-    interface ISaleRepository
+    public interface ISaleRepository
     {
         void Insert(SaleDTO sale);
         void Update(SaleDTO sale);
