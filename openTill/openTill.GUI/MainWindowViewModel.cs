@@ -17,6 +17,10 @@ namespace openTill.GUI
         {
             this.productService = new ProductService(new ProductRepository());
         }
+        public MainWindowViewModel(ProductService productService)
+        {
+            this.productService = productService;
+        }
         private ProductService productService;
         private ObservableCollection<TransactionItem> _transactionProducts;
 
