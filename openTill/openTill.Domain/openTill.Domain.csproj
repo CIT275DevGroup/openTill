@@ -80,6 +80,7 @@
     <Compile Include="Interface\Service\IEmployeeService.cs" />
     <Compile Include="Interface\Service\IProductService.cs" />
     <Compile Include="Interface\Service\ISaleService.cs" />
+    <Compile Include="Interface\IProductService.cs" />
     <Compile Include="Services\ProductService.cs" />
     <Compile Include="Services\SaleService.cs" />
   </ItemGroup>
