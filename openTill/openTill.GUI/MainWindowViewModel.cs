@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using openTill.Persistence;
+using openTill.Domain.Interface.Service;
 
 namespace openTill.GUI
 {

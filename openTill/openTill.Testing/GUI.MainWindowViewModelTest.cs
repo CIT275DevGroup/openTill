@@ -7,6 +7,7 @@ using openTill.Domain.Services;
 using openTill.Domain.DTO;
 using System.Collections.Generic;
 using System.Linq;
+using openTill.Domain.Interface.Service;
 
 namespace openTill.Testing
 {
