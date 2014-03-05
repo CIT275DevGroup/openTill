@@ -15,6 +15,6 @@ namespace openTill.Domain.Interface
     public interface IEmployeeRepository
     {
         IEnumerable<EmployeeDTO> GetAll();
-        bool ValidateUser(string userName, string passWord);
+        bool ValidateUser(string userName, string password);
     }
 }

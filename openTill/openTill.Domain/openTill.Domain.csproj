@@ -48,6 +48,8 @@
     <Compile Include="Address.cs" />
     <Compile Include="Brand.cs" />
     <Compile Include="Category.cs" />
+    <Compile Include="DTO\SaleDTO.cs" />
+    <Compile Include="Interface\ISaleRepository.cs" />
     <Compile Include="ProductCategory.cs" />
     <Compile Include="DTO\AddressDTO.cs" />
     <Compile Include="DTO\BrandDTO.cs" />
@@ -67,6 +69,7 @@
     <Compile Include="Position.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sale.cs" />
     <Compile Include="SaleItem.cs" />
     <Compile Include="Services\BrandService.cs" />
     <Compile Include="Services\CategoryService.cs" />
