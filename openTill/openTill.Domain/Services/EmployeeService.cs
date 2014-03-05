@@ -56,17 +56,6 @@ namespace openTill.Domain.Services
             return authenticate;
         }
 
-        /// <summary>
-        /// Method calls on repository to return a list of Employees based on a last name string.
-        /// </summary>
-        /// <param name="lastName">Last name to be used for lookup.</param>
-        /// <returns>List of Employee Data Transfer Objects.</returns>
-        public List<EmployeeDTO> GetByLastName(string lastName)
-        {
-            var employeeList = Mapper.Map<List<EmployeeDTO>>(_employeeRepository.GetByLastName(lastName));
-            return employeeList;
-        }
-
         #endregion
     }
 }
