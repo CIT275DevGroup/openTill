@@ -16,11 +16,7 @@ using openTill.Domain.Interface.Service;
 
 namespace openTill.Domain.Services
 {
-<<<<<<< HEAD
-    public class ProductService : openTill.Domain.Services.IProductService
-=======
     public class ProductService : IProductService
->>>>>>> addedServiceInterfaces
     {
         #region Fields
 

@@ -74,7 +74,6 @@
     <Compile Include="Services\BrandService.cs" />
     <Compile Include="Services\CategoryService.cs" />
     <Compile Include="Services\EmployeeService.cs" />
-    <Compile Include="Interface\IProductService.cs" />
     <Compile Include="Interface\Service\IBrandService.cs" />
     <Compile Include="Interface\Service\ICategoryService.cs" />
     <Compile Include="Interface\Service\IEmployeeService.cs" />
