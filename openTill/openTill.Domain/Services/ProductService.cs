@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 
 namespace openTill.Domain.Services
 {
-    public class ProductService
+    public class ProductService : openTill.Domain.Services.IProductService
     {
         #region Fields
 
