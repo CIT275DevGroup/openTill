@@ -7,20 +7,17 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using openTill.Persistence;
 
 namespace openTill.GUI
 {
-    class MainWindowViewModel : ObservableObject
+    public class MainWindowViewModel : ObservableObject
     {
         public MainWindowViewModel()
         {
-            throw new NotImplementedException();
+            this.productService = new ProductService(new ProductRepository());
         }
-        public MainWindowViewModel(ProductService productService)
-        {
-            _productService = productService;
-        }
-        private ProductService _productService;
+        private ProductService productService;
         private ObservableCollection<TransactionItem> _transactionProducts;
 
         public ObservableCollection<TransactionItem> TransactionProducts
@@ -53,7 +50,7 @@ namespace openTill.GUI
             }
             else
             {
-                TransactionItem newItem = new TransactionItem(_productService.GetProductByUPC(UPC));
+                TransactionItem newItem = new TransactionItem(productService.GetProductByUPC(UPC));
                 if (newItem != null)
                     TransactionProducts.Add(newItem);
                 else
@@ -62,12 +59,19 @@ namespace openTill.GUI
         }
         public void RemoveTransactionItem()
         {
-            TransactionProducts.Remove(SelectedItem);
+            if (SelectedItem != null)
+            {
+                if (SelectedItem.Quantity > 1)
+                    SelectedItem.Quantity -= 1;
+                else
+                {
+                    TransactionProducts.Remove(SelectedItem);
+                }
+            }
         }
         public void ChangeItemQuantity(int amount)
         {
             SelectedItem.Quantity += amount;
         }
-
     }
 }
