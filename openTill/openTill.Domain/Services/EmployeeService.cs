@@ -11,10 +11,12 @@ using System.Threading.Tasks;
 //Project:  openTill Point of Sale System
 //Date:  24 Feb 2014
 //Revisions:
+using openTill.Domain.Interface.Repository;
+using openTill.Domain.Interface.Service;
 
 namespace openTill.Domain.Services
 {
-    public class EmployeeService
+    public class EmployeeService : IEmployeeService
     {
         #region Fields
         private readonly IEmployeeRepository _employeeRepository;
