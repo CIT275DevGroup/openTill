@@ -21,7 +21,7 @@ namespace openTill.GUI
                 RaisePropertyChanged("Item");
             }
         }
-        private int _quantity;
+        private int _quantity = 1;
        
         public int Quantity
         {
