@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Moq">
+      <HintPath>..\packages\Moq.4.2.1402.2112\lib\net40\Moq.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <Choose>
@@ -53,10 +56,12 @@
     <Compile Include="Persistence.BrandRepositoryTest.cs" />
     <Compile Include="Persistence.CategoryRepositoryTest.cs" />
     <Compile Include="Persistence.ProductRepositoryTest.cs" />
+    <Compile Include="GUI.MainWindowViewModelTest.cs" />
     <Compile Include="[Section].[ClassBeingTested]Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>

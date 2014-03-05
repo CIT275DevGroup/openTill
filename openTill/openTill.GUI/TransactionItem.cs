@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace openTill.GUI
 {
-    class TransactionItem : ObservableObject
+    public class TransactionItem : ObservableObject
     {
         private ProductDTO _item;
 
