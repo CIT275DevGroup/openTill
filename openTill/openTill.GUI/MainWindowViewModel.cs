@@ -1,4 +1,4 @@
-﻿using openTill.Domain;
+﻿using openTill.Domain.Interface;
 using openTill.Domain.Services;
 using System;
 using System.Collections.Generic;
@@ -17,12 +17,12 @@ namespace openTill.GUI
         {
             this.productService = new ProductService(new ProductRepository());
         }
-        public MainWindowViewModel(ProductService productService)
+        public MainWindowViewModel(IProductService productService)
         {
             this.productService = productService;
         }
-        private ProductService productService;
-        private ObservableCollection<TransactionItem> _transactionProducts;
+        private IProductService productService;
+        private ObservableCollection<TransactionItem> _transactionProducts = new ObservableCollection<TransactionItem>();
 
         public ObservableCollection<TransactionItem> TransactionProducts
         {
