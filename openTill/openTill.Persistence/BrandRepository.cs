@@ -4,6 +4,7 @@ using System.Linq;
 using AutoMapper;
 using openTill.Domain.DTO;
 using openTill.Domain.Interface;
+using openTill.Domain.Interface.Repository;
 
 namespace openTill.Persistence
 {

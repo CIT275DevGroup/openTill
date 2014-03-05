@@ -1,11 +1,7 @@
-﻿using openTill.Domain.DTO;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using openTill.Domain.DTO;
 
-namespace openTill.Domain.Interface
+namespace openTill.Domain.Interface.Repository
 {
     interface ISaleRepository
     {
