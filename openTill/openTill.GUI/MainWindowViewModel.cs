@@ -48,9 +48,8 @@ namespace openTill.GUI
         {
             if (TransactionProducts.Any(x => x.Item.UPC == UPC))
             {
-                TransactionItem matchingItem = TransactionProducts.First(x => x.Item.UPC == UPC);
-                SelectedItem = matchingItem;
-                matchingItem.Quantity += 1;
+                SelectedItem = TransactionProducts.First(x => x.Item.UPC == UPC);
+                SelectedItem.Quantity += 1;
             }
             else
             {
