@@ -26,9 +26,25 @@ namespace openTill.GUI
 
         private void btnEditInv_Click(object sender, RoutedEventArgs e)
         {
-            EditInventory ei = new EditInventory();
+            //EditInventory ei = new EditInventory();
 
-            ei.ShowDialog();
+            //ei.ShowDialog();
+			lblContextName.Content = "EDIT ITEM";
         }
+
+		private void btnAddInv_Click(object sender, RoutedEventArgs e)
+		{
+			lblContextName.Content = "ADD ITEM";
+		}
+
+		private void btnRemoveInv_Click(object sender, RoutedEventArgs e)
+		{
+			lblContextName.Content = "REMOVE ITEM";
+		}
+
+		private void btnFindItem_Click(object sender, RoutedEventArgs e)
+		{
+			lblContextName.Content = "FIND ITEM";
+		}
 	}
 }
