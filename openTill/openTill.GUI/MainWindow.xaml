@@ -1,0 +1,56 @@
+﻿<Window x:Class="openTill.GUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" MinHeight="350" Height="350" Width="623"
+		MinWidth="570">
+	<Grid Margin="0,0,0,0">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="25px"></RowDefinition>
+			<RowDefinition Height="12*"></RowDefinition>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="2*">
+
+			</ColumnDefinition>
+			<ColumnDefinition Width="2*">
+
+			</ColumnDefinition>
+			<ColumnDefinition Width="2*">
+
+			</ColumnDefinition>
+		</Grid.ColumnDefinitions>
+
+		<Button Grid.Row="1" Grid.Column="2" Content="No Scan" Width="90px" Height="30px" Name="btnNoScan" HorizontalAlignment="Right" VerticalAlignment="Top" ToolTip="If the item doesn't have a barcode, click here to key in amount" Margin="0,10,45,0" Foreground="White" Background="#FF007ACF"/>
+
+		<Button Grid.Row="1" Grid.Column="2" Content="Price Override" Width="90px" Height="30px" Name="btnPriceOverride"  HorizontalAlignment="Right" VerticalAlignment="Top" ToolTip="Override the price of an item" Margin="0,54,45,0" Foreground="White" Background="#FF007ACF"/>
+
+		<Button Grid.Row="1" Grid.Column="2" Content="Discount" Width="90px" Height="30px" Name="btnDiscount"  HorizontalAlignment="Right" VerticalAlignment="Top" ToolTip="Discount an item due to coupons or rewards" Margin="0,105,45,0" Foreground="White" Background="#FF007ACF"/>
+
+		<Button Grid.Row="1" Grid.Column="2" Content="Void Item" Width="90px" Height="30px" Name="btnVoidItem"  HorizontalAlignment="Right" VerticalAlignment="Top" ToolTip="Cancel a transaction or remove an item from the total" Margin="0,153,45,0" Foreground="White" Background="#FF007ACF"/>
+
+		<Button Grid.Row="1" Grid.Column="2" Content="Refund" Width="90px" Height="30px" Name="btnRefund" HorizontalAlignment="Right" VerticalAlignment="Top" ToolTip="Refund an amount based on previous sale" Margin="0,203,45,0" Foreground="White" Background="#FF007ACF"/>
+		<Button Grid.Row="1" Grid.Column="2" Content="Inventory" Width="90px" Height="30px" Name="btnInventory" HorizontalAlignment="Right" VerticalAlignment="Top" ToolTip="Access Inventory Windows" Margin="0,249,45,0" Foreground="White" Click="btnInventory_Click" Background="#FF007ACF"/>
+
+		<ListBox Grid.Column="0" Name="lstReceipt" Margin="0,24,0,46" Grid.RowSpan="2"/>
+
+		<Label Grid.Row="1" Content="Tax..." Name="lblTax" Grid.Column="0" Width="50px" Height="30px" Margin="10,0,0,15" HorizontalAlignment="Left" VerticalAlignment="Bottom"></Label>
+
+		<Label Grid.Row="1" Content="Total..." Name="lblTotal"
+		  Grid.Column="0" Width="50px" Height="30px" Margin="10,0,0,-3" HorizontalAlignment="Left" VerticalAlignment="Bottom"></Label>
+		<TextBox Grid.Row="0" Grid.Column="2" HorizontalAlignment="Right" Height="21" Margin="0,2,53,0" TextWrapping="Wrap" Text="Search..." Name="txtSearch" VerticalAlignment="Top" Width="93" Foreground="#FF0E02FF" Panel.ZIndex="1"/>
+		<Button Grid.Row="0" Grid.Column="2" Width="20px" Height="20px" Name="btnSearch" Margin="139,3,28,0" HorizontalAlignment="Right" VerticalAlignment="Top" OpacityMask="#FF007ACF" Background="#FF007ACF" Panel.ZIndex="1">
+			<Image Source="search_glass.png" OpacityMask="#FF007ACF"></Image>
+		</Button>
+		<Button Grid.Row="0" Grid.Column="2" Width="20px" Margin="0,3,2,0" Name="btnSettings" VerticalAlignment="Top" HorizontalAlignment="Right" Background="#FF007ACF" Panel.ZIndex="1">
+			<Image Source="gear.png" VerticalAlignment="Top" HorizontalAlignment="Right" OpacityMask="#FF007ACF"/>
+		</Button>
+		<Image Grid.Column="1" Height="145" Margin="23.667,10.333,0,0" Grid.Row="1" Name="imgItem" Width="152" Source="pringles.jpg" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+		<TextBox Grid.Column="1" Height="56" Margin="59,0,62,10" Grid.Row="1" TextWrapping="Wrap" Text="01" VerticalAlignment="Bottom" Width="51" FontSize="36" HorizontalAlignment="Center"/>
+		<Button Content="+" Grid.Column="1" Margin="127,0,10,10" Grid.Row="1" Name="btnAddQty" VerticalAlignment="Bottom" Width="35" Height="56" FontSize="36" HorizontalAlignment="Center" Foreground="White" Background="#FF007ACF"/>
+
+		<Button Content="-" Grid.Column="1" Margin="10,0,131,10" Grid.Row="1" Name="btnSubtractQty" VerticalAlignment="Bottom" Width="31" Height="56" FontSize="36" HorizontalAlignment="Center" Foreground="White" Background="#FF007ACF"/>
+
+		<Rectangle Stretch="UniformToFill"
+				   Width="{Binding ActualWidth, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Grid}}}"  Fill="#FF007ACF" Height="{Binding ActualHeight, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Grid}}}" Grid.Row="0" Grid.ColumnSpan="3"/>
+	</Grid>
+</Window>
