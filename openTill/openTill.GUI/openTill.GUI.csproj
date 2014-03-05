@@ -55,17 +55,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="noScanWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="EditInventory_ReDesign.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Compile Include="noScanWindow.xaml.cs">
-      <DependentUpon>noScanWindow.xaml</DependentUpon>
-    </Compile>
     <Compile Include="ObservableObject.cs" />
     <Compile Include="TransactionItem.cs" />
     <Page Include="MainWindow.xaml">
@@ -110,6 +103,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -137,6 +131,10 @@
     <ProjectReference Include="..\openTill.Domain\openTill.Domain.csproj">
       <Project>{3be0e974-d39f-4a68-8b61-20da78b023d1}</Project>
       <Name>openTill.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\openTill.Persistence\openTill.Persistence.csproj">
+      <Project>{e02e5be5-b386-483c-8590-26c6ac792d60}</Project>
+      <Name>openTill.Persistence</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

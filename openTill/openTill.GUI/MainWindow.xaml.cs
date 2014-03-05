@@ -32,11 +32,11 @@ namespace openTill.GUI
 			mi.ShowDialog();
 		}
 
-		private void btnNoScan_Click(object sender, RoutedEventArgs e)
-		{
-			noScanWindow noScan = new noScanWindow();
+        //private void btnNoScan_Click(object sender, RoutedEventArgs e)
+        //{
+        //    noScanWindow noScan = new noScanWindow();
 
-			noScan.ShowDialog();
-		}
+        //    noScan.ShowDialog();
+        //}
 	}
 }
