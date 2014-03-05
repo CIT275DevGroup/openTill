@@ -11,6 +11,14 @@ namespace openTill.Persistence
     // Project: openTill
     // Date: 2/25/2014
 
+    #region [ Updates ]
+
+    // Author: Ryan Redburn
+    // Date: 3/4/2014
+    // Revisios: Fixed minor logic and spelling errors. Added some additional exception handling. 
+
+    #endregion
+
     public class CategoryRepository : ICategoryRepository
     {
         #region [ Methods ]
@@ -39,14 +47,19 @@ namespace openTill.Persistence
         public CategoryDTO GetByName(string name)
         {
             // Throws an exception for invalid name value
-            if (!String.IsNullOrWhiteSpace(name))
-                throw new ArgumentNullException("name", "name does not accept a null or empty as an argument.");
+            if (String.IsNullOrWhiteSpace(name))
+                throw new ArgumentNullException("name",
+                    "name does not accept a null or empty string as an argument.");
 
             CategoryDTO category;
 
             using (var context = new openTillEntities())
             {
                 category = Mapper.Map<CategoryDTO>(context.Categories.SingleOrDefault(c => c.Name == name));
+
+                // Throws an exception if the given category doesn't exist
+                if (category == null)
+                    throw new InvalidOperationException("No entry matching the given category was found.");
             }
 
             return category;

@@ -11,6 +11,14 @@ namespace openTill.Persistence
     // Project: openTill
     // Date: 2/25/2014
 
+    #region [ Updates ]
+
+    // Author: Ryan Redburn
+    // Date: 3/4/2014
+    // Revisios: Fixed minor logic and spelling errors. Added some additional exception handling. 
+
+    #endregion
+
     public class BrandRepository : IBrandRepository
     {
         #region [ Methods ]

@@ -11,6 +11,14 @@ namespace openTill.Persistence
     // Project: openTill
     // Date: 2/25/2014
 
+    #region [ Updates ]
+
+    // Author: Ryan Redburn
+    // Date: 3/4/2014
+    // Revisios: Fixed minor logic and spelling errors. Added some additional exception handling. 
+
+    #endregion
+
     public class ProductRepository : IProductRepository
     {
         #region [ Methods ]
@@ -39,7 +47,7 @@ namespace openTill.Persistence
         public IEnumerable<ProductDTO> GetByBrand(string brand)
         {
             // Throws an exception for invalid brand value
-            if (!String.IsNullOrWhiteSpace(brand))
+            if (String.IsNullOrWhiteSpace(brand))
                 throw new ArgumentNullException("brand",
                     "brand does not accept a null or empty string as an argument.");
 
@@ -61,7 +69,7 @@ namespace openTill.Persistence
         public ProductDTO GetByUPC(string upc)
         {
             // Throws an exception for invalid upc value
-            if (!String.IsNullOrWhiteSpace(upc))
+            if (String.IsNullOrWhiteSpace(upc))
                 throw new ArgumentNullException("upc",
                     "upc does not accept a null or empty string as an argument.");
 
@@ -70,6 +78,10 @@ namespace openTill.Persistence
             using (var context = new openTillEntities())
             {
                 product = Mapper.Map<ProductDTO>(context.Products.SingleOrDefault(p => p.UPC == upc));
+
+                // Throws an exception if no matching product is fonud
+                if (product == null)
+                    throw new InvalidOperationException("No product with the given upc exists.");
             }
 
             return product;
@@ -84,10 +96,14 @@ namespace openTill.Persistence
             // Throws an exception for a null dto
             if (newProduct == null)
                 throw new ArgumentNullException("newProduct",
-                    "newProduct does not accept a null dto as an argumnet.");
+                    "newProduct does not accept a null dto as an argument.");
 
             using (var context = new openTillEntities())
             {
+                // Throws exception if a product with the given upc already exists
+                if (context.Products.SingleOrDefault(p => p.UPC == newProduct.UPC) != null)
+                    throw new InvalidOperationException("A product with the given upc already exists.");
+
                 context.Products.Add(Mapper.Map<Product>(newProduct));
                 context.SaveChanges();
             }
@@ -102,7 +118,7 @@ namespace openTill.Persistence
             // Throws an exception for a null dto
             if (productUpdate == null)
                 throw new ArgumentNullException("productUpdate",
-                    "productUpdate does not accept a null dto as an argumnet.");
+                    "productUpdate does not accept a null dto as an argument.");
 
             using (var context = new openTillEntities())
             {
@@ -137,7 +153,7 @@ namespace openTill.Persistence
             // Throws an exception for a null dto
             if (productDel == null)
                 throw new ArgumentNullException("productDel",
-                    "productDel does not accept a null dto as an argumnet.");
+                    "productDel does not accept a null dto as an argument.");
 
             using (var context = new openTillEntities())
             {
