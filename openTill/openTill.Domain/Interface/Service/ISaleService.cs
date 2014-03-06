@@ -8,6 +8,5 @@ namespace openTill.Domain.Interface.Service
         void Insert(SaleDTO sale);
         void Update(SaleDTO sale);
         List<SaleDTO> GetSalesByEmployee(string userName);
-        SaleDTO FinalizeSale(SaleDTO sale);
     }
 }

@@ -1,4 +1,4 @@
-﻿using openTill.Domain;
+﻿using openTill.Domain.Interface;
 using openTill.Domain.Services;
 using System;
 using System.Collections.Generic;
@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using openTill.Persistence;
+using openTill.Domain.Interface.Service;
 
 namespace openTill.GUI
 {
@@ -17,12 +18,12 @@ namespace openTill.GUI
         {
             this.productService = new ProductService(new ProductRepository());
         }
-        public MainWindowViewModel(ProductService productService)
+        public MainWindowViewModel(IProductService productService)
         {
             this.productService = productService;
         }
-        private ProductService productService;
-        private ObservableCollection<TransactionItem> _transactionProducts;
+        private IProductService productService;
+        private ObservableCollection<TransactionItem> _transactionProducts = new ObservableCollection<TransactionItem>();
 
         public ObservableCollection<TransactionItem> TransactionProducts
         {
@@ -48,9 +49,8 @@ namespace openTill.GUI
         {
             if (TransactionProducts.Any(x => x.Item.UPC == UPC))
             {
-                TransactionItem matchingItem = TransactionProducts.First(x => x.Item.UPC == UPC);
-                SelectedItem = matchingItem;
-                matchingItem.Quantity += 1;
+                SelectedItem = TransactionProducts.First(x => x.Item.UPC == UPC);
+                SelectedItem.Quantity += 1;
             }
             else
             {

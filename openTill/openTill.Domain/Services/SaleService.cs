@@ -1,8 +1,11 @@
 ﻿using AutoMapper;
 using openTill.Domain.DTO;
+using openTill.Domain.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using openTill.Domain.Interface.Repository;
 using openTill.Domain.Interface.Service;
 
@@ -42,15 +45,6 @@ namespace openTill.Domain.Services
         {
             var saleList = Mapper.Map<List<SaleDTO>>(_saleRepository.GetSalesByEmployee(userName));
             return saleList;
-        }
-
-        public SaleDTO FinalizeSale(SaleDTO sale)
-        {
-            var saleTotal = sale.SaleItems.Aggregate(0m, (current, item) => current + item.SellingPrice);
-            saleTotal = saleTotal + saleTotal * .06m;
-            sale.DateOfSale = DateTime.Now;
-            sale.Total = saleTotal;
-            return sale;
         }
 
         #endregion
