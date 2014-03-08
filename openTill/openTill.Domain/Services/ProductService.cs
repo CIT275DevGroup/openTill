@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 //Project:  openTill Point of Sale System
 //Date:  24 Feb 2014
 //Revisions:
+
 using openTill.Domain.Interface.Repository;
 using openTill.Domain.Interface.Service;
 

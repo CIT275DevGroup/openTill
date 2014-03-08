@@ -5,6 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//Author:  Morgan W. Davis III
+//Project:  openTill Point of Sale System
+//Date:  03 Mar 2014
+//Revisions:
+
 namespace openTill.Domain
 {
     class Sale
