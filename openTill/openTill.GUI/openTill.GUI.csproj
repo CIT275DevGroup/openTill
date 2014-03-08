@@ -70,6 +70,7 @@
     <Compile Include="enterPin.xaml.cs">
       <DependentUpon>enterPin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="InventoryViewModel.cs" />
     <Compile Include="loginPrompt.xaml.cs">
       <DependentUpon>loginPrompt.xaml</DependentUpon>
     </Compile>
