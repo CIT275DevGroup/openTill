@@ -18,12 +18,21 @@ namespace openTill.GUI
     /// </summary>
     public class MainWindowViewModel : ObservableObject
     {
+        private ChangeQtyCommand qtyCommand;
+
+        public ChangeQtyCommand QtyCommand
+        {
+            get { return qtyCommand; }
+            private set { qtyCommand = value; }
+        }
+
         /// <summary>
         /// Default constructor, instantiates a ProductService
         /// </summary>
         public MainWindowViewModel()
         {
             this.productService = new ProductService(new ProductRepository());
+            QtyCommand = new ChangeQtyCommand(this);
         }
         /// <summary>
         /// Constructor taking an IProductService for testing
@@ -101,18 +110,6 @@ namespace openTill.GUI
         public void ChangeItemQuantity(int amount)
         {
             SelectedItem.Quantity += amount;
-        }
-        public static RoutedCommand ChangeQtyCommand = new RoutedCommand();
-        public void QtyCommandExecuted(object sender, ExecutedRoutedEventArgs e, int amount)
-        {
-            SelectedItem.Quantity += amount;
-        }
-        public void QtyCommandCanExecute(object sender, CanExecuteRoutedEventArgs e)
-        {
-            if (SelectedItem != null)
-                e.CanExecute = true;
-            else
-                e.CanExecute = false;
         }
     }
 }

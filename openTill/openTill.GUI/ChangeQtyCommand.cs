@@ -7,18 +7,26 @@ using System.Windows.Input;
 
 namespace openTill.GUI
 {
-    class ChangeQtyCommand : ICommand
+    public class ChangeQtyCommand : ICommand
     {
-        public bool CanExecute(object parameter)
+        MainWindowViewModel viewModel;
+        public ChangeQtyCommand(MainWindowViewModel viewModel)
         {
-            throw new NotImplementedException();
+            this.viewModel = viewModel;
+        }
+        public bool CanExecute(object obj)
+        {
+            if (viewModel.SelectedItem != null)
+                return true;
+            else
+                return false;
         }
 
         public event EventHandler CanExecuteChanged;
-
-        public void Execute(object parameter)
+        public void Execute(object obj)
         {
-            throw new NotImplementedException();
+            int amount = (int)obj;
+            viewModel.SelectedItem.Quantity += amount;
         }
     }
 }
