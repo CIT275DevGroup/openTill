@@ -35,7 +35,7 @@ namespace openTill.GUI
         private IProductService productService;
         private ObservableCollection<TransactionItem> _transactionProducts = new ObservableCollection<TransactionItem>();
         /// <summary>
-        /// ObservableCollection of ProductDTO wrapped with quantity and price properties
+        /// ObservableCollection of ProductDTO wrapped with quantity
         /// </summary>
         public ObservableCollection<TransactionItem> TransactionProducts
         {
