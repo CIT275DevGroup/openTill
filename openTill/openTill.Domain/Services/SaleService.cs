@@ -65,6 +65,20 @@ namespace openTill.Domain.Services
             return saleList;
         }
 
+        /// <summary>
+        /// Method calculates sale total and tax.
+        /// </summary>
+        /// <param name="sale">Method takes on SaleDTO as an argument.</param>
+        /// <returns></returns>
+        public SaleDTO FinalizeSale(SaleDTO sale)
+        {
+            var saleTotal = sale.SaleItems.Aggregate(0m, (current, item) => current + item.SellingPrice);
+            saleTotal = saleTotal + saleTotal * .06m;
+            sale.DateOfSale = DateTime.Now;
+            sale.Total = saleTotal;
+            return sale;
+        }
+
         #endregion
     }
 
