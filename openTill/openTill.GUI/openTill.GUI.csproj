@@ -66,6 +66,7 @@
     <Compile Include="categorySelect.xaml.cs">
       <DependentUpon>categorySelect.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ChangeQtyCommand.cs" />
     <Compile Include="enterPin.xaml.cs">
       <DependentUpon>enterPin.xaml</DependentUpon>
     </Compile>
