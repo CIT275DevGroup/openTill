@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using openTill.Persistence;
 using openTill.Domain.Interface.Service;
+using System.Windows.Input;
 
 namespace openTill.GUI
 {
@@ -100,6 +101,18 @@ namespace openTill.GUI
         public void ChangeItemQuantity(int amount)
         {
             SelectedItem.Quantity += amount;
+        }
+        public static RoutedCommand ChangeQtyCommand = new RoutedCommand();
+        public void QtyCommandExecuted(object sender, ExecutedRoutedEventArgs e, int amount)
+        {
+            SelectedItem.Quantity += amount;
+        }
+        public void QtyCommandCanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+            if (SelectedItem != null)
+                e.CanExecute = true;
+            else
+                e.CanExecute = false;
         }
     }
 }

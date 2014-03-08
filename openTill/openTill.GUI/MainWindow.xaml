@@ -1,8 +1,17 @@
 ﻿<Window x:Class="openTill.GUI.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:openTill.GUI"
         Title="MainWindow" MinHeight="350" Height="350" Width="623"
 		MinWidth="570">
+    <Window.Resources>
+        <local:MainWindowViewModel x:Key="viewModel"/>
+    </Window.Resources>
+    <Window.CommandBindings>
+        <CommandBinding Command="{x:Static local:ChangeQtyCommand}"
+                        Executed="QtyCommandExecuted"
+                        CanExecute="QtyCommandCanExecute"/>
+    </Window.CommandBindings>
 	<Grid Margin="0,0,0,0">
 		<Grid.RowDefinitions>
 			<RowDefinition Height="25px"></RowDefinition>
