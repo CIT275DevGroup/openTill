@@ -46,5 +46,29 @@ namespace openTill.GUI
 		{
 			lblContextName.Content = "FIND ITEM";
 		}
+
+		private void btnChooseCat_Click(object sender, RoutedEventArgs e)
+		{
+			categorySelect catSel = new categorySelect();
+
+			catSel.ShowDialog();
+		}
+
+		private void btnInvClear_Click(object sender, RoutedEventArgs e)
+		{
+			txtItemName.Clear();
+			txtItemDescription.Clear();
+			txtUPC.Clear();
+			txtStorePrice.Clear();
+			cboItem_Brand.SelectedIndex = 0;
+			txtSellingPrice.Clear();
+			txtOnHand.Clear();
+			Radbtn_NoDeposit_Copy.IsChecked = true;
+			Radbtn_YesDeposit.IsChecked = false;
+			Radbtn_YesTaxble.IsChecked = true;
+			Radbtn_NoTaxble.IsChecked = false;
+			txtMinAge.Clear();
+
+		}
 	}
 }

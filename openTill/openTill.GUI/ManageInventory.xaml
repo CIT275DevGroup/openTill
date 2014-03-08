@@ -37,7 +37,7 @@
 		<Label x:Name="Lb_Category" Content="Category:" 
 		  HorizontalAlignment="Left" Grid.Row="1"  Margin="6,186,0,0" VerticalAlignment="Top" Width="81"/>
 		<TextBox x:Name="txtMinAge" Grid.Row="1" ToolTip="Some items (such as alcoholic beverages, require a minimum age." HorizontalAlignment="Left" Height="23" Margin="99,359,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78"/>
-		<ComboBox Grid.Column="0" Grid.Row="1"  x:Name="cboItem_Brand" HorizontalAlignment="Left" Margin="87,224,0,0" VerticalAlignment="Top" Width="215" ToolTip="Select the Brand of an item" Background="#FF007ACF" Foreground="White"/>
+		<ComboBox Grid.Column="0" Grid.Row="1" x:Name="cboItem_Brand" HorizontalAlignment="Left" Margin="87,224,0,0" VerticalAlignment="Top" Width="215" ToolTip="Select the Brand of an item" Background="#FF007ACF" Foreground="White"/>
 		<Label Grid.Row="1"  x:Name="Lb_StorePrice" Content="Store Price:" HorizontalAlignment="Left" Margin="6,258,0,0" VerticalAlignment="Top" Width="81"/>
 		<TextBox Grid.Row="1"  x:Name="txtStorePrice" ToolTip="Cost of the Item to the Store" HorizontalAlignment="Left" Height="23" Margin="87,260,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75"/>
 		<Label x:Name="Lb_SellingPrice" Content="Selling Price:" HorizontalAlignment="Left" Margin="185,260,0,0" Grid.Row="1"   VerticalAlignment="Top" Width="81"/>
@@ -54,7 +54,7 @@
 		<Label Grid.Row="1" Content="ADD NEW ITEM" HorizontalAlignment="Center" Margin="154,10,105.333,0" VerticalAlignment="Top" Width="116" FontWeight="Bold" Visibility="Hidden"/>
 		<Button Grid.Row="1" Content="Save" ToolTip="Save changes to item" Width="66" Height="28" x:Name="btnInvSave" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,399,0,0" Foreground="White" Background="#FF007ACF"/>
 		<Button Content="Cancel" Width="66" Grid.Row="1" Height="28" x:Name="btnInvCancel" HorizontalAlignment="Left" VerticalAlignment="Top" ToolTip="Cancel Changes to Item" Margin="83,399,0,0" Foreground="White" Background="#FF007ACF"/>
-		<Button Content="Clear" Grid.Row="1" Width="66" Height="28" x:Name="btnInvClear" HorizontalAlignment="Left" VerticalAlignment="Top" ToolTip="Clear above fields" Margin="154,399,0,0" Foreground="White" Background="#FF007ACF"/>
+		<Button Content="Clear" Grid.Row="1" Width="66" Height="28" x:Name="btnInvClear" HorizontalAlignment="Left" VerticalAlignment="Top" ToolTip="Clear above fields" Margin="154,399,0,0" Foreground="White" Background="#FF007ACF" Click="btnInvClear_Click"/>
 		<Button Grid.Row="0" Grid.Column="1" Width="20px" Height="20px" Name="btnSearch" Margin="0,1,28,0" HorizontalAlignment="Right" VerticalAlignment="Top" OpacityMask="#FF007ACF" Background="#FF007ACF" Panel.ZIndex="1">
 			<Image Source="search_glass.png" OpacityMask="#FF007ACF"></Image>
 		</Button>
@@ -63,7 +63,7 @@
 		</Button>
 		<Rectangle Stretch="UniformToFill"
 				   Width="{Binding ActualWidth, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Grid}}}"  Fill="#FF007ACF" Height="{Binding ActualHeight, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Grid}}}" Grid.Row="0" Grid.ColumnSpan="2"/>
-		<Button Content="Choose Categories" Width="150" Height="28" HorizontalAlignment="Left" VerticalAlignment="Top" ToolTip="Browse Items in Inventory" Margin="88,189,0,0" Foreground="White" Background="#FF007ACF" Name="btnChooseCat" Grid.Row="1" />
+		<Button Content="Choose Categories" Width="150" Height="28" HorizontalAlignment="Left" VerticalAlignment="Top" ToolTip="Browse Items in Inventory" Margin="88,189,0,0" Foreground="White" Background="#FF007ACF" Name="btnChooseCat" Grid.Row="1" Click="btnChooseCat_Click" />
 
 
 	</Grid>

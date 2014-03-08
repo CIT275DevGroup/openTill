@@ -38,5 +38,10 @@ namespace openTill.GUI
 
 			newPin.ShowDialog();
 		}
+
+		private void btnNoScan_Click(object sender, RoutedEventArgs e)
+		{
+			
+		}
 	}
 }
