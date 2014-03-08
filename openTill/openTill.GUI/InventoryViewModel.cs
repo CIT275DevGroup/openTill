@@ -1,4 +1,5 @@
-﻿using System;
+﻿using openTill.Domain.Interface.Service;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,10 @@ namespace openTill.GUI
 {
     class InventoryViewModel
     {
+        private IProductService productService;
+        public InventoryViewModel()
+        {
 
+        }
     }
 }
