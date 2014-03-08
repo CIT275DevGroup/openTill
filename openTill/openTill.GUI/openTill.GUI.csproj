@@ -55,15 +55,29 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="categorySelect.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="EditInventory_ReDesign.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Compile Include="categorySelect.xaml.cs">
+      <DependentUpon>categorySelect.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="enterPin.xaml.cs">
+      <DependentUpon>enterPin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="loginPrompt.xaml.cs">
       <DependentUpon>loginPrompt.xaml</DependentUpon>
     </Compile>
     <Compile Include="ObservableObject.cs" />
     <Compile Include="TransactionItem.cs" />
+    <Page Include="enterPin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="loginPrompt.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

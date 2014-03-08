@@ -1,8 +1,8 @@
 ﻿<Window x:Class="openTill.GUI.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" MinHeight="350" Height="350" Width="623"
-		MinWidth="570">
+        Title="OpenTill" MinHeight="350" Height="350" Width="623"
+		MinWidth="570" Foreground="{x:Null}">
 	<Grid Margin="0,0,0,0">
 		<Grid.RowDefinitions>
 			<RowDefinition Height="25px"></RowDefinition>
@@ -19,7 +19,7 @@
 
 		<Button Grid.Row="1" Grid.Column="2" Content="No Scan" Width="90px" Height="30px" Name="btnNoScan" HorizontalAlignment="Right" VerticalAlignment="Top" ToolTip="If the item doesn't have a barcode, click here to key in amount" Margin="0,10,45,0" Foreground="White" Background="#FF007ACF"/>
 
-		<Button Grid.Row="1" Grid.Column="2" Content="Price Override" Width="90px" Height="30px" Name="btnPriceOverride"  HorizontalAlignment="Right" VerticalAlignment="Top" ToolTip="Override the price of an item" Margin="0,54,45,0" Foreground="White" Background="#FF007ACF"/>
+		<Button Grid.Row="1" Grid.Column="2" Content="Price Override" Width="90px" Height="30px" Name="btnPriceOverride"  HorizontalAlignment="Right" VerticalAlignment="Top" ToolTip="Override the price of an item" Margin="0,54,45,0" Foreground="White" Background="#FF007ACF" Click="btnPriceOverride_Click"/>
 
 		<Button Grid.Row="1" Grid.Column="2" Content="Discount" Width="90px" Height="30px" Name="btnDiscount"  HorizontalAlignment="Right" VerticalAlignment="Top" ToolTip="Discount an item due to coupons or rewards" Margin="0,105,45,0" Foreground="White" Background="#FF007ACF"/>
 

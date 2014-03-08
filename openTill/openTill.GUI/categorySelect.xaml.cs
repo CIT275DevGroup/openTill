@@ -15,23 +15,13 @@ using System.Windows.Shapes;
 namespace openTill.GUI
 {
 	/// <summary>
-	/// Interaction logic for loginPrompt.xaml
+	/// Interaction logic for categorySelect.xaml
 	/// </summary>
-	public partial class loginPrompt : Window
+	public partial class categorySelect : Window
 	{
-		public loginPrompt()
+		public categorySelect()
 		{
 			InitializeComponent();
-		}
-
-		private void btnCancel_Click(object sender, RoutedEventArgs e)
-		{
-			this.Close();
-		}
-
-		private void btnSubmit_Click(object sender, RoutedEventArgs e)
-		{
-			String pass = txtPass.Password;
 		}
 	}
 }

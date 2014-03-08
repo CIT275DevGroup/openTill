@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace openTill.GUI
 {
 	/// <summary>
-	/// Interaction logic for loginPrompt.xaml
+	/// Interaction logic for enterPin.xaml
 	/// </summary>
-	public partial class loginPrompt : Window
+	public partial class enterPin : Window
 	{
-		public loginPrompt()
+		public enterPin()
 		{
 			InitializeComponent();
 		}
@@ -31,7 +31,7 @@ namespace openTill.GUI
 
 		private void btnSubmit_Click(object sender, RoutedEventArgs e)
 		{
-			String pass = txtPass.Password;
+			string pass = txtPIN.Password;
 		}
 	}
 }
