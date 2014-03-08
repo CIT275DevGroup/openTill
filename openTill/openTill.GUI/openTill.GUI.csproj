@@ -60,6 +60,7 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Compile Include="ChangeQtyCommand.cs" />
+    <Compile Include="InventoryViewModel.cs" />
     <Compile Include="ObservableObject.cs" />
     <Compile Include="TransactionItem.cs" />
     <Page Include="MainWindow.xaml">
