@@ -20,10 +20,10 @@ namespace openTill.Domain.Services
 
         #region Constructors
 
-        public SaleService(ISaleRepository saleRepository)
-        {
-            _saleRepository = saleRepository;
-        }
+        //public SaleService(ISaleRepository saleRepository)
+        //{
+          //  _saleRepository = saleRepository;
+        //}
 
         #endregion
 

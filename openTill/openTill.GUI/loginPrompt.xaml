@@ -1,0 +1,9 @@
+﻿<Window x:Class="openTill.GUI.loginPrompt"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="loginPrompt" Height="300" Width="300">
+    <Grid>
+		<Label Content="Please Login" FontSize="18" Margin="84,72,96,158"></Label>
+		<TextBox Width="50px" Height="20px"></TextBox>
+    </Grid>
+</Window>
