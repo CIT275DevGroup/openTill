@@ -17,6 +17,7 @@ namespace openTill.Domain.DTO
         public int ID;
         public int SaleID;
         public int ProductID;
+        public decimal SellingPrice;
         public int Quantity;
         #endregion
     }

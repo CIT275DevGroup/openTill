@@ -6,11 +6,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using openTill.Domain.Interface.Repository;
+using openTill.Domain.Interface.Service;
 
 namespace openTill.Domain.Services
 {
     
-    public class SaleService
+    public class SaleService : ISaleService
     {
         #region fields
 
