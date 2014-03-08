@@ -16,11 +16,11 @@ namespace openTill.Persistence
 
     // Author: Ryan Redburn
     // Date: 3/4/2014
-    // Revisios: Fixed minor logic and spelling errors. Added some additional exception handling. 
+    // Revisions: Fixed minor logic and spelling errors. Added some additional exception handling. 
 
     #endregion
 
-    public class ProductRepository : IProductRepository
+    public sealed class ProductRepository : IProductRepository
     {
         #region [ Methods ]
 
