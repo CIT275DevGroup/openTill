@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using openTill.Persistence;
 using openTill.Domain.Interface.Service;
+using System.Windows.Input;
 
 namespace openTill.GUI
 {
@@ -17,12 +18,21 @@ namespace openTill.GUI
     /// </summary>
     public class MainWindowViewModel : ObservableObject
     {
+        private ChangeQtyCommand qtyCommand;
+
+        public ChangeQtyCommand QtyCommand
+        {
+            get { return qtyCommand; }
+            private set { qtyCommand = value; }
+        }
+
         /// <summary>
         /// Default constructor, instantiates a ProductService
         /// </summary>
         public MainWindowViewModel()
         {
             this.productService = new ProductService(new ProductRepository());
+            QtyCommand = new ChangeQtyCommand(this);
         }
         /// <summary>
         /// Constructor taking an IProductService for testing
