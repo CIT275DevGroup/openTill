@@ -75,6 +75,7 @@
       <DependentUpon>loginPrompt.xaml</DependentUpon>
     </Compile>
     <Compile Include="ObservableObject.cs" />
+    <Compile Include="ObservableProduct.cs" />
     <Compile Include="TransactionItem.cs" />
     <Page Include="enterPin.xaml">
       <SubType>Designer</SubType>
