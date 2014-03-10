@@ -26,14 +26,14 @@
 		<Button Grid.Column="1"  Grid.Row="1" Content="Remove from Inventory" Width="150px" Height="30px" Name="btnRemoveInv" HorizontalAlignment="Right" VerticalAlignment="Top" ToolTip="Remove Item from Inventory" Margin="0,111,10,0" Foreground="White" Background="#FF007ACF" Click="btnRemoveInv_Click"/>
 		<Button Grid.Column="1" Grid.Row="1" Content="Edit Inventory Item" Width="150px" Height="30px" Name="btnEditInv" HorizontalAlignment="Right" VerticalAlignment="Top" ToolTip="Edit Item in Inventory" Margin="0,178,10,0" Foreground="White" Click="btnEditInv_Click" Background="#FF007ACF"/>
 		<Button Grid.Column="1" Grid.Row="1" Content="Find in Inventory" Width="150px" Height="30px" Name="btnFindItem" HorizontalAlignment="Right" VerticalAlignment="Top" ToolTip="Find Item in Inventory" Margin="0,243,10,0" Foreground="White" Background="#FF007ACF" Click="btnFindItem_Click" />
-		<TextBox Grid.Column="0" Text="Item Name" Name="txtItemName" ToolTip="Type an Item Name" Margin="6,25,0,0" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="214" />
+		<TextBox Grid.Column="0" Text="Item Name" Name="txtItemName" ToolTip="Type an Item Name" Margin="6,157,0,0" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="214" />
 		<TextBox Grid.Column="0" Text="Item Description" Name="txtItemDescription" ToolTip="type an Item Description" Margin="6,60,0,0" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Left" Height="89" Width="337" />
 
 		<Label Grid.Row="1"  Content="Brand:&#xD;&#xA;" Grid.Column="0" Margin="6,224,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="76" Height="29" />
-		<Button Content="Browse" Width="106" Height="28" x:Name="btnAddInv_Copy" HorizontalAlignment="Left" VerticalAlignment="Top" ToolTip="Browse Items in Inventory" Margin="237,22,0,0" Foreground="White" Background="#FF007ACF" Grid.Row="1" />
+		<Button Content="Browse" Width="106" Height="28" x:Name="btnAddInv_Copy" HorizontalAlignment="Left" VerticalAlignment="Top" ToolTip="Browse Items in Inventory" Margin="237,154,0,0" Foreground="White" Background="#FF007ACF" Grid.Row="1" Click="btnAddInv_Copy_Click" />
 		<Label Content="EDIT ITEM" Name="lblContextName" Margin="133,0,0,0" VerticalAlignment="Top" Width="140" FontWeight="Bold" HorizontalAlignment="Left" Grid.Row="1" />
-		<Label x:Name="Lb_UPC_" Content="UPC #:" HorizontalAlignment="Left" Margin="6,154,0,0" VerticalAlignment="Top" Width="81" Grid.Row="1" />
-		<TextBox x:Name="txtUPC" HorizontalAlignment="Left" Height="23" ToolTip="Type a UPC code" Margin="87,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="1" Width="151"/>
+		<Label x:Name="Lb_UPC_" Content="UPC #:" HorizontalAlignment="Left" Margin="6,23,0,0" VerticalAlignment="Top" Width="81" Grid.Row="1" />
+		<TextBox x:Name="txtUPC" HorizontalAlignment="Left" Height="23" ToolTip="Type a UPC code" Margin="78,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="1" Width="151"/>
 		<Label x:Name="Lb_Category" Content="Category:" 
 		  HorizontalAlignment="Left" Grid.Row="1"  Margin="6,186,0,0" VerticalAlignment="Top" Width="81"/>
 		<TextBox x:Name="txtMinAge" Grid.Row="1" ToolTip="Some items (such as alcoholic beverages, require a minimum age." HorizontalAlignment="Left" Height="23" Margin="99,359,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78"/>

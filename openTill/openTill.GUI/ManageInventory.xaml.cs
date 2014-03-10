@@ -70,5 +70,10 @@ namespace openTill.GUI
 			txtMinAge.Clear();
 
 		}
+
+		private void btnAddInv_Copy_Click(object sender, RoutedEventArgs e)
+		{
+
+		}
 	}
 }
