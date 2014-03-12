@@ -26,8 +26,8 @@
 		</Grid.RowDefinitions>
 
 
-		<Button Grid.Column="1" Grid.Row="1" Content="Add to Inventory" Width="150px" Height="30px" Name="btnAddInv" HorizontalAlignment="Right" VerticalAlignment="Top" ToolTip="Add Item to Inventory" Margin="0,50,10,0" Foreground="White" Background="#FF007ACF" Click="btnAddInv_Click"/>
-		<Button Grid.Column="1"  Grid.Row="1" Content="Remove from Inventory" Width="150px" Height="30px" Name="btnRemoveInv" HorizontalAlignment="Right" VerticalAlignment="Top" ToolTip="Remove Item from Inventory" Margin="0,111,10,0" Foreground="White" Background="#FF007ACF" Click="btnRemoveInv_Click"/>
+		<Button Grid.Column="1" Grid.Row="1" Content="Add to Inventory" Width="150px" Height="30px" Name="btnAddInv" HorizontalAlignment="Right" VerticalAlignment="Top" ToolTip="Add Item to Inventory" Margin="0,50,10,0" Foreground="White" Background="#FF007ACF" Command="{Binding Source={StaticResource viewModel}, Path=AddCommand}"/>
+        <Button Grid.Column="1"  Grid.Row="1" Content="Remove from Inventory" Width="150px" Height="30px" Name="btnRemoveInv" HorizontalAlignment="Right" VerticalAlignment="Top" ToolTip="Remove Item from Inventory" Margin="0,111,10,0" Foreground="White" Background="#FF007ACF" Command="{Binding Source={StaticResource viewModel}, Path=RemoveCommand}"/>
 		<Button Grid.Column="1" Grid.Row="1" Content="Edit Inventory Item" Width="150px" Height="30px" Name="btnEditInv" HorizontalAlignment="Right" VerticalAlignment="Top" ToolTip="Edit Item in Inventory" Margin="0,178,10,0" Foreground="White" Click="btnEditInv_Click" Background="#FF007ACF"/>
 		<Button Grid.Column="1" Grid.Row="1" Content="Find in Inventory" Width="150px" Height="30px" Name="btnFindItem" HorizontalAlignment="Right" VerticalAlignment="Top" ToolTip="Find Item in Inventory" Margin="0,243,10,0" Foreground="White" Background="#FF007ACF" Click="btnFindItem_Click" />
 		<TextBox Grid.Column="0" Text="{Binding Source={StaticResource viewModel}, Path=SelectedProduct.Name}" Name="txtItemName" ToolTip="Type an Item Name" Margin="6,25,0,0" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="214" />
