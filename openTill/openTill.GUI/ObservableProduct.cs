@@ -197,5 +197,23 @@ namespace openTill.GUI
                 SaleItem = this.SaleItem
             };
         }
+        public ObservableProduct(ProductDTO dto)
+        {
+            UPC = dto.UPC;
+            CategoryListID = dto.CategoryListID;
+            BrandID = dto.BrandID;
+            Name = dto.Name;
+            Description = dto.Description;
+            StoreCost = dto.StoreCost;
+            SellingPrice = dto.SellingPrice;
+            MinOnHand = dto.MinOnHand;
+            OnHand = dto.OnHand;
+            HasDeposit = dto.HasDeposit;
+            IsTaxable = dto.IsTaxable;
+            MinimumAge = dto.MinimumAge;
+            Brand = dto.Brand;
+            CategoryList = dto.CategoryList;
+            SaleItem = dto.SaleItem;
+        }
     }
 }

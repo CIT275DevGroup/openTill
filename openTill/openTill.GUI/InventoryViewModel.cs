@@ -31,7 +31,7 @@ namespace openTill.GUI
             get { return _products; }
             set { _products = value; }
         }
-        private ObservableProduct _selectedProduct;
+        private ObservableProduct _selectedProduct = new ObservableProduct(new ProductDTO());
 
         public ObservableProduct SelectedProduct
         {
@@ -61,6 +61,7 @@ namespace openTill.GUI
         public InventoryViewModel()
         {
             this.productService = new ProductService(new ProductRepository());
+            Products = new ObservableCollection<ObservableProduct>(productService.GetAllProducts().Select(x => new ObservableProduct(x)));
             Brands = new BrandService(new BrandRepository()).GetAllBrands().ToArray();
             AddCommand = new AddProductCommand(this);
             RemoveCommand = new RemoveProductCommand(this);
