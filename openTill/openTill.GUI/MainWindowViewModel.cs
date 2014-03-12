@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using openTill.Persistence;
 using openTill.Domain.Interface.Service;
 using System.Windows.Input;
+using openTill.GUI.Commands;
 
 namespace openTill.GUI
 {
