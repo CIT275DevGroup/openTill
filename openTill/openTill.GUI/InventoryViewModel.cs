@@ -2,6 +2,7 @@
 using openTill.Domain.Interface.Repository;
 using openTill.Domain.Interface.Service;
 using openTill.Domain.Services;
+using openTill.GUI.Commands;
 using openTill.Persistence;
 using System;
 using System.Collections.Generic;
@@ -41,10 +42,33 @@ namespace openTill.GUI
                 RaisePropertyChanged("SelectedProduct");
             }
         }
+        private AddProductCommand addCommand;
+
+        public AddProductCommand AddCommand
+        {
+            get { return addCommand; }
+            private set { addCommand = value; }
+        }
+        private RemoveProductCommand removeCommand;
+
+        public RemoveProductCommand RemoveCommand
+        {
+            get { return removeCommand; }
+            private set { removeCommand = value; }
+        }
+        
+        
         public InventoryViewModel()
         {
             this.productService = new ProductService(new ProductRepository());
             Brands = new BrandService(new BrandRepository()).GetAllBrands().ToArray();
+            AddCommand = new AddProductCommand(this);
+            RemoveCommand = new RemoveProductCommand(this);
+        }
+        public InventoryViewModel(IProductService productService, IBrandService brandService)
+        {
+            this.productService = productService;
+            Brands = brandService.GetAllBrands().ToArray();
         }
     }
 }
