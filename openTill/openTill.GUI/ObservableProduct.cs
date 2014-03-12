@@ -176,5 +176,26 @@ namespace openTill.GUI
                 RaisePropertyChanged("SaleItem");
             }
         }
+        public ProductDTO GetDTO()
+        {
+            return new ProductDTO
+            {
+                UPC = this.UPC,
+                CategoryListID = this.CategoryListID,
+                BrandID = this.BrandID,
+                Name = this.Name,
+                Description = this.Description,
+                StoreCost = this.StoreCost,
+                SellingPrice = this.SellingPrice,
+                MinOnHand = this.MinOnHand,
+                OnHand = this.OnHand,
+                HasDeposit = this.HasDeposit,
+                IsTaxable = this.IsTaxable,
+                MinimumAge = this.MinimumAge,
+                Brand = this.Brand,
+                CategoryList = this.CategoryList,
+                SaleItem = this.SaleItem
+            };
+        }
     }
 }
