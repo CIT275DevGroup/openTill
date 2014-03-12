@@ -63,10 +63,12 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Compile Include="Commands\AddProductCommand.cs" />
     <Compile Include="categorySelect.xaml.cs">
       <DependentUpon>categorySelect.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ChangeQtyCommand.cs" />
+    <Compile Include="Commands\ChangeQtyCommand.cs" />
+    <Compile Include="Commands\RemoveProductCommand.cs" />
     <Compile Include="enterPin.xaml.cs">
       <DependentUpon>enterPin.xaml</DependentUpon>
     </Compile>
@@ -160,6 +162,7 @@
       <Name>openTill.Persistence</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
