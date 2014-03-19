@@ -37,7 +37,10 @@ namespace openTill.GUI
         public InventoryViewModel(IProductService productService, IBrandService brandService)
         {
             this.productService = productService;
+            Products = new ObservableCollection<ObservableProduct>(this.productService.GetAllProducts().Select(x => new ObservableProduct(x)));
             Brands = brandService.GetAllBrands().ToArray();
+            AddCommand = new AddProductCommand(this);
+            RemoveCommand = new RemoveProductCommand(this);
         }
 
         /// <summary>
