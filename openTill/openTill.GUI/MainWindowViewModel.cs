@@ -13,13 +13,10 @@ namespace openTill.GUI
     /// </summary>
     public class MainWindowViewModel : ObservableObject
     {
+        private TransactionItem _selectedItem;
+        private ObservableCollection<TransactionItem> _transactionProducts = new ObservableCollection<TransactionItem>();
+        private IProductService productService;
         private ChangeQtyCommand qtyCommand;
-
-        public ChangeQtyCommand QtyCommand
-        {
-            get { return qtyCommand; }
-            private set { qtyCommand = value; }
-        }
 
         /// <summary>
         /// Default constructor, instantiates a ProductService
@@ -39,23 +36,11 @@ namespace openTill.GUI
             this.productService = productService;
         }
 
-        private IProductService productService;
-        private ObservableCollection<TransactionItem> _transactionProducts = new ObservableCollection<TransactionItem>();
-
-        /// <summary>
-        /// ObservableCollection of ProductDTO wrapped with quantity
-        /// </summary>
-        public ObservableCollection<TransactionItem> TransactionProducts
+        public ChangeQtyCommand QtyCommand
         {
-            get { return _transactionProducts; }
-            set
-            {
-                _transactionProducts = value;
-            }
+            get { return qtyCommand; }
+            private set { qtyCommand = value; }
         }
-
-        private TransactionItem _selectedItem;
-
         /// <summary>
         /// Represents currently selected item from TransactionProducts
         /// </summary>
@@ -69,6 +54,17 @@ namespace openTill.GUI
             }
         }
 
+        /// <summary>
+        /// ObservableCollection of ProductDTO wrapped with quantity
+        /// </summary>
+        public ObservableCollection<TransactionItem> TransactionProducts
+        {
+            get { return _transactionProducts; }
+            set
+            {
+                _transactionProducts = value;
+            }
+        }
         /// <summary>
         /// Uses IProductService to try and pull the product with the associated UPC, adds the product to Transaction Items if successful
         /// </summary>
@@ -91,6 +87,15 @@ namespace openTill.GUI
         }
 
         /// <summary>
+        /// Changes the quantity property of the SelectedItem
+        /// </summary>
+        /// <param name="amount">amount by which to modify the quantity of the SelectedItem</param>
+        public void ChangeItemQuantity(int amount)
+        {
+            SelectedItem.Quantity += amount;
+        }
+
+        /// <summary>
         /// Will remove the SelectedItem from TransactionItems, if not null
         /// </summary>
         public void RemoveTransactionItem()
@@ -104,15 +109,6 @@ namespace openTill.GUI
                     TransactionProducts.Remove(SelectedItem);
                 }
             }
-        }
-
-        /// <summary>
-        /// Changes the quantity property of the SelectedItem
-        /// </summary>
-        /// <param name="amount">amount by which to modify the quantity of the SelectedItem</param>
-        public void ChangeItemQuantity(int amount)
-        {
-            SelectedItem.Quantity += amount;
         }
     }
 }
