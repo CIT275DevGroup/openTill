@@ -17,17 +17,16 @@ namespace openTill.GUI.Commands
         public bool CanExecute(object parameter)
         {
             string upc = parameter as string;
-            if (viewModel.Products.Contains(viewModel.SelectedProduct) || viewModel.Products.Any(x => x.UPC == upc))
-                return false;
-            else
+            if (viewModel.ProductService.GetProductByUPC(upc) == null)
                 return true;
+            else
+                return false;
         }
 
         public event EventHandler CanExecuteChanged;
 
         public void Execute(object parameter)
         {
-            viewModel.Products.Add(viewModel.SelectedProduct);
             viewModel.ProductService.SaveProduct(viewModel.SelectedProduct.GetDTO());
         }
     }

@@ -29,7 +29,6 @@ namespace openTill.GUI
         public InventoryViewModel()
         {
             this.productService = new ProductService(new ProductRepository());
-            Products = new ObservableCollection<ObservableProduct>(productService.GetAllProducts().Select(x => new ObservableProduct(x)));
             Brands = new BrandService(new BrandRepository()).GetAllBrands().ToArray();
             AddCommand = new AddProductCommand(this);
             RemoveCommand = new RemoveProductCommand(this);
@@ -43,7 +42,6 @@ namespace openTill.GUI
         public InventoryViewModel(IProductService productService, IBrandService brandService)
         {
             this.productService = productService;
-            Products = new ObservableCollection<ObservableProduct>(this.productService.GetAllProducts().Select(x => new ObservableProduct(x)));
             Brands = brandService.GetAllBrands().ToArray();
             AddCommand = new AddProductCommand(this);
             RemoveCommand = new RemoveProductCommand(this);
@@ -65,17 +63,6 @@ namespace openTill.GUI
         {
             get { return _brands; }
             set { _brands = value; }
-        }
-        /// <summary>
-        /// Internal collection of products for use by the view
-        /// </summary>
-        public ObservableCollection<ObservableProduct> Products
-        {
-            get { return _products; }
-            set 
-            {
-                _products = value;
-            }
         }
         /// <summary>
         /// Instance of a command for removing the selected product from the Products collection

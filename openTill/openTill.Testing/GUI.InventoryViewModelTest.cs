@@ -51,7 +51,6 @@ namespace openTill.Testing
         public void InitializeTest()
         {
             Assert.IsNull(viewModel.SelectedProduct.UPC);
-            Assert.IsTrue(viewModel.Products.Any(x => x.UPC == "111"));
         }
         [TestMethod]
         public void AddProductTest()
@@ -59,7 +58,6 @@ namespace openTill.Testing
             viewModel.SelectedProduct = testProduct;
             if (viewModel.AddCommand.CanExecute(testProduct.UPC))
                 viewModel.AddCommand.Execute(null);
-            CollectionAssert.Contains(viewModel.Products, viewModel.SelectedProduct);
         }
         [TestMethod]
         public void AddDuplicateTest()
@@ -78,12 +76,15 @@ namespace openTill.Testing
                 viewModel.AddCommand.Execute(null);
             if (viewModel.RemoveCommand.CanExecute(testProduct.UPC))
                 viewModel.RemoveCommand.Execute(null);
-            CollectionAssert.DoesNotContain(viewModel.Products, testProduct);
         }
         [TestMethod]
-        public void GetProductTest()
+        public void SaveProductTest()
         {
             InventoryViewModel viewModel = new InventoryViewModel();
+            viewModel.SelectedProduct = testProduct;
+            if (viewModel.AddCommand.CanExecute(testProduct.UPC))
+                viewModel.AddCommand.Execute(null);
+            Assert.IsNotNull(viewModel.ProductService.GetProductByUPC(testProduct.UPC));
         }
     }
 }

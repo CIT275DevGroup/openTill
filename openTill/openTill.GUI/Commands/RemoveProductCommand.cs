@@ -17,7 +17,7 @@ namespace openTill.GUI.Commands
         public bool CanExecute(object parameter)
         {
             string upc = parameter as string;
-            if (viewModel.Products.Contains(viewModel.SelectedProduct) || viewModel.Products.Any(x => x.UPC == upc))
+            if (viewModel.ProductService.GetProductByUPC(upc) != null)
                 return true;
             else
                 return false;
@@ -27,7 +27,7 @@ namespace openTill.GUI.Commands
 
         public void Execute(object parameter)
         {
-            viewModel.Products.Remove(viewModel.SelectedProduct);
+            throw new NotImplementedException("Removal not implemented");
         }
     }
 }
