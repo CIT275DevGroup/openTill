@@ -17,7 +17,7 @@ namespace openTill.GUI.Commands
         public bool CanExecute(object parameter)
         {
             string upc = parameter as string;
-            if (viewModel.Products.Contains(viewModel.SelectedProduct) && !viewModel.Products.Any(x => x.UPC == upc))
+            if (viewModel.Products.Contains(viewModel.SelectedProduct) || viewModel.Products.Any(x => x.UPC == upc))
                 return false;
             else
                 return true;
