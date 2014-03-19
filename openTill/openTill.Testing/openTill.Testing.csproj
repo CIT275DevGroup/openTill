@@ -58,6 +58,7 @@
     <Compile Include="Persistence.CategoryRepositoryTest.cs" />
     <Compile Include="Persistence.ProductRepositoryTest.cs" />
     <Compile Include="GUI.MainWindowViewModelTest.cs" />
+    <Compile Include="GUI.InventoryViewModelTest.cs" />
     <Compile Include="[Section].[ClassBeingTested]Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
