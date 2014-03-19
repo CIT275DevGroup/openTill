@@ -28,6 +28,7 @@ namespace openTill.GUI.Commands
         public void Execute(object parameter)
         {
             viewModel.Products.Add(viewModel.SelectedProduct);
+            viewModel.ProductService.SaveProduct(viewModel.SelectedProduct.GetDTO());
         }
     }
 }

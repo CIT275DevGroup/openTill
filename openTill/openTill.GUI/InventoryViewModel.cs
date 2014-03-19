@@ -15,6 +15,12 @@ namespace openTill.GUI
         private ObservableProduct _selectedProduct = new ObservableProduct(new ProductDTO());
         private AddProductCommand addCommand;
         private IProductService productService;
+
+        public IProductService ProductService
+        {
+            get { return productService; }
+            private set { productService = value; }
+        }
         private RemoveProductCommand removeCommand;
 
         /// <summary>
@@ -69,7 +75,6 @@ namespace openTill.GUI
             set 
             {
                 _products = value;
-                productService.SaveProduct(SelectedProduct.GetDTO());
             }
         }
         /// <summary>
