@@ -80,5 +80,10 @@ namespace openTill.Testing
                 viewModel.RemoveCommand.Execute(null);
             CollectionAssert.DoesNotContain(viewModel.Products, testProduct);
         }
+        [TestMethod]
+        public void GetProductTest()
+        {
+            InventoryViewModel viewModel = new InventoryViewModel();
+        }
     }
 }

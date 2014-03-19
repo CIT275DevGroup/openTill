@@ -66,7 +66,11 @@ namespace openTill.GUI
         public ObservableCollection<ObservableProduct> Products
         {
             get { return _products; }
-            set { _products = value; }
+            set 
+            {
+                _products = value;
+                productService.SaveProduct(SelectedProduct.GetDTO());
+            }
         }
         /// <summary>
         /// Instance of a command for removing the selected product from the Products collection

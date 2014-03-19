@@ -72,6 +72,11 @@ namespace openTill.Domain.Services
             return productList;
         }
 
+        public void SaveProduct(ProductDTO product)
+        {
+            _productRepository.Insert(product);
+        }
+
 
         #endregion
 
