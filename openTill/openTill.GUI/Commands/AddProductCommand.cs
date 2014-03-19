@@ -17,10 +17,15 @@ namespace openTill.GUI.Commands
         public bool CanExecute(object parameter)
         {
             string upc = parameter as string;
-            if (viewModel.ProductService.GetProductByUPC(upc) == null)
-                return true;
-            else
+            try
+            {
+                viewModel.ProductService.GetProductByUPC(upc);
                 return false;
+            }
+            catch
+            {
+                return true;
+            }
         }
 
         public event EventHandler CanExecuteChanged;

@@ -24,7 +24,18 @@ namespace openTill.Testing
                 {
                     new ProductDTO()
                     {
-                        UPC = "111"
+                        UPC = "111",
+                        BrandID = 1,
+                        CategoryListID = 1,
+                        Description = "Test",
+                        IsTaxable = true,
+                        HasDeposit = true,
+                        MinimumAge = 1,
+                        Name = "Test Item",
+                        MinOnHand = 0,
+                        OnHand = 1,
+                        SellingPrice = 1,
+                        StoreCost = 2
                     }
                 });
             mockBrand = new Mock<IBrandService>();
