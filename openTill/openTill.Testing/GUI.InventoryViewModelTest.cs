@@ -70,5 +70,15 @@ namespace openTill.Testing
             bool canAddAgain = viewModel.AddCommand.CanExecute(testProduct.UPC);
             Assert.IsFalse(canAddAgain);
         }
+        [TestMethod]
+        public void RemoveProductTest()
+        {
+            viewModel.SelectedProduct = testProduct;
+            if (viewModel.AddCommand.CanExecute(testProduct.UPC))
+                viewModel.AddCommand.Execute(null);
+            if (viewModel.RemoveCommand.CanExecute(testProduct.UPC))
+                viewModel.RemoveCommand.Execute(null);
+            CollectionAssert.DoesNotContain(viewModel.Products, testProduct);
+        }
     }
 }
