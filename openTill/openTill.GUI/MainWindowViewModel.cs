@@ -1,16 +1,10 @@
-﻿using openTill.Domain.Interface;
+﻿using openTill.Domain.Interface.Service;
 using openTill.Domain.Services;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using openTill.Persistence;
-using openTill.Domain.Interface.Service;
-using System.Windows.Input;
 using openTill.GUI.Commands;
+using openTill.Persistence;
+using System;
+using System.Collections.ObjectModel;
+using System.Linq;
 
 namespace openTill.GUI
 {
@@ -35,6 +29,7 @@ namespace openTill.GUI
             this.productService = new ProductService(new ProductRepository());
             QtyCommand = new ChangeQtyCommand(this);
         }
+
         /// <summary>
         /// Constructor taking an IProductService for testing
         /// </summary>
@@ -43,8 +38,10 @@ namespace openTill.GUI
         {
             this.productService = productService;
         }
+
         private IProductService productService;
         private ObservableCollection<TransactionItem> _transactionProducts = new ObservableCollection<TransactionItem>();
+
         /// <summary>
         /// ObservableCollection of ProductDTO wrapped with quantity
         /// </summary>
@@ -56,7 +53,9 @@ namespace openTill.GUI
                 _transactionProducts = value;
             }
         }
+
         private TransactionItem _selectedItem;
+
         /// <summary>
         /// Represents currently selected item from TransactionProducts
         /// </summary>
@@ -69,6 +68,7 @@ namespace openTill.GUI
                 RaisePropertyChanged("SelectedItem");
             }
         }
+
         /// <summary>
         /// Uses IProductService to try and pull the product with the associated UPC, adds the product to Transaction Items if successful
         /// </summary>
@@ -89,6 +89,7 @@ namespace openTill.GUI
                     throw new ArgumentException("UPC: " + UPC + "Not found in the system");
             }
         }
+
         /// <summary>
         /// Will remove the SelectedItem from TransactionItems, if not null
         /// </summary>
@@ -104,6 +105,7 @@ namespace openTill.GUI
                 }
             }
         }
+
         /// <summary>
         /// Changes the quantity property of the SelectedItem
         /// </summary>

@@ -1,10 +1,6 @@
 ﻿using openTill.Domain;
 using openTill.Domain.DTO;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace openTill.GUI
 {
@@ -29,7 +25,7 @@ namespace openTill.GUI
         public string UPC
         {
             get { return _upc; }
-            set 
+            set
             {
                 _upc = value;
                 RaisePropertyChanged("UPC");
@@ -39,7 +35,7 @@ namespace openTill.GUI
         public int CategoryListID
         {
             get { return _categoryListID; }
-            set 
+            set
             {
                 _categoryListID = value;
                 RaisePropertyChanged("CategoryListID");
@@ -54,13 +50,12 @@ namespace openTill.GUI
                 _brandID = value;
                 RaisePropertyChanged("BrandID");
             }
-
         }
 
         public string Name
         {
             get { return _name; }
-            set 
+            set
             {
                 _name = value;
                 RaisePropertyChanged("Name");
@@ -70,7 +65,7 @@ namespace openTill.GUI
         public string Description
         {
             get { return _description; }
-            set 
+            set
             {
                 _description = value;
                 RaisePropertyChanged("Description");
@@ -80,7 +75,7 @@ namespace openTill.GUI
         public decimal StoreCost
         {
             get { return _storeCost; }
-            set 
+            set
             {
                 _storeCost = value;
                 RaisePropertyChanged("StoreCost");
@@ -90,7 +85,7 @@ namespace openTill.GUI
         public decimal SellingPrice
         {
             get { return _sellingPrice; }
-            set 
+            set
             {
                 _sellingPrice = value;
                 RaisePropertyChanged("SellingPrice");
@@ -100,7 +95,7 @@ namespace openTill.GUI
         public int OnHand
         {
             get { return _onHand; }
-            set 
+            set
             {
                 _onHand = value;
                 RaisePropertyChanged("OnHand");
@@ -110,7 +105,7 @@ namespace openTill.GUI
         public int MinOnHand
         {
             get { return _minOnHand; }
-            set 
+            set
             {
                 _minOnHand = value;
                 RaisePropertyChanged("MinOnHand");
@@ -120,7 +115,7 @@ namespace openTill.GUI
         public bool HasDeposit
         {
             get { return _hasDeposit; }
-            set 
+            set
             {
                 _hasDeposit = value;
                 RaisePropertyChanged("HasDeposit");
@@ -130,7 +125,7 @@ namespace openTill.GUI
         public bool IsTaxable
         {
             get { return _isTaxable; }
-            set 
+            set
             {
                 _isTaxable = value;
                 RaisePropertyChanged("IsTaxable");
@@ -140,7 +135,7 @@ namespace openTill.GUI
         public int MinimumAge
         {
             get { return _minimumAge; }
-            set 
+            set
             {
                 _minimumAge = value;
                 RaisePropertyChanged("MinimumAge");
@@ -160,7 +155,7 @@ namespace openTill.GUI
         public List<ProductCategory> CategoryList
         {
             get { return _categoryList; }
-            set 
+            set
             {
                 _categoryList = value;
                 RaisePropertyChanged("CategoryList");
@@ -170,12 +165,13 @@ namespace openTill.GUI
         public List<SaleItem> SaleItem
         {
             get { return _saleItem; }
-            set 
+            set
             {
                 _saleItem = value;
                 RaisePropertyChanged("SaleItem");
             }
         }
+
         public ProductDTO GetDTO()
         {
             return new ProductDTO
@@ -197,6 +193,7 @@ namespace openTill.GUI
                 SaleItem = this.SaleItem
             };
         }
+
         public ObservableProduct(ProductDTO dto)
         {
             UPC = dto.UPC;

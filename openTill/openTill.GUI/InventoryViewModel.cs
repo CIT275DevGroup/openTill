@@ -1,15 +1,10 @@
 ﻿using openTill.Domain.DTO;
-using openTill.Domain.Interface.Repository;
 using openTill.Domain.Interface.Service;
 using openTill.Domain.Services;
 using openTill.GUI.Commands;
 using openTill.Persistence;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace openTill.GUI
 {
@@ -23,7 +18,7 @@ namespace openTill.GUI
             get { return _brands; }
             set { _brands = value; }
         }
-        
+
         private ObservableCollection<ObservableProduct> _products;
 
         public ObservableCollection<ObservableProduct> Products
@@ -31,17 +26,19 @@ namespace openTill.GUI
             get { return _products; }
             set { _products = value; }
         }
+
         private ObservableProduct _selectedProduct = new ObservableProduct(new ProductDTO());
 
         public ObservableProduct SelectedProduct
         {
             get { return _selectedProduct; }
-            set 
+            set
             {
                 _selectedProduct = value;
                 RaisePropertyChanged("SelectedProduct");
             }
         }
+
         private AddProductCommand addCommand;
 
         public AddProductCommand AddCommand
@@ -49,6 +46,7 @@ namespace openTill.GUI
             get { return addCommand; }
             private set { addCommand = value; }
         }
+
         private RemoveProductCommand removeCommand;
 
         public RemoveProductCommand RemoveCommand
@@ -56,8 +54,7 @@ namespace openTill.GUI
             get { return removeCommand; }
             private set { removeCommand = value; }
         }
-        
-        
+
         public InventoryViewModel()
         {
             this.productService = new ProductService(new ProductRepository());
@@ -66,6 +63,7 @@ namespace openTill.GUI
             AddCommand = new AddProductCommand(this);
             RemoveCommand = new RemoveProductCommand(this);
         }
+
         public InventoryViewModel(IProductService productService, IBrandService brandService)
         {
             this.productService = productService;
