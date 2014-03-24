@@ -3,9 +3,11 @@ using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using openTill.GUI;
 using openTill.Domain.DTO;
+using openTill.Domain.Services;
 using Moq;
 using openTill.Domain.Interface.Service;
 using System.Collections.Generic;
+using openTill.Persistence;
 
 namespace openTill.Testing
 {
@@ -16,6 +18,7 @@ namespace openTill.Testing
         InventoryViewModel viewModel;
         Mock<IProductService> mockProduct;
         Mock<IBrandService> mockBrand;
+        Mock<ICategoryService> mockCategory;
         [TestInitialize]
         public void Initialize()
         {
@@ -52,11 +55,32 @@ namespace openTill.Testing
                     BrandName = "Test2"
                 }
             });
+            mockCategory = new Mock<ICategoryService>();
+            mockCategory.Setup(x => x.GetAll()).Returns(new List<CategoryDTO>() 
+            {
+                new CategoryDTO()
+                {
+                    Id = 1,
+                    Name = "Test Category",
+                    Description = "A test category"
+                },
+            });
             testProduct = new ObservableProduct(new ProductDTO
             {
-                UPC = "123"
+                UPC = "123",
+                BrandID = 1,
+                CategoryListID = 1,
+                Description = "Test",
+                IsTaxable = true,
+                HasDeposit = true,
+                MinimumAge = 1,
+                Name = "Test Item",
+                MinOnHand = 0,
+                OnHand = 1,
+                SellingPrice = 1,
+                StoreCost = 2
             });
-            viewModel = new InventoryViewModel(mockProduct.Object, mockBrand.Object);
+            viewModel = new InventoryViewModel(mockProduct.Object, mockBrand.Object, mockCategory.Object);
         }
         [TestMethod]
         public void InitializeTest()
