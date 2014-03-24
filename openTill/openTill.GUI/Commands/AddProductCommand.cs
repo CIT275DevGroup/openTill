@@ -19,7 +19,9 @@ namespace openTill.GUI.Commands
             string upc = parameter as string;
             try
             {
-                viewModel.ProductService.GetProductByUPC(upc);
+                if (viewModel.SelectedProduct.UPC == String.Empty || viewModel.SelectedProduct.UPC == null)
+                    return false;
+                viewModel.ProductService.GetProductByUPC(viewModel.SelectedProduct.UPC);
                 return false;
             }
             catch

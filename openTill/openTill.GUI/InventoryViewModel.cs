@@ -34,6 +34,7 @@ namespace openTill.GUI
             Brands = new BrandService(new BrandRepository()).GetAllBrands().ToArray();
             AddCommand = new AddProductCommand(this);
             RemoveCommand = new RemoveProductCommand(this);
+            this.SelectedProduct = new ObservableProduct(new ProductDTO() { UPC="111" });
         }
 
         /// <summary>

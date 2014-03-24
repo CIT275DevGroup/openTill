@@ -19,6 +19,11 @@ namespace openTill.Testing
         Mock<IProductService> mockProduct;
         Mock<IBrandService> mockBrand;
         Mock<ICategoryService> mockCategory;
+        [ClassInitialize]
+        public static void ClassInit(TestContext context)
+        {
+            AutomapperBootstrapper.Initialize();
+        }
         [TestInitialize]
         public void Initialize()
         {
@@ -27,7 +32,7 @@ namespace openTill.Testing
                 {
                     new ProductDTO()
                     {
-                        UPC = "111",
+                        UPC = "123",
                         BrandID = 1,
                         CategoryListID = 1,
                         Description = "Test",
@@ -67,7 +72,7 @@ namespace openTill.Testing
             });
             testProduct = new ObservableProduct(new ProductDTO
             {
-                UPC = "123",
+                UPC = "555",
                 BrandID = 1,
                 CategoryListID = 1,
                 Description = "Test",

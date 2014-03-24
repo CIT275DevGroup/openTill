@@ -70,6 +70,7 @@
     <Compile Include="Address.cs">
       <DependentUpon>openTill.tt</DependentUpon>
     </Compile>
+    <Compile Include="AutomapperBootstrapper.cs" />
     <Compile Include="Brand.cs">
       <DependentUpon>openTill.tt</DependentUpon>
     </Compile>
