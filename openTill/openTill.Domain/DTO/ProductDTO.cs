@@ -26,9 +26,7 @@ namespace openTill.Domain.DTO
         public bool HasDeposit;
         public bool IsTaxable;
         public int MinimumAge;
-        public Brand Brand;
-        public List<ProductCategory> CategoryList;
-        public List<SaleItem> SaleItem;
+        public List<CategoryDTO> CategoryList;
         #endregion
     }
 }

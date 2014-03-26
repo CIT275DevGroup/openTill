@@ -26,9 +26,7 @@ namespace openTill.Domain
         private bool _hasDeposit;
         private bool _isTaxable;
         private int _minimumAge;
-        private Brand _brand;
         private List<ProductCategory> _categoryList;
-        private List<SaleItem> _saleItem;
 
         
         
@@ -107,23 +105,10 @@ namespace openTill.Domain
             get { return _minimumAge; }
             set { _minimumAge = value; }
         }
-
-        public Brand Brand
-        {
-            get { return _brand; }
-            set { _brand = value; }
-        }
-
         public List<ProductCategory> CategoryList
         {
             get { return _categoryList; }
             set { _categoryList = value; }
-        }
-
-        public List<SaleItem> SaleItem
-        {
-            get { return _saleItem; }
-            set { _saleItem = value; }
         }
 
         #endregion

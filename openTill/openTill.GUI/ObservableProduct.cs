@@ -18,9 +18,7 @@ namespace openTill.GUI
         private bool _hasDeposit;
         private bool _isTaxable;
         private int _minimumAge;
-        private Brand _brand;
-        private List<ProductCategory> _categoryList;
-        private List<SaleItem> _saleItem;
+        private List<CategoryDTO> _categoryList;
 
         public string UPC
         {
@@ -152,15 +150,15 @@ namespace openTill.GUI
         //    }
         //}
 
-        //public List<ProductCategory> CategoryList
-        //{
-        //    get { return _categoryList; }
-        //    set
-        //    {
-        //        _categoryList = value;
-        //        RaisePropertyChanged("CategoryList");
-        //    }
-        //}
+        public List<CategoryDTO> CategoryList
+        {
+            get { return _categoryList; }
+            set
+            {
+                _categoryList = value;
+                RaisePropertyChanged("CategoryList");
+            }
+        }
 
         //public List<SaleItem> SaleItem
         //{
@@ -206,7 +204,7 @@ namespace openTill.GUI
             IsTaxable = dto.IsTaxable;
             MinimumAge = dto.MinimumAge;
             //Brand = dto.Brand;
-            //CategoryList = dto.CategoryList;
+            CategoryList = dto.CategoryList;
             //SaleItem = dto.SaleItem;
         }
     }

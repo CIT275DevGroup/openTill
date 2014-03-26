@@ -8,6 +8,7 @@ using Moq;
 using openTill.Domain.Interface.Service;
 using System.Collections.Generic;
 using openTill.Persistence;
+using AutoMapper;
 
 namespace openTill.Testing
 {
@@ -19,11 +20,11 @@ namespace openTill.Testing
         Mock<IProductService> mockProduct;
         Mock<IBrandService> mockBrand;
         Mock<ICategoryService> mockCategory;
-        [ClassInitialize]
-        public static void ClassInit(TestContext context)
-        {
-            AutomapperBootstrapper.Initialize();
-        }
+        //[ClassInitialize]
+        //public static void ClassInit(TestContext context)
+        //{
+        //    AutomapperBootstrapper.Initialize();
+        //}
         [TestInitialize]
         public void Initialize()
         {
@@ -120,11 +121,32 @@ namespace openTill.Testing
         [TestMethod]
         public void SaveProductTest()
         {
+            Mapper.CreateMap<Domain.Brand, BrandDTO>();
+            Mapper.CreateMap<Domain.Category, CategoryDTO>();
+            Mapper.CreateMap<Domain.Product, ProductDTO>();
+            Mapper.CreateMap<Domain.ProductCategory, ProductCategoryDTO>();
+            Mapper.CreateMap<BrandDTO, Domain.Brand>();
+            Mapper.CreateMap<CategoryDTO, Domain.Category>();
+            Mapper.CreateMap<ProductDTO, Domain.Product>();
+            Mapper.CreateMap<ProductCategoryDTO, Domain.ProductCategory>();
+            Mapper.CreateMap<openTill.Persistence.Product, ProductDTO>();
+            Mapper.CreateMap<openTill.Persistence.Brand, BrandDTO>();
+            Mapper.CreateMap<openTill.Persistence.Category, CategoryDTO>();
+            Mapper.CreateMap<openTill.Persistence.Employee, EmployeeDTO>();
+            Mapper.CreateMap<ProductDTO, openTill.Persistence.Product>();
+            Mapper.CreateMap<BrandDTO, openTill.Persistence.Brand>();
+            Mapper.CreateMap<CategoryDTO, openTill.Persistence.Category>();
+            Mapper.CreateMap<EmployeeDTO, openTill.Persistence.Employee>();
+
             InventoryViewModel viewModel = new InventoryViewModel();
             viewModel.SelectedProduct = testProduct;
             if (viewModel.AddCommand.CanExecute(testProduct.UPC))
                 viewModel.AddCommand.Execute(null);
             Assert.IsNotNull(viewModel.ProductService.GetProductByUPC(testProduct.UPC));
+            if (viewModel.RemoveCommand.CanExecute(testProduct.UPC))
+                viewModel.RemoveCommand.Execute(null);
+            Assert.IsFalse(viewModel.ProductService.GetAllProducts().Any(x => x.UPC == testProduct.UPC));
         }
+
     }
 }
