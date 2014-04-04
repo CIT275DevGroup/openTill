@@ -23,57 +23,5 @@ namespace openTill.GUI
 		{
             InitializeComponent();
 		}
-
-        private void btnEditInv_Click(object sender, RoutedEventArgs e)
-        {
-            //EditInventory ei = new EditInventory();
-
-            //ei.ShowDialog();
-			lblContextName.Content = "EDIT ITEM";
-        }
-
-		private void btnAddInv_Click(object sender, RoutedEventArgs e)
-		{
-			lblContextName.Content = "ADD ITEM";
-		}
-
-		private void btnRemoveInv_Click(object sender, RoutedEventArgs e)
-		{
-			lblContextName.Content = "REMOVE ITEM";
-		}
-
-		private void btnFindItem_Click(object sender, RoutedEventArgs e)
-		{
-			lblContextName.Content = "FIND ITEM";
-		}
-
-		private void btnChooseCat_Click(object sender, RoutedEventArgs e)
-		{
-			categorySelect catSel = new categorySelect();
-
-			catSel.ShowDialog();
-		}
-
-		private void btnInvClear_Click(object sender, RoutedEventArgs e)
-		{
-			txtItemName.Clear();
-			txtItemDescription.Clear();
-			txtUPC.Clear();
-			txtStorePrice.Clear();
-			cboItem_Brand.SelectedIndex = 0;
-			txtSellingPrice.Clear();
-			txtOnHand.Clear();
-			Radbtn_NoDeposit_Copy.IsChecked = true;
-			Radbtn_YesDeposit.IsChecked = false;
-			Radbtn_YesTaxble.IsChecked = true;
-			Radbtn_NoTaxble.IsChecked = false;
-			txtMinAge.Clear();
-
-		}
-
-		private void btnAddInv_Copy_Click(object sender, RoutedEventArgs e)
-		{
-
-		}
 	}
 }
