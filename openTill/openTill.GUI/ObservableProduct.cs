@@ -18,9 +18,7 @@ namespace openTill.GUI
         private bool _hasDeposit;
         private bool _isTaxable;
         private int _minimumAge;
-        private Brand _brand;
-        private List<ProductCategory> _categoryList;
-        private List<SaleItem> _saleItem;
+        private List<CategoryDTO> _categoryList;
 
         public string UPC
         {
@@ -142,17 +140,17 @@ namespace openTill.GUI
             }
         }
 
-        public Brand Brand
-        {
-            get { return _brand; }
-            set
-            {
-                _brand = value;
-                RaisePropertyChanged("Brand");
-            }
-        }
+        //public Brand Brand
+        //{
+        //    get { return _brand; }
+        //    set
+        //    {
+        //        _brand = value;
+        //        RaisePropertyChanged("Brand");
+        //    }
+        //}
 
-        public List<ProductCategory> CategoryList
+        public List<CategoryDTO> CategoryList
         {
             get { return _categoryList; }
             set
@@ -162,15 +160,15 @@ namespace openTill.GUI
             }
         }
 
-        public List<SaleItem> SaleItem
-        {
-            get { return _saleItem; }
-            set
-            {
-                _saleItem = value;
-                RaisePropertyChanged("SaleItem");
-            }
-        }
+        //public List<SaleItem> SaleItem
+        //{
+        //    get { return _saleItem; }
+        //    set
+        //    {
+        //        _saleItem = value;
+        //        RaisePropertyChanged("SaleItem");
+        //    }
+        //}
 
         public ProductDTO GetDTO()
         {
@@ -188,9 +186,6 @@ namespace openTill.GUI
                 HasDeposit = this.HasDeposit,
                 IsTaxable = this.IsTaxable,
                 MinimumAge = this.MinimumAge,
-                Brand = this.Brand,
-                CategoryList = this.CategoryList,
-                SaleItem = this.SaleItem
             };
         }
 
@@ -208,9 +203,9 @@ namespace openTill.GUI
             HasDeposit = dto.HasDeposit;
             IsTaxable = dto.IsTaxable;
             MinimumAge = dto.MinimumAge;
-            Brand = dto.Brand;
+            //Brand = dto.Brand;
             CategoryList = dto.CategoryList;
-            SaleItem = dto.SaleItem;
+            //SaleItem = dto.SaleItem;
         }
     }
 }

@@ -25,5 +25,7 @@ namespace openTill.Domain.Interface.Service
         /// <returns>Returns a list of Product Data Transfer Objects.</returns>
         List<ProductDTO> GetProductsByBrand(string givenBrand);
         void SaveProduct(ProductDTO product);
+
+        void RemoveProduct(ProductDTO product);
     }
 }

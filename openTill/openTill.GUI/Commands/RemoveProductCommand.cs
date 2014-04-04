@@ -27,7 +27,7 @@ namespace openTill.GUI.Commands
 
         public void Execute(object parameter)
         {
-            throw new NotImplementedException("Removal not implemented");
+            viewModel.ProductService.RemoveProduct(viewModel.SelectedProduct.GetDTO());
         }
     }
 }

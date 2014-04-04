@@ -11,10 +11,11 @@ namespace openTill.GUI
     public class InventoryViewModel : ObservableObject
     {
         private BrandDTO[] _brands;
-        private ObservableCollection<ObservableProduct> _products;
+        private CategoryDTO[] _categories;
         private ObservableProduct _selectedProduct = new ObservableProduct(new ProductDTO());
         private AddProductCommand addCommand;
         private IProductService productService;
+        private ICategoryService categoryService;
 
         public IProductService ProductService
         {
@@ -29,9 +30,11 @@ namespace openTill.GUI
         public InventoryViewModel()
         {
             this.productService = new ProductService(new ProductRepository());
+            this.categoryService = new CategoryService(new CategoryRepository());
             Brands = new BrandService(new BrandRepository()).GetAllBrands().ToArray();
             AddCommand = new AddProductCommand(this);
             RemoveCommand = new RemoveProductCommand(this);
+            this.SelectedProduct = new ObservableProduct(new ProductDTO() { UPC="111" });
         }
 
         /// <summary>
@@ -39,7 +42,7 @@ namespace openTill.GUI
         /// </summary>
         /// <param name="productService">an object that implements IProductService</param>
         /// <param name="brandService">an object that implements IBrandService</param>
-        public InventoryViewModel(IProductService productService, IBrandService brandService)
+        public InventoryViewModel(IProductService productService, IBrandService brandService, ICategoryService categoryService)
         {
             this.productService = productService;
             Brands = brandService.GetAllBrands().ToArray();
@@ -64,6 +67,10 @@ namespace openTill.GUI
             get { return _brands; }
             set { _brands = value; }
         }
+        /// <summary>
+        /// Array of categories for use in category selection, assignment, and creation
+        /// </summary>
+        public CategoryDTO[] Categories { get { return _categories; } set { _categories = value; } }
         /// <summary>
         /// Instance of a command for removing the selected product from the Products collection
         /// </summary>

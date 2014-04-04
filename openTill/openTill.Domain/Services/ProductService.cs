@@ -71,12 +71,22 @@ namespace openTill.Domain.Services
             var productList = Mapper.Map<List<ProductDTO>>(_productRepository.GetByBrand(givenBrand));
             return productList;
         }
-
+        /// <summary>
+        /// DANGER ZONE
+        /// </summary>
+        /// <param name="product">HIGHWAY TO THE DANGER ZONE</param>
         public void SaveProduct(ProductDTO product)
         {
             _productRepository.Insert(product);
         }
-
+        /// <summary>
+        /// APPEAZE THE DATABASE OVERLORDS
+        /// </summary>
+        /// <param name="product">LAAAAAANNNNAAAAAA</param>
+        public void RemoveProduct(ProductDTO product)
+        {
+            _productRepository.Delete(product);
+        }
 
         #endregion
 

@@ -19,7 +19,11 @@ namespace openTill.GUI.Commands
             string upc = parameter as string;
             try
             {
-                viewModel.ProductService.GetProductByUPC(upc);
+                if (viewModel.SelectedProduct.UPC == String.Empty || viewModel.SelectedProduct.UPC == null)
+                    return false;
+                // THIS IS HERE BECAUSE I CODE SHITELY (MW recommends Poorly, you decide)
+                //Also because if it throws an error it found no matching upcs and will procede to the catch and return true
+                viewModel.ProductService.GetProductByUPC(viewModel.SelectedProduct.UPC);
                 return false;
             }
             catch
