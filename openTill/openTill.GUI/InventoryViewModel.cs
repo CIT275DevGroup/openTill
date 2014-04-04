@@ -3,6 +3,7 @@ using openTill.Domain.Interface.Service;
 using openTill.Domain.Services;
 using openTill.GUI.Commands;
 using openTill.Persistence;
+using System;
 using System.Collections.ObjectModel;
 using System.Linq;
 
@@ -13,7 +14,7 @@ namespace openTill.GUI
         private BrandDTO[] _brands;
         private CategoryDTO[] _categories;
         private ObservableProduct _selectedProduct = new ObservableProduct(new ProductDTO());
-        private AddProductCommand addCommand;
+        private ActionCommand addCommand;
         private IProductService productService;
         private ICategoryService categoryService;
 
@@ -32,7 +33,7 @@ namespace openTill.GUI
             this.productService = new ProductService(new ProductRepository());
             this.categoryService = new CategoryService(new CategoryRepository());
             Brands = new BrandService(new BrandRepository()).GetAllBrands().ToArray();
-            AddCommand = new AddProductCommand(this);
+            AddCommand = new ActionCommand(CanAddProduct, AddProduct);
             RemoveCommand = new RemoveProductCommand(this);
             this.SelectedProduct = new ObservableProduct(new ProductDTO() { UPC="111" });
         }
@@ -46,17 +47,38 @@ namespace openTill.GUI
         {
             this.productService = productService;
             Brands = brandService.GetAllBrands().ToArray();
-            AddCommand = new AddProductCommand(this);
+            AddCommand = new ActionCommand(CanAddProduct, AddProduct);
             RemoveCommand = new RemoveProductCommand(this);
         }
 
         /// <summary>
         /// Instance of a command for adding the selected product to Products collection
         /// </summary>
-        public AddProductCommand AddCommand
+        public ActionCommand AddCommand
         {
             get { return addCommand; }
             private set { addCommand = value; }
+        }
+        private bool CanAddProduct()
+        {
+            try
+            {
+                if (SelectedProduct.UPC == String.Empty || SelectedProduct.UPC == null)
+                    return false;
+                // THIS IS HERE BECAUSE I CODE SHITELY (MW recommends Poorly, you decide)
+                //Also because if it throws an error it found no matching upcs and will procede to the catch and return true
+                ProductService.GetProductByUPC(SelectedProduct.UPC);
+                return false;
+            }
+            catch
+            {
+                return true;
+            }
+        }
+        private void AddProduct()
+        {
+            ProductService.SaveProduct(SelectedProduct.GetDTO());
+            SelectedProduct = new ObservableProduct();
         }
 
         /// <summary>

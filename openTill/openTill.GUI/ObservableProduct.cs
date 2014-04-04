@@ -1,5 +1,6 @@
 ﻿using openTill.Domain;
 using openTill.Domain.DTO;
+using System;
 using System.Collections.Generic;
 
 namespace openTill.GUI
@@ -187,6 +188,21 @@ namespace openTill.GUI
                 IsTaxable = this.IsTaxable,
                 MinimumAge = this.MinimumAge,
             };
+        }
+        public ObservableProduct()
+        {
+            UPC = String.Empty;
+            CategoryListID = 0;
+            BrandID = 0;
+            Name = String.Empty;
+            Description = String.Empty;
+            StoreCost = 0;
+            SellingPrice = 0;
+            MinOnHand = 0;
+            OnHand = 0;
+            HasDeposit = false;
+            IsTaxable = false;
+            MinimumAge = 0;
         }
 
         public ObservableProduct(ProductDTO dto)

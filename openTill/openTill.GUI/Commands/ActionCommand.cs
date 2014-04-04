@@ -7,38 +7,38 @@ using System.Windows.Input;
 
 namespace openTill.GUI.Commands
 {
-    class ParamCommand : ICommand
+    class ActionCommand : ICommand
     {
-        private Func<object,bool> canExecuteDelegate;
+        private Func<bool> canExecuteDelegate;
 
-        public Func<object,bool> CanExecuteDelegate
+        public Func<bool> CanExecuteDelegate
         {
             get { return canExecuteDelegate; }
             set { canExecuteDelegate = value; }
         }
-        private Action<object> executeDelegate;
+        private Action executeDelegate;
 
-        public Action<object> ExecuteDelegate
+        public Action ExecuteDelegate
         {
             get { return executeDelegate; }
             set { executeDelegate = value; }
         }
         
-        public ParamCommand(Func<object,bool> canExecute, Action<object> execute)
+        public ActionCommand(Func<bool> canExecute, Action execute)
         {
             CanExecuteDelegate = canExecute;
             ExecuteDelegate = execute;
         }
         public bool CanExecute(object parameter)
         {
-            return CanExecuteDelegate.Invoke(parameter);
+            return CanExecuteDelegate.Invoke();
         }
 
         public event EventHandler CanExecuteChanged;
 
         public void Execute(object parameter)
         {
-            ExecuteDelegate.Invoke(parameter);
+            ExecuteDelegate.Invoke();
         }
     }
 }
