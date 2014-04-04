@@ -35,7 +35,7 @@ namespace openTill.Testing
                         MinOnHand = 0,
                         OnHand = 1,
                         SellingPrice = 1,
-                        StoreCost = 2
+                        StoreCost = 2,
                     }
                 });
             mockBrand = new Mock<IBrandService>();

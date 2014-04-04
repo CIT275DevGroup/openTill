@@ -84,6 +84,7 @@
       <DependentUpon>categorySelect.xaml</DependentUpon>
     </Compile>
     <Compile Include="Commands\ChangeQtyCommand.cs" />
+    <Compile Include="Commands\ParamCommand.cs" />
     <Compile Include="Commands\RemoveProductCommand.cs" />
     <Compile Include="enterPin.xaml.cs">
       <DependentUpon>enterPin.xaml</DependentUpon>
