@@ -23,7 +23,7 @@ namespace openTill.GUI
             get { return productService; }
             private set { productService = value; }
         }
-        private RemoveProductCommand removeCommand;
+        private ActionCommand removeCommand;
 
         /// <summary>
         /// Default constructor, hooks up to the product and brand services from openTill.Domain
@@ -34,7 +34,7 @@ namespace openTill.GUI
             this.categoryService = new CategoryService(new CategoryRepository());
             Brands = new BrandService(new BrandRepository()).GetAllBrands().ToArray();
             AddCommand = new ActionCommand(CanAddProduct, AddProduct);
-            RemoveCommand = new RemoveProductCommand(this);
+            RemoveCommand = new ActionCommand(CanRemoveProduct, RemoveProduct);
             this.SelectedProduct = new ObservableProduct(new ProductDTO() { UPC="111" });
         }
 
@@ -48,7 +48,7 @@ namespace openTill.GUI
             this.productService = productService;
             Brands = brandService.GetAllBrands().ToArray();
             AddCommand = new ActionCommand(CanAddProduct, AddProduct);
-            RemoveCommand = new RemoveProductCommand(this);
+            RemoveCommand = new ActionCommand(CanRemoveProduct, RemoveProduct);
         }
 
         /// <summary>
@@ -80,7 +80,26 @@ namespace openTill.GUI
             ProductService.SaveProduct(SelectedProduct.GetDTO());
             SelectedProduct = new ObservableProduct();
         }
-
+        private bool CanRemoveProduct()
+        {
+            try
+            {
+                if (SelectedProduct.UPC == String.Empty || SelectedProduct.UPC == null)
+                    return false;
+                // THIS IS HERE BECAUSE I CODE SHITELY (MW recommends Poorly, you decide)
+                //Also because if it throws an error it found no matching upcs and will procede to the catch and return true
+                ProductService.GetProductByUPC(SelectedProduct.UPC);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        private void RemoveProduct()
+        {
+            ProductService.RemoveProduct(SelectedProduct.GetDTO());
+        }
         /// <summary>
         /// List of brands for use in product dropdown
         /// </summary>
@@ -96,7 +115,7 @@ namespace openTill.GUI
         /// <summary>
         /// Instance of a command for removing the selected product from the Products collection
         /// </summary>
-        public RemoveProductCommand RemoveCommand
+        public ActionCommand RemoveCommand
         {
             get { return removeCommand; }
             private set { removeCommand = value; }

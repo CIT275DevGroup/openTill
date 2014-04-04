@@ -7,7 +7,7 @@ using System.Windows.Input;
 
 namespace openTill.GUI.Commands
 {
-    class ParamCommand : ICommand
+    public class ParamCommand : ICommand
     {
         private Func<object,bool> canExecuteDelegate;
 
