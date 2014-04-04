@@ -20,11 +20,11 @@ namespace openTill.Testing
         Mock<IProductService> mockProduct;
         Mock<IBrandService> mockBrand;
         Mock<ICategoryService> mockCategory;
-        //[ClassInitialize]
-        //public static void ClassInit(TestContext context)
-        //{
-        //    AutomapperBootstrapper.Initialize();
-        //}
+        [ClassInitialize]
+        public static void ClassInit(TestContext context)
+        {
+            AutomapperBootstrapper.Initialize();
+        }
         [TestInitialize]
         public void Initialize()
         {
@@ -94,14 +94,14 @@ namespace openTill.Testing
             Assert.IsNull(viewModel.SelectedProduct.UPC);
         }
         [TestMethod]
-        public void AddProductTest()
+        public void MockAddProductTest()
         {
             viewModel.SelectedProduct = testProduct;
             if (viewModel.AddCommand.CanExecute(testProduct.UPC))
                 viewModel.AddCommand.Execute(null);
         }
         [TestMethod]
-        public void AddDuplicateTest()
+        public void MockAddDuplicateTest()
         {
             viewModel.SelectedProduct = testProduct;
             if (viewModel.AddCommand.CanExecute(testProduct.UPC))
@@ -110,7 +110,7 @@ namespace openTill.Testing
             Assert.IsFalse(canAddAgain);
         }
         [TestMethod]
-        public void RemoveProductTest()
+        public void MockRemoveProductTest()
         {
             viewModel.SelectedProduct = testProduct;
             if (viewModel.AddCommand.CanExecute(testProduct.UPC))
@@ -119,25 +119,8 @@ namespace openTill.Testing
                 viewModel.RemoveCommand.Execute(null);
         }
         [TestMethod]
-        public void SaveProductTest()
+        public void AddRemoveProductTest()
         {
-            Mapper.CreateMap<Domain.Brand, BrandDTO>();
-            Mapper.CreateMap<Domain.Category, CategoryDTO>();
-            Mapper.CreateMap<Domain.Product, ProductDTO>();
-            Mapper.CreateMap<Domain.ProductCategory, ProductCategoryDTO>();
-            Mapper.CreateMap<BrandDTO, Domain.Brand>();
-            Mapper.CreateMap<CategoryDTO, Domain.Category>();
-            Mapper.CreateMap<ProductDTO, Domain.Product>();
-            Mapper.CreateMap<ProductCategoryDTO, Domain.ProductCategory>();
-            Mapper.CreateMap<openTill.Persistence.Product, ProductDTO>();
-            Mapper.CreateMap<openTill.Persistence.Brand, BrandDTO>();
-            Mapper.CreateMap<openTill.Persistence.Category, CategoryDTO>();
-            Mapper.CreateMap<openTill.Persistence.Employee, EmployeeDTO>();
-            Mapper.CreateMap<ProductDTO, openTill.Persistence.Product>();
-            Mapper.CreateMap<BrandDTO, openTill.Persistence.Brand>();
-            Mapper.CreateMap<CategoryDTO, openTill.Persistence.Category>();
-            Mapper.CreateMap<EmployeeDTO, openTill.Persistence.Employee>();
-
             InventoryViewModel viewModel = new InventoryViewModel();
             viewModel.SelectedProduct = testProduct;
             if (viewModel.AddCommand.CanExecute(testProduct.UPC))
