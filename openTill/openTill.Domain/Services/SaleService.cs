@@ -16,7 +16,9 @@ using openTill.Domain.Interface.Service;
 
 namespace openTill.Domain.Services
 {
-    
+    /// <summary>
+    /// A road map to perform the CRUD operations for a Sale object.
+    /// </summary>   
     public class SaleService : ISaleService
     {
         #region fields
@@ -26,7 +28,10 @@ namespace openTill.Domain.Services
         #endregion
 
         #region Constructors
-
+        /// <summary>
+        /// A constructor that requires a repository as a parameter.
+        /// </summary>
+        /// <param name="saleRepository">Repository to be used.</param>
         public SaleService(ISaleRepository saleRepository)
         {
             _saleRepository = saleRepository;
@@ -78,9 +83,6 @@ namespace openTill.Domain.Services
             sale.Total = saleTotal;
             return sale;
         }
-
         #endregion
-    }
-
-     
+    }     
 }

@@ -8,8 +8,14 @@ using System.Threading.Tasks;
 
 namespace openTill.Persistence
 {
+    /// <summary>
+    /// A class the initializes a method that makes CRUD operations possible throughout the entire program.
+    /// </summary>
     public static class AutomapperBootstrapper
     {
+        /// <summary>
+        /// Creates the road maps for CRUD operations throughout the entire program
+        /// </summary>
         public static void Initialize()
         {
             Mapper.CreateMap<openTill.Persistence.Product, ProductDTO>();

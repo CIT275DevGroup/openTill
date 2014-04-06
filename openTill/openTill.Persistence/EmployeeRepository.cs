@@ -13,7 +13,11 @@ namespace openTill.Persistence
     // Author: Ryan Redburn
     // Project: openTill
     // Date: 3/5/2014
+    // Revisions: 4/6/2014 Added Documentation | Curtis Reinhold
 
+    /// <summary>
+    /// A class that actually performs the CRUD operations for an Employee. 
+    /// </summary>
     public sealed class EmployeeRepository : IEmployeeRepository
     {
         #region [ Methods ]

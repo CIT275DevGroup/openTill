@@ -16,10 +16,13 @@ namespace openTill.Persistence
 
     // Author: Ryan Redburn
     // Date: 3/4/2014
-    // Revisions: Fixed minor logic and spelling errors. Added some additional exception handling. 
+    // Revisions: Fixed minor logic and spelling errors. Added some additional exception handling.
+    // Revisions: 4/6/2014 Added Some Documentation | Curtis Reinhold
 
     #endregion
-
+    /// <summary>
+    /// The class that actually performs the CRUD operations of a Brand.
+    /// </summary>
     public sealed class BrandRepository : IBrandRepository
     {
         #region [ Methods ]

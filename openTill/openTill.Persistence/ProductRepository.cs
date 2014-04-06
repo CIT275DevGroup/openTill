@@ -16,10 +16,13 @@ namespace openTill.Persistence
 
     // Author: Ryan Redburn
     // Date: 3/4/2014
-    // Revisions: Fixed minor logic and spelling errors. Added some additional exception handling. 
+    // Revisions: Fixed minor logic and spelling errors. Added some additional exception handling.
+    // Revisions: 4/6/2014 Added Documentation | Curtis Reinhold
 
     #endregion
-
+    /// <summary>
+    /// A class that actually perform the CRUD operations of a Product.
+    /// </summary>
     public sealed class ProductRepository : IProductRepository
     {
         #region [ Methods ]

@@ -10,12 +10,15 @@ using System.Threading.Tasks;
 //Author:  Morgan W. Davis III
 //Project:  openTill Point of Sale System
 //Date:  24 Feb 2014
-//Revisions:
+//Revisions: 4/6/2014 Added Some Documentation | Curtis Reinhold
 using openTill.Domain.Interface.Repository;
 using openTill.Domain.Interface.Service;
 
 namespace openTill.Domain.Services
 {
+    /// <summary>
+    /// A road map to perform the CRUD operations for an Employee
+    /// </summary>
     public class EmployeeService : IEmployeeService
     {
         #region Fields
@@ -57,7 +60,6 @@ namespace openTill.Domain.Services
             authenticate = _employeeRepository.ValidateUser(userName, password);
             return authenticate;
         }
-
         #endregion
     }
 }

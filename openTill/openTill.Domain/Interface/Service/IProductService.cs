@@ -1,8 +1,13 @@
 ﻿using System.Collections.Generic;
 using openTill.Domain.DTO;
 
+// Revision: 4/6/2014 Added some Documentation | Curtis Reinhold
+
 namespace openTill.Domain.Interface.Service
 {
+    /// <summary>
+    /// An interface that calls on the IProductRepository to perform CRUD operations.
+    /// </summary>
     public interface IProductService
     {
         /// <summary>
