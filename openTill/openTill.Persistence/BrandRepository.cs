@@ -54,7 +54,7 @@ namespace openTill.Persistence
             using (var context = new openTillEntities())
             {
                 // Throws an exception if a brand with the given name already exists
-                if (context.Brands.SingleOrDefault(b => b.Name == newBrand.BrandName) != null)
+                if (context.Brands.SingleOrDefault(b => b.Name == newBrand.Name) != null)
                     throw new InvalidOperationException("A brand with the given brand name already exists.");
 
                 context.Brands.Add(Mapper.Map<Brand>(newBrand));
@@ -82,11 +82,11 @@ namespace openTill.Persistence
                     throw new InvalidOperationException("No entry matching the given brand was found.");
 
                 // Throws an exception if a brand with the given name already exists
-                if (context.Brands.SingleOrDefault(b => b.Name == brandUpdate.BrandName) != null)
+                if (context.Brands.SingleOrDefault(b => b.Name == brandUpdate.Name) != null)
                     throw new InvalidOperationException("A brand with the given brand name already exists.");
 
                 // Update existing brand
-                brand.Name = brandUpdate.BrandName;
+                brand.Name = brandUpdate.Name;
 
                 context.SaveChanges();
             }

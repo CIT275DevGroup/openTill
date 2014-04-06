@@ -15,7 +15,7 @@ namespace openTill.Domain.DTO
     {
         #region Properties
         public int Id;
-        public string BrandName;
+        public string Name;
         #endregion
     }
 }
