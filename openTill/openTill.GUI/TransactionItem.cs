@@ -1,4 +1,6 @@
-﻿using openTill.Domain.DTO;
+﻿using GalaSoft.MvvmLight;
+using openTill.Domain.DTO;
+using openTill.GUI.Models;
 
 namespace openTill.GUI
 {
@@ -7,33 +9,48 @@ namespace openTill.GUI
     /// </summary>
     public class TransactionItem : ObservableObject
     {
-        private ProductDTO _item;
+        /// <summary>
+        /// The <see cref="Item" /> property's name.
+        /// </summary>
+        public const string ItemPropertyName = "Item";
+
+        private ObservableProduct _item;
 
         /// <summary>
-        /// The ProductDTO associated with this TransactionItem
+        /// Sets and gets the Item property.
+        /// Changes to that property's value raise the PropertyChanged event. 
         /// </summary>
-        public ProductDTO Item
+        public ObservableProduct Item
         {
-            get { return _item; }
+            get
+            {
+                return _item;
+            }
             set
             {
-                _item = value;
-                RaisePropertyChanged("Item");
+                Set(ItemPropertyName, ref _item, value);
             }
         }
+        /// <summary>
+        /// The <see cref="Quantity" /> property's name.
+        /// </summary>
+        public const string QuantityPropertyName = "Quantity";
 
-        private int _quantity = 1;
+        private int _quantity;
 
         /// <summary>
-        /// The quantity of the ProductDTO represented by this object
+        /// Sets and gets the Quantity property.
+        /// Changes to that property's value raise the PropertyChanged event. 
         /// </summary>
         public int Quantity
         {
-            get { return _quantity; }
+            get
+            {
+                return _quantity;
+            }
             set
             {
-                _quantity = value;
-                RaisePropertyChanged("Quantity");
+                Set(QuantityPropertyName, ref _quantity, value);
             }
         }
 
@@ -43,7 +60,7 @@ namespace openTill.GUI
         /// <param name="item">the ProductDTO this object will represent</param>
         public TransactionItem(ProductDTO item)
         {
-            _item = item;
+            Item = new ObservableProduct(item);
         }
     }
 }

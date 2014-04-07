@@ -9,6 +9,8 @@ using openTill.Domain.Interface.Service;
 using System.Collections.Generic;
 using openTill.Persistence;
 using AutoMapper;
+using openTill.GUI.Models;
+using openTill.GUI.ViewModel;
 
 namespace openTill.Testing
 {
@@ -53,12 +55,12 @@ namespace openTill.Testing
                 new BrandDTO()
                 {
                     Id = 1,
-                    BrandName = "Test1"
+                    Name = "Test1"
                 },
                 new BrandDTO()
                 {
                     Id = 2,
-                    BrandName = "Test2"
+                    Name = "Test2"
                 }
             });
             mockCategory = new Mock<ICategoryService>();
