@@ -1,7 +1,9 @@
-﻿using openTill.Domain.DTO;
+﻿using GalaSoft.MvvmLight;
+using openTill.Domain.DTO;
 using openTill.Domain.Interface.Service;
 using openTill.Domain.Services;
 using openTill.GUI.Commands;
+using openTill.GUI.Models;
 using openTill.Persistence;
 using System;
 using System.Collections.ObjectModel;
@@ -9,7 +11,7 @@ using System.Linq;
 
 namespace openTill.GUI
 {
-    public class InventoryViewModel : ObservableObject
+    public class InventoryViewModel : ViewModelBase
     {
         private BrandDTO[] _brands;
         private CategoryDTO[] _categories;

@@ -1,4 +1,5 @@
-﻿using openTill.Domain.Interface.Service;
+﻿using GalaSoft.MvvmLight;
+using openTill.Domain.Interface.Service;
 using openTill.Domain.Services;
 using openTill.GUI.Commands;
 using openTill.Persistence;
@@ -11,7 +12,7 @@ namespace openTill.GUI
     /// <summary>
     /// Contains state and commands for the Main Window
     /// </summary>
-    public class MainWindowViewModel : ObservableObject
+    public class MainWindowViewModel : ViewModelBase
     {
         private TransactionItem _selectedItem;
         private ObservableCollection<TransactionItem> _transactionProducts = new ObservableCollection<TransactionItem>();

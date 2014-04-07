@@ -1,4 +1,5 @@
-﻿using openTill.Domain.DTO;
+﻿using GalaSoft.MvvmLight;
+using openTill.Domain.DTO;
 
 namespace openTill.GUI
 {
