@@ -114,12 +114,16 @@
                 <Button Content="Update Product" FontSize="18" Padding="5" Margin="5" Command="{Binding UpdateCommand}" DockPanel.Dock="Right"/>
             </DockPanel>
         </Grid>
+        
         <DockPanel Grid.Row="1" Grid.Column="1" LastChildFill="True" Margin="5">
+            
             <TextBlock Text="Products" FontSize="24" HorizontalAlignment="Center" DockPanel.Dock="Top"/>
+            
             <DockPanel DockPanel.Dock="Top" LastChildFill="True">
                 <TextBlock Text="Search:" FontSize="18" VerticalAlignment="Center"/>
                 <TextBox FontSize="18" Padding="5" Margin="5" Text="Not Yet Functional" IsEnabled="False"/>
             </DockPanel>
+            
             <ItemsControl ItemsSource="{Binding Products}">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
