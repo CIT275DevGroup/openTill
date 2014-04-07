@@ -23,7 +23,7 @@ namespace openTill.GUI.ViewModel
     /// See http://www.galasoft.ch/mvvm
     /// </para>
     /// </summary>
-    public class MainViewModel : ViewModelBase
+    public class InventoryViewModel : ViewModelBase
     {
         /// <summary>
         /// The <see cref="Brands" /> property's name.
@@ -63,7 +63,7 @@ namespace openTill.GUI.ViewModel
         /// <summary>
         /// Initializes a new instance of the MainViewModel class.
         /// </summary>
-        public MainViewModel()
+        public InventoryViewModel()
         {
             AutomapperBootstrapper.Initialize();
             productService = ServiceLocator.Current.GetInstance<IProductService>();
