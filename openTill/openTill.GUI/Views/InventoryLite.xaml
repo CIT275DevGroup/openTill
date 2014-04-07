@@ -56,7 +56,9 @@
             <ComboBox Grid.Row="4" Grid.Column="1" FontSize="18" Margin="5" ItemsSource="{Binding Categories}" SelectedValuePath="Id" SelectedValue="{Binding SelectedProduct.CategoryListID}">
                 <ComboBox.ItemTemplate>
                     <DataTemplate>
-                        <TextBlock Text="{Binding Name}"/>
+                        <Grid>
+                            <TextBlock Text="{Binding Name}"/>
+                        </Grid>
                     </DataTemplate>
                 </ComboBox.ItemTemplate>
             </ComboBox>
@@ -99,7 +101,7 @@
                 <TextBlock Grid.Column="2" Text="Taxable:" FontSize="18" VerticalAlignment="Center"/>
                 <CheckBox Grid.Column="3" VerticalAlignment="Center" Margin="5,8,5,5" HorizontalAlignment="Center" IsChecked="{Binding SelectedProduct.IsTaxable}"/>
             </Grid>
-            
+
             <Grid Grid.Row="7" Grid.Column="1">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
@@ -114,16 +116,16 @@
                 <Button Content="Update Product" FontSize="18" Padding="5" Margin="5" Command="{Binding UpdateCommand}" DockPanel.Dock="Right"/>
             </DockPanel>
         </Grid>
-        
+
         <DockPanel Grid.Row="1" Grid.Column="1" LastChildFill="True" Margin="5">
-            
+
             <TextBlock Text="Products" FontSize="24" HorizontalAlignment="Center" DockPanel.Dock="Top"/>
-            
+
             <DockPanel DockPanel.Dock="Top" LastChildFill="True">
                 <TextBlock Text="Search:" FontSize="18" VerticalAlignment="Center"/>
                 <TextBox FontSize="18" Padding="5" Margin="5" Text="Not Yet Functional" IsEnabled="False"/>
             </DockPanel>
-            
+
             <ItemsControl ItemsSource="{Binding Products}">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
@@ -132,10 +134,12 @@
                                 <ColumnDefinition/>
                                 <ColumnDefinition/>
                                 <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
                             <TextBlock Text="{Binding UPC}" Grid.Column="0" FontSize="18" VerticalAlignment="Center"/>
                             <TextBlock Text="{Binding Name}" Grid.Column="1" FontSize="18" VerticalAlignment="Center"/>
-                            <Button Content="Select" Grid.Column="2" Command="{Binding Source={StaticResource Locator}, Path=Main.SelectCommand}" CommandParameter="{Binding}" FontSize="18" Padding="5"/>
+                            <Button Content="Select" Grid.Column="2" Command="{Binding Source={StaticResource Locator}, Path=Inventory.SelectCommand}" CommandParameter="{Binding}" FontSize="18" Padding="5"/>
+                            <Button Content="Delete" Grid.Column="3" Command="{Binding Source={StaticResource Locator}, Path=Inventory.RemoveCommand}" CommandParameter="{Binding}" FontSize="18" Padding="5"/>
                         </Grid>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>

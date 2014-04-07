@@ -122,6 +122,30 @@ namespace openTill.GUI.ViewModel
                                           ));
             }
         }
+        private RelayCommand<ObservableProduct> _removeCommand;
+
+        /// <summary>
+        /// Gets the UpdateCommand.
+        /// </summary>
+        public RelayCommand<ObservableProduct> RemoveCommand
+        {
+            get
+            {
+                return _removeCommand
+                    ?? (_removeCommand = new RelayCommand<ObservableProduct>(
+                                          (param) =>
+                                          {
+                                              productService.RemoveProduct(productService.GetProductByUPC(param.UPC));
+                                              SelectedProduct = new ObservableProduct();
+                                              RefreshProducts();
+                                          },
+                                          (param) =>
+                                          {
+                                              return (Products.Any(x => x.UPC == param.UPC)) ? true : false;
+                                          }
+                                          ));
+            }
+        }
         /// <summary>
         /// Gets the AddCommand.
         /// </summary>
@@ -134,6 +158,7 @@ namespace openTill.GUI.ViewModel
                                           () =>
                                           {
                                               productService.SaveProduct(SelectedProduct.GetDTO());
+                                              SelectedProduct = new ObservableProduct();
                                               RefreshProducts();
                                           },
                                           () =>
