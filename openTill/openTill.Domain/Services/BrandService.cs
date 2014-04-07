@@ -10,11 +10,16 @@ using System.Threading.Tasks;
 //Author:  Morgan W. Davis III
 //Project:  openTill Point of Sale System
 //Date:  24 Feb 2014
-//Revisions:
+//Revisions: 4/6/2014 Added Some Documentation | Curtis Reinhold
+using openTill.Domain.Interface.Repository;
+using openTill.Domain.Interface.Service;
 
 namespace openTill.Domain.Services
 {
-    public class BrandService
+    /// <summary>
+    /// A road map to perform the CRUD operations for a brand object
+    /// </summary>
+    public class BrandService : IBrandService
     {
         #region Fields
         private readonly IBrandRepository _brandRepository;
@@ -73,7 +78,6 @@ namespace openTill.Domain.Services
             var brandToUpdate = Mapper.Map<BrandDTO>(givenBrand);
             _brandRepository.Update(brandToUpdate);
         }
-
         #endregion
     }
 }

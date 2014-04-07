@@ -28,8 +28,6 @@ namespace openTill.Testing {
             testCategoryRepository.GetByName("");
         }
 
-        //GetByName still needs more tests to check the return value
-
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
         public void NullDTOCategoryInsertException() {

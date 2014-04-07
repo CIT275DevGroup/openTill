@@ -20,6 +20,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -48,6 +49,8 @@
     <Compile Include="Address.cs" />
     <Compile Include="Brand.cs" />
     <Compile Include="Category.cs" />
+    <Compile Include="DTO\SaleDTO.cs" />
+    <Compile Include="Interface\Repository\ISaleRepository.cs" />
     <Compile Include="ProductCategory.cs" />
     <Compile Include="DTO\AddressDTO.cs" />
     <Compile Include="DTO\BrandDTO.cs" />
@@ -59,19 +62,26 @@
     <Compile Include="DTO\ProductDTO.cs" />
     <Compile Include="DTO\SaleItemDTO.cs" />
     <Compile Include="Employee.cs" />
-    <Compile Include="Interface\IBrandRepository.cs" />
-    <Compile Include="Interface\ICategoryRepository.cs" />
-    <Compile Include="Interface\IEmployeeRepository.cs" />
-    <Compile Include="Interface\IProductRepository.cs" />
+    <Compile Include="Interface\Repository\IBrandRepository.cs" />
+    <Compile Include="Interface\Repository\ICategoryRepository.cs" />
+    <Compile Include="Interface\Repository\IEmployeeRepository.cs" />
+    <Compile Include="Interface\Repository\IProductRepository.cs" />
     <Compile Include="Phone.cs" />
     <Compile Include="Position.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sale.cs" />
     <Compile Include="SaleItem.cs" />
     <Compile Include="Services\BrandService.cs" />
     <Compile Include="Services\CategoryService.cs" />
     <Compile Include="Services\EmployeeService.cs" />
+    <Compile Include="Interface\Service\IBrandService.cs" />
+    <Compile Include="Interface\Service\ICategoryService.cs" />
+    <Compile Include="Interface\Service\IEmployeeService.cs" />
+    <Compile Include="Interface\Service\IProductService.cs" />
+    <Compile Include="Interface\Service\ISaleService.cs" />
     <Compile Include="Services\ProductService.cs" />
+    <Compile Include="Services\SaleService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

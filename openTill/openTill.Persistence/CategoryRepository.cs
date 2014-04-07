@@ -4,6 +4,7 @@ using System.Linq;
 using AutoMapper;
 using openTill.Domain.DTO;
 using openTill.Domain.Interface;
+using openTill.Domain.Interface.Repository;
 
 namespace openTill.Persistence
 {
@@ -15,11 +16,13 @@ namespace openTill.Persistence
 
     // Author: Ryan Redburn
     // Date: 3/4/2014
-    // Revisios: Fixed minor logic and spelling errors. Added some additional exception handling. 
-
+    // Revisions: Fixed minor logic and spelling errors. Added some additional exception handling. 
+    // Revisions: 4/6/2014 Added Some Documentation | Curtis Reinhold
     #endregion
-
-    public class CategoryRepository : ICategoryRepository
+    /// <summary>
+    /// A class that actually performs the CRUD operations for a Category.
+    /// </summary>
+    public sealed class CategoryRepository : ICategoryRepository
     {
         #region [ Methods ]
 
