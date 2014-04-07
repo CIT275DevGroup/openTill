@@ -94,9 +94,9 @@
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <TextBlock Text="Deposit:" FontSize="18" Margin="5"/>
+                <TextBlock Text="Deposit:" FontSize="18" VerticalAlignment="Center"/>
                 <CheckBox Grid.Column="1" VerticalAlignment="Center" Margin="5,8,5,5" HorizontalAlignment="Center" IsChecked="{Binding SelectedProduct.HasDeposit}"/>
-                <TextBlock Grid.Column="2" Text="Taxable:" FontSize="18" Margin="5"/>
+                <TextBlock Grid.Column="2" Text="Taxable:" FontSize="18" VerticalAlignment="Center"/>
                 <CheckBox Grid.Column="3" VerticalAlignment="Center" Margin="5,8,5,5" HorizontalAlignment="Center" IsChecked="{Binding SelectedProduct.IsTaxable}"/>
             </Grid>
             
@@ -118,7 +118,7 @@
             <TextBlock Text="Products" FontSize="24" HorizontalAlignment="Center" DockPanel.Dock="Top"/>
             <DockPanel DockPanel.Dock="Top" LastChildFill="True">
                 <TextBlock Text="Search:" FontSize="18" VerticalAlignment="Center"/>
-                <TextBox FontSize="18" Padding="5" Margin="5"/>
+                <TextBox FontSize="18" Padding="5" Margin="5" Text="Not Yet Functional" IsEnabled="False"/>
             </DockPanel>
             <ItemsControl ItemsSource="{Binding Products}">
                 <ItemsControl.ItemTemplate>
