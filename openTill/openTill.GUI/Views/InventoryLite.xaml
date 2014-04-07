@@ -6,7 +6,7 @@
         xmlns:ignore="http://www.ignore.com"
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:Custom="http://www.galasoft.ch/mvvmlight" x:Class="openTill.GUI.Views.InventoryLite"
         mc:Ignorable="d ignore"
-        DataContext="{Binding Main, Source={StaticResource Locator}}">
+        DataContext="{Binding Inventory, Source={StaticResource Locator}}">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -130,10 +130,12 @@
                         <Grid Margin="5">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition/>
+                                <ColumnDefinition/>
                                 <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
-                            <TextBlock Text="{Binding Name}" Grid.Column="0" FontSize="18" VerticalAlignment="Center"/>
-                            <Button Content="Select" Grid.Column="1" Command="{Binding Source={StaticResource Locator}, Path=Main.SelectCommand}" CommandParameter="{Binding}" FontSize="18" Padding="5"/>
+                            <TextBlock Text="{Binding UPC}" Grid.Column="0" FontSize="18" VerticalAlignment="Center"/>
+                            <TextBlock Text="{Binding Name}" Grid.Column="1" FontSize="18" VerticalAlignment="Center"/>
+                            <Button Content="Select" Grid.Column="2" Command="{Binding Source={StaticResource Locator}, Path=Main.SelectCommand}" CommandParameter="{Binding}" FontSize="18" Padding="5"/>
                         </Grid>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
