@@ -7,10 +7,13 @@ using System.Threading.Tasks;
 //Author:  Morgan W. Davis III
 //Project:  openTill Point of Sale System
 //Date:  24 Feb 2014
-//Revisions:
+//Revisions: 4/6/2014 Added Documentation | Curtis Reinhold
 
 namespace openTill.Domain
 {
+    /// <summary>
+    /// A class of a phone number for an employee.
+    /// </summary>
     public class Phone
     {
         #region Fields
@@ -19,12 +22,17 @@ namespace openTill.Domain
         #endregion
 
         #region Properties
+        /// <summary>
+        /// An ID for the PhoneNumber
+        /// </summary>
         public int ID
         {
             get { return _id; }
             set { _id = value; }
         }
-
+        /// <summary>
+        /// Employees Phone Number
+        /// </summary>
         public string PhoneNumber
         {
             get { return _phoneNumber; }

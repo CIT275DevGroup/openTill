@@ -26,8 +26,6 @@ namespace openTill.Testing {
             testProductRepository.GetByBrand("");
         }
 
-        //GetByBrand needs more tests to check return value
-
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
         public void NullStringProductGetByUPCException() {

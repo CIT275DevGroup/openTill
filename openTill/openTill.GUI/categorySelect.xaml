@@ -1,0 +1,6 @@
+﻿<Window x:Class="openTill.GUI.categorySelect"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="categorySelect" Height="300" Width="488.66">
+    <Grid/>
+</Window>

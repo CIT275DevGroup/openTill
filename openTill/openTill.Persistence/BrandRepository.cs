@@ -4,6 +4,7 @@ using System.Linq;
 using AutoMapper;
 using openTill.Domain.DTO;
 using openTill.Domain.Interface;
+using openTill.Domain.Interface.Repository;
 
 namespace openTill.Persistence
 {
@@ -15,11 +16,14 @@ namespace openTill.Persistence
 
     // Author: Ryan Redburn
     // Date: 3/4/2014
-    // Revisios: Fixed minor logic and spelling errors. Added some additional exception handling. 
+    // Revisions: Fixed minor logic and spelling errors. Added some additional exception handling.
+    // Revisions: 4/6/2014 Added Some Documentation | Curtis Reinhold
 
     #endregion
-
-    public class BrandRepository : IBrandRepository
+    /// <summary>
+    /// The class that actually performs the CRUD operations of a Brand.
+    /// </summary>
+    public sealed class BrandRepository : IBrandRepository
     {
         #region [ Methods ]
 
@@ -53,7 +57,7 @@ namespace openTill.Persistence
             using (var context = new openTillEntities())
             {
                 // Throws an exception if a brand with the given name already exists
-                if (context.Brands.SingleOrDefault(b => b.Name == newBrand.BrandName) != null)
+                if (context.Brands.SingleOrDefault(b => b.Name == newBrand.Name) != null)
                     throw new InvalidOperationException("A brand with the given brand name already exists.");
 
                 context.Brands.Add(Mapper.Map<Brand>(newBrand));
@@ -81,11 +85,11 @@ namespace openTill.Persistence
                     throw new InvalidOperationException("No entry matching the given brand was found.");
 
                 // Throws an exception if a brand with the given name already exists
-                if (context.Brands.SingleOrDefault(b => b.Name == brandUpdate.BrandName) != null)
+                if (context.Brands.SingleOrDefault(b => b.Name == brandUpdate.Name) != null)
                     throw new InvalidOperationException("A brand with the given brand name already exists.");
 
                 // Update existing brand
-                brand.Name = brandUpdate.BrandName;
+                brand.Name = brandUpdate.Name;
 
                 context.SaveChanges();
             }

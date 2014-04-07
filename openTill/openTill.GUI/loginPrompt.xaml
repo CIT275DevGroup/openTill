@@ -1,0 +1,15 @@
+﻿<Window x:Class="openTill.GUI.loginPrompt"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="loginPrompt" MaxHeight="300px" MaxWidth="300px" Height="300" Width="300" MinHeight="300px" MinWidth="300px" WindowStyle="None">
+    <Grid Margin="0,0,-24,-27">
+        <Label Content="Please Login" FontSize="18" Margin="97,92,81.333,183.333" Foreground="#FF007ACF" />
+        <TextBox Height="20px" ToolTip="Please type a Username" Name="txtUsername" Margin="120,142,78.333,158.333"/>
+        <PasswordBox PasswordChar="*" Height="20px" Name="txtPass" ToolTip="Please type a Password" Margin="120,167,78.333,133.333"/>
+        <Button Height="20px" ToolTip="Submit" Content="Submit" Name="btnSubmit" Margin="98,219,100.333,81.333" Foreground="White" Background="#FF007ACF" Click="btnSubmit_Click" />
+        <Button Height="20px" ToolTip="Cancel" Content="Cancel" Name="btnCancel" Margin="98,246,100.333,54.333" Click="btnCancel_Click" Foreground="White" Background="#FF007ACF" />
+        <Label Content="User Name:" HorizontalAlignment="Left" Margin="49,142,0,0" VerticalAlignment="Top" Width="66" FontSize="10"/>
+        <Label Content="Password:" HorizontalAlignment="Left" Margin="49,165,0,0" VerticalAlignment="Top" Width="66" FontSize="10" RenderTransformOrigin="0.551,1.533"/>
+        <Label Content="*Please see manager for help logging in" HorizontalAlignment="Left" Margin="56,188,0,0" VerticalAlignment="Top" Width="187" Foreground="#FFF11B1B" FontSize="10"/>
+    </Grid>
+</Window>
