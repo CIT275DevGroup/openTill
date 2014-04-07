@@ -53,22 +53,22 @@ namespace openTill.GUI.ViewModel
 
             }
 
-            SimpleIoc.Default.Register<MainViewModel>();
-            SimpleIoc.Default.Register<InverseBooleanConverter>();
+            SimpleIoc.Default.Register<InventoryViewModel>();
+            SimpleIoc.Default.Register<TransactionViewModel>();
         }
 
-        public MainViewModel Main
+        public InventoryViewModel Inventory
         {
             get
             {
-                return ServiceLocator.Current.GetInstance<MainViewModel>();
+                return ServiceLocator.Current.GetInstance<InventoryViewModel>();
             }
         }
-        public InverseBooleanConverter InverseBooleanConverter
+        public TransactionViewModel Transaction
         {
             get
             {
-                return ServiceLocator.Current.GetInstance<InverseBooleanConverter>();
+                return ServiceLocator.Current.GetInstance<TransactionViewModel>();
             }
         }
         public static void Cleanup()

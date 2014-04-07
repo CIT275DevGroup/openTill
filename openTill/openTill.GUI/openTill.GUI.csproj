@@ -85,10 +85,14 @@
     </ApplicationDefinition>
     <Compile Include="Models\ObservableBrand.cs" />
     <Compile Include="Models\ObservableCategory.cs" />
-    <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\InventoryViewModel.cs" />
     <Compile Include="ViewModelLocator.cs" />
+    <Compile Include="ViewModel\TransactionViewModel.cs" />
     <Compile Include="Views\InventoryLite.xaml.cs">
       <DependentUpon>InventoryLite.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TransactionLite.xaml.cs">
+      <DependentUpon>TransactionLite.xaml</DependentUpon>
     </Compile>
     <Page Include="categorySelect.xaml">
       <SubType>Designer</SubType>
@@ -98,18 +102,12 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Compile Include="Commands\AddProductCommand.cs" />
     <Compile Include="categorySelect.xaml.cs">
       <DependentUpon>categorySelect.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Commands\ChangeQtyCommand.cs" />
-    <Compile Include="Commands\ActionCommand.cs" />
-    <Compile Include="Commands\ParamCommand.cs" />
-    <Compile Include="Commands\RemoveProductCommand.cs" />
     <Compile Include="enterPin.xaml.cs">
       <DependentUpon>enterPin.xaml</DependentUpon>
     </Compile>
-    <Compile Include="InventoryViewModel.cs" />
     <Compile Include="loginPrompt.xaml.cs">
       <DependentUpon>loginPrompt.xaml</DependentUpon>
     </Compile>
@@ -146,9 +144,12 @@
       <SubType>Form</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\TransactionLite.xaml">
+      <SubType>Form</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MainWindowViewModel.cs" />
     <Compile Include="ManageInventory.xaml.cs">
       <DependentUpon>ManageInventory.xaml</DependentUpon>
     </Compile>
@@ -185,15 +186,6 @@
     <Resource Include="GUI_Images\gear.png" />
     <Resource Include="Inventory_Images\pringles.jpg" />
     <Resource Include="GUI_Images\search_glass.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="pringles.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="gear.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="search_glass.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\openTill.Domain\openTill.Domain.csproj">

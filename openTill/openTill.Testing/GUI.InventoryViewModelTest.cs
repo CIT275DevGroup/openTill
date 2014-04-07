@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using openTill.Persistence;
 using AutoMapper;
 using openTill.GUI.Models;
+using openTill.GUI.ViewModel;
 
 namespace openTill.Testing
 {

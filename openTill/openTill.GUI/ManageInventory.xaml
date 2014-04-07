@@ -4,9 +4,6 @@
         xmlns:local="clr-namespace:openTill.GUI"
         Title="Manage Inventory" MinHeight="350" Height="502" Width="570"
 		MinWidth="570" VerticalAlignment="Top" HorizontalAlignment="Left">
-    <Window.Resources>
-        <local:InventoryViewModel x:Key="viewModel"/>
-    </Window.Resources>
 	<Grid>
 		<Grid.ColumnDefinitions>
 			<ColumnDefinition Width="2*">
