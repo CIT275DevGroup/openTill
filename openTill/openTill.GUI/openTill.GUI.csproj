@@ -83,11 +83,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="InverseBooleanConverter.cs" />
     <Compile Include="Models\ObservableBrand.cs" />
     <Compile Include="Models\ObservableCategory.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
-    <Compile Include="ViewModel\ViewModelLocator.cs" />
+    <Compile Include="ViewModelLocator.cs" />
     <Compile Include="Views\InventoryLite.xaml.cs">
       <DependentUpon>InventoryLite.xaml</DependentUpon>
     </Compile>
