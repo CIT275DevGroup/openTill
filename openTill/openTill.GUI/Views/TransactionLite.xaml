@@ -44,7 +44,7 @@
             <DockPanel DockPanel.Dock="Top" LastChildFill="True">
                 <TextBlock Text="Search:" FontSize="18" VerticalAlignment="Center"/>
                 <Button Content="Search" FontSize="18" Margin="5" DockPanel.Dock="Right" Command="{Binding SearchProductsCommand}"/>
-                <Button Content="Dat Scan Yo" Command="{Binding }" DockPanel.Dock="Right" FontSize="18"/>
+                <Button Content="Dat Scan Yo" Command="{Binding }" DockPanel.Dock="Right" FontSize="18" Margin="5"/>
                 <TextBox Grid.Column="1" FontSize="18" Padding="5" Margin="5" VerticalAlignment="Center" Text="{Binding FilterString, StringFormat='c'}"/>
             </DockPanel>
 
