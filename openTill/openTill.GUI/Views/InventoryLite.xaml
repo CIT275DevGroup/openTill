@@ -7,7 +7,7 @@
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:Custom="http://www.galasoft.ch/mvvmlight" x:Class="openTill.GUI.Views.InventoryLite"
         mc:Ignorable="d ignore"
         DataContext="{Binding Inventory, Source={StaticResource Locator}}">
-
+<!--The left side of the form and heading is here.-->
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -17,6 +17,7 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
+        <!--The Inventory Screen Heading-->
         <TextBlock Text="Inventory Screen" Grid.Row="0" Grid.ColumnSpan="2" FontSize="36" HorizontalAlignment="Center"/>
         <Grid Grid.Row="1" Margin="5">
             <Grid.ColumnDefinitions>
@@ -34,16 +35,21 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
+            <!--The UPC title-->
             <TextBlock Grid.Row="0" Grid.Column="0" Text="UPC:" FontSize="18" VerticalAlignment="Center"/>
+            <!--The UPC textbox -->
             <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding SelectedProduct.UPC, Mode=TwoWay}" FontSize="18" Margin="5"/>
-
+            <!--The Name title -->
             <TextBlock Grid.Row="1" Grid.Column="0" Text="Name:" FontSize="18" VerticalAlignment="Center"/>
+            <!--The Name textbox -->
             <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding SelectedProduct.Name}" FontSize="18" Margin="5"/>
-
+            <!--The Description title -->
             <TextBlock Grid.Row="2" Grid.Column="0" Text="Description:" FontSize="18" VerticalAlignment="Center"/>
+            <!--The Description textbox -->
             <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding SelectedProduct.Description}" FontSize="18" Margin="5"/>
-
+            <!--The Brand title -->
             <TextBlock Grid.Row="3" Grid.Column="0" Text="Brand:" FontSize="18" VerticalAlignment="Center"/>
+            <!--The Brand combobox -->
             <ComboBox Grid.Row="3" Grid.Column="1" FontSize="18" Margin="5" ItemsSource="{Binding Brands}" SelectedValuePath="Id" SelectedValue="{Binding SelectedProduct.BrandID}">
                 <ComboBox.ItemTemplate>
                     <DataTemplate>
@@ -51,8 +57,9 @@
                     </DataTemplate>
                 </ComboBox.ItemTemplate>
             </ComboBox>
-
+            <!--The Category title -->
             <TextBlock Grid.Row="4" Grid.Column="0" Text="Category:" FontSize="18" VerticalAlignment="Center"/>
+            <!--The Category combobox -->
             <ComboBox Grid.Row="4" Grid.Column="1" FontSize="18" Margin="5" ItemsSource="{Binding Categories}" SelectedValuePath="Id" SelectedValue="{Binding SelectedProduct.CategoryListID}">
                 <ComboBox.ItemTemplate>
                     <DataTemplate>
@@ -62,33 +69,37 @@
                     </DataTemplate>
                 </ComboBox.ItemTemplate>
             </ComboBox>
-
+            <!--The Price/Cost title -->
             <TextBlock Grid.Row="5" Grid.Column="0" Text="Price / Cost:" FontSize="18" VerticalAlignment="Center"/>
+            <!--Mini grid for Price/Cost text boxes -->
             <Grid Grid.Row="5" Grid.Column="1">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-
+                <!--The Price text box-->
                 <TextBox Text="{Binding SelectedProduct.SellingPrice, StringFormat='c'}" FontSize="18" Margin="5"/>
                 <TextBlock Grid.Column="1" Text=" / " FontSize="18" VerticalAlignment="Center" DockPanel.Dock="Left"/>
+                <!--The Cost text box -->
                 <TextBox Grid.Column="2" Text="{Binding SelectedProduct.StoreCost, StringFormat='c'}" FontSize="18" Margin="5"/>
             </Grid>
-
+            <!--The Inv/Min title-->
             <TextBlock Grid.Row="6" Grid.Column="0" Text="Inv / Min:" FontSize="18" VerticalAlignment="Center"/>
+            <!--A mini grid for the Inv/Min text boxes-->
             <Grid Grid.Row="6" Grid.Column="1">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-
+                <!--The Inv text box-->
                 <TextBox Text="{Binding SelectedProduct.OnHand}" FontSize="18" Margin="5"/>
                 <TextBlock Grid.Column="1" Text=" / " FontSize="18" VerticalAlignment="Center" DockPanel.Dock="Left"/>
+                <!--The Min text box-->
                 <TextBox Grid.Column="2" Text="{Binding SelectedProduct.MinOnHand}" FontSize="18" Margin="5"/>
             </Grid>
-
+            <!--A mini grid for Deposit and Taxable Checkboxes-->
             <Grid Grid.Row="7" Grid.Column="0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
@@ -96,9 +107,13 @@
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
+                <!--The Deposit title-->
                 <TextBlock Text="Deposit:" FontSize="18" VerticalAlignment="Center"/>
+                <!--The Deposit checkbox-->
                 <CheckBox Grid.Column="1" VerticalAlignment="Center" Margin="5,8,5,5" HorizontalAlignment="Center" IsChecked="{Binding SelectedProduct.HasDeposit}"/>
+                <!--The Taxable title-->
                 <TextBlock Grid.Column="2" Text="Taxable:" FontSize="18" VerticalAlignment="Center"/>
+                <!--The Taxable checkbox-->
                 <CheckBox Grid.Column="3" VerticalAlignment="Center" Margin="5,8,5,5" HorizontalAlignment="Center" IsChecked="{Binding SelectedProduct.IsTaxable}"/>
             </Grid>
 
@@ -107,25 +122,29 @@
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
+                <!--The Min Age title -->
                 <TextBlock Grid.Row="0" Grid.Column="0" Text="Min Age:" FontSize="18" VerticalAlignment="Center"/>
+                <!--The Min Age text box-->
                 <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding SelectedProduct.MinimumAge}" FontSize="18" Margin="5"/>
             </Grid>
-
+            
             <DockPanel Grid.Row="8" Grid.ColumnSpan="2">
+                <!--The New Product button-->
                 <Button Content="New Product" FontSize="18" Padding="5" Margin="5" Command="{Binding AddCommand}" DockPanel.Dock="Left"/>
+                <!--The Update Product button-->
                 <Button Content="Update Product" FontSize="18" Padding="5" Margin="5" Command="{Binding UpdateCommand}" DockPanel.Dock="Right"/>
             </DockPanel>
         </Grid>
-
+        <!--Right half of the form-->
         <DockPanel Grid.Row="1" Grid.Column="1" LastChildFill="True" Margin="5">
-
+            <!--The Products heading-->
             <TextBlock Text="Products" FontSize="24" HorizontalAlignment="Center" DockPanel.Dock="Top"/>
-
+            <!--A search function that isn't functional yet.-->
             <DockPanel DockPanel.Dock="Top" LastChildFill="True">
                 <TextBlock Text="Search:" FontSize="18" VerticalAlignment="Center"/>
                 <TextBox FontSize="18" Padding="5" Margin="5" Text="Not Yet Functional" IsEnabled="False"/>
             </DockPanel>
-
+            <!--The products list that appears as you add products-->
             <ItemsControl ItemsSource="{Binding Products}">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>

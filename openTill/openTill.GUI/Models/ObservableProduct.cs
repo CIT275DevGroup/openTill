@@ -6,6 +6,9 @@ using System.Windows.Input;
 
 namespace openTill.GUI.Models
 {
+    /// <summary>
+    /// A class for an ObservableProduct
+    /// </summary>
     public class ObservableProduct : ObservableObject
     {
         /// <summary>
@@ -93,6 +96,9 @@ namespace openTill.GUI.Models
         private decimal _storeCost;
         private string _upc;
 
+        /// <summary>
+        /// Creates an empty ObservableProduct
+        /// </summary>
         public ObservableProduct()
         {
             UPC = String.Empty;
@@ -109,7 +115,10 @@ namespace openTill.GUI.Models
             MinimumAge = 0;
             ProductState = State.New;
         }
-
+        /// <summary>
+        /// Creates an ObservableProduct
+        /// </summary>
+        /// <param name="dto"></param>
         public ObservableProduct(ProductDTO dto)
         {
             UPC = dto.UPC;
@@ -127,7 +136,9 @@ namespace openTill.GUI.Models
             CategoryList = dto.CategoryList;
             ProductState = State.Unmodified;
         }
-
+        /// <summary>
+        /// Created a State enumeration
+        /// </summary>
         public enum State { Unmodified, Modified, New };
 
         /// <summary>
@@ -353,7 +364,10 @@ namespace openTill.GUI.Models
                 Set(UPCPropertyName, ref  _upc, value);
             }
         }
-
+        /// <summary>
+        /// Creates a ProductDTO
+        /// </summary>
+        /// <returns>A ProductDTO</returns>
         public ProductDTO GetDTO()
         {
             return new ProductDTO

@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace openTill.GUI.Models
 {
+    /// <summary>
+    /// A class for an ObservableBrand
+    /// </summary>
     public class ObservableBrand : ObservableObject
     {
         /// <summary>
@@ -54,16 +57,27 @@ namespace openTill.GUI.Models
                 Set(BrandNamePropertyName, ref _brandName, value);
             }
         }
+        /// <summary>
+        /// Makes an empty observable brand.
+        /// </summary>
         public ObservableBrand()
         {
             Id = 0;
             BrandName = String.Empty;
         }
+        /// <summary>
+        /// Creates an Observable Brand with information from the BrandDTO
+        /// </summary>
+        /// <param name="dto">The Brand data transfer object</param>
         public ObservableBrand(BrandDTO dto)
         {
             Id = dto.Id;
             BrandName = dto.Name;
         }
+        /// <summary>
+        /// Creates a BrandDTO
+        /// </summary>
+        /// <returns>A BrandDTO</returns>
         public BrandDTO GetDTO()
         {
             return new BrandDTO

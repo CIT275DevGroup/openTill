@@ -56,7 +56,9 @@ namespace openTill.GUI.ViewModel
             SimpleIoc.Default.Register<InventoryViewModel>();
             SimpleIoc.Default.Register<TransactionViewModel>();
         }
-
+        /// <summary>
+        /// Gets the InventoryViewModel
+        /// </summary>
         public InventoryViewModel Inventory
         {
             get
@@ -64,6 +66,9 @@ namespace openTill.GUI.ViewModel
                 return ServiceLocator.Current.GetInstance<InventoryViewModel>();
             }
         }
+        /// <summary>
+        /// Gets the TransactionViewModel
+        /// </summary>
         public TransactionViewModel Transaction
         {
             get
@@ -71,6 +76,9 @@ namespace openTill.GUI.ViewModel
                 return ServiceLocator.Current.GetInstance<TransactionViewModel>();
             }
         }
+        /// <summary>
+        /// A method to clear the ViewModels
+        /// </summary>
         public static void Cleanup()
         {
             // TODO Clear the ViewModels

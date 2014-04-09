@@ -1,11 +1,16 @@
-﻿<Window x:Class="openTill.GUI.enterPin"
+﻿    <!--Enter Pin Screen-->
+    <Window x:Class="openTill.GUI.enterPin"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="enterPin" Height="300" Width="300" MinHeight="300" MinWidth="300" MaxHeight="300" MaxWidth="300">
 	<Grid Margin="0,0,-16,-30">
+        <!--Enter Pin label-->
 		<Label Content="Enter Pin" Width="100px" Margin="96,85,96,151" FontSize="18" Foreground="#FF007ACF"/>
+        <!--Password box for the pin shows *'s-->
 		<PasswordBox PasswordChar="*" Height="20px" ToolTip="Enter Employee PIN" Name="txtPIN" Margin="91,124,107,126"/>
+        <!--Submit button-->
 		<Button Height="20px" ToolTip="Submit" Content="Submit" Name="btnSubmit" Margin="91,167,107,83" Foreground="White" Background="#FF007ACF" Click="btnSubmit_Click" />
+        <!--Cancel Button-->
 		<Button Height="20px" ToolTip="Cancel" Content="Cancel" Name="btnCancel" Margin="91,192,107,58" Click="btnCancel_Click" Foreground="White" Background="#FF007ACF" />
 	</Grid>
 </Window>

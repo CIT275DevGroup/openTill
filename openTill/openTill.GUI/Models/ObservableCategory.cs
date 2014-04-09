@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace openTill.GUI.Models
 {
+    /// <summary>
+    /// A class for an ObservableCategory
+    /// </summary>
     public class ObservableCategory : ObservableObject
     {
         /// <summary>
@@ -76,18 +79,29 @@ namespace openTill.GUI.Models
                 Set(DescriptionPropertyName, ref _description, value);
             }
         }
+        /// <summary>
+        /// Creates an empty ObservableCategory
+        /// </summary>
         public ObservableCategory()
         {
             Id = 0;
             Name = String.Empty;
             Description = String.Empty;
         }
+        /// <summary>
+        /// Creates a ObservableCategory
+        /// </summary>
+        /// <param name="dto">CategoryDTO</param>
         public ObservableCategory(CategoryDTO dto)
         {
             this.Id = dto.Id;
             this.Name = dto.Name;
             this.Description = dto.Description;
         }
+        /// <summary>
+        /// Creates a CategoryDTO
+        /// </summary>
+        /// <returns>CategoryDTO</returns>
         public CategoryDTO GetDTO()
         {
             return new CategoryDTO

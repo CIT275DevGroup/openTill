@@ -16,25 +16,29 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        
+        <!--The Transacation Screen heading-->
         <TextBlock Text="Transaction Screen" Grid.Row="0" Grid.ColumnSpan="2" FontSize="36" HorizontalAlignment="Center"/>
         
         <DockPanel Grid.Row="1" Margin="5">
+            <!--Purchase items heading-->
             <TextBlock Text="Purchase Items" FontSize="24" HorizontalAlignment="Center" DockPanel.Dock="Top"/>
+            <!--List of items being purchased goes here-->
             <ListBox DockPanel.Dock="Top">
                 
             </ListBox>
         </DockPanel>
 
         <DockPanel Grid.Row="1" Grid.Column="1" LastChildFill="True" Margin="5">
-
+            <!--Products heading-->
             <TextBlock Text="Products" FontSize="24" HorizontalAlignment="Center" DockPanel.Dock="Top"/>
 
             <DockPanel DockPanel.Dock="Top" LastChildFill="True">
+                <!--Search title-->
                 <TextBlock Text="Search:" FontSize="18" VerticalAlignment="Center"/>
+                <!--A tex box for searching that isn't functional yet-->
                 <TextBox FontSize="18" Padding="5" Margin="5" Text="Not Yet Functional" IsEnabled="False"/>
             </DockPanel>
-
+            <!--A list for the products-->
             <ItemsControl ItemsSource="{Binding Products}">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
