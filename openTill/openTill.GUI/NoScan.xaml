@@ -21,6 +21,8 @@
 		<Button Content="9" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="85" Margin="197,10,0,0" Height="52" Background="#FF007ACF" Foreground="White"/>
 		<TextBox HorizontalAlignment="Left" Height="23" Margin="10,25,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="276"/>
 		<Label Content="Data Entry:" HorizontalAlignment="Left" Margin="8,1,0,0" VerticalAlignment="Top"/>
+		<Button Content="Enter" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="85" Margin="196,205,0,0" Height="52" Background="#FF007ACF" Foreground="White"/>
+		<Button Content="Cancel" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="85" Margin="15,205,0,0" Height="52" Background="#FF007ACF" Foreground="White"/>
 	</Grid>
 
 </Window>
