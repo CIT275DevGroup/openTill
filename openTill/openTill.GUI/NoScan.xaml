@@ -9,20 +9,20 @@
 			<ColumnDefinition>
 			</ColumnDefinition>
 		</Grid.ColumnDefinitions>
-		<Button Content="0" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="85" Margin="106,205,0,0" Height="52" Background="#FF007ACF" Foreground="White"/>
-		<Button Content="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="85" Margin="15,142,0,0" Height="51" Background="#FF007ACF" Foreground="White"/>
-		<Button Content="2" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="85" Margin="106,142,0,0" Height="51" Background="#FF007ACF" Foreground="White"/>
-		<Button Content="3" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="85" Margin="197,142,0,0" Height="51" Background="#FF007ACF" Foreground="White"/>
-		<Button Content="4" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="85" Margin="15,76,0,0" Height="52" Background="#FF007ACF" Foreground="White"/>
-		<Button Content="5" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="85" Margin="106,76,0,0" Height="52" Background="#FF007ACF" Foreground="White"/>
-		<Button Content="6" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="85" Margin="197,76,0,0" Height="52" Background="#FF007ACF" Foreground="White"/>
-		<Button Content="7" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="85" Margin="15,10,0,0" Height="52" Background="#FF007ACF" Foreground="White"/>
-		<Button Content="8" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="85" Margin="106,10,0,0" Height="52" Background="#FF007ACF" Foreground="White"/>
-		<Button Content="9" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="85" Margin="197,10,0,0" Height="52" Background="#FF007ACF" Foreground="White"/>
-		<TextBox HorizontalAlignment="Left" Height="23" Margin="10,25,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="276"/>
+		<Button Content="0" Grid.Column="1" Name="btnZero" HorizontalAlignment="Left" VerticalAlignment="Top" Width="85" Margin="106,205,0,0" Height="52" Background="#FF007ACF" Foreground="White" Click="btnZero_Click"/>
+		<Button Content="1" Grid.Column="1" Name="btnOne" HorizontalAlignment="Left" VerticalAlignment="Top" Width="85" Margin="15,142,0,0" Height="51" Background="#FF007ACF" Foreground="White" Click="btnOne_Click"/>
+		<Button Content="2" Grid.Column="1" Name="btnTwo" HorizontalAlignment="Left" VerticalAlignment="Top" Width="85" Margin="106,142,0,0" Height="51" Background="#FF007ACF" Foreground="White" Click="btnTwo_Click"/>
+		<Button Content="3" Grid.Column="1" Name="btnThree" HorizontalAlignment="Left" VerticalAlignment="Top" Width="85" Margin="197,142,0,0" Height="51" Background="#FF007ACF" Foreground="White" Click="btnThree_Click"/>
+		<Button Content="4" Grid.Column="1" Name="btnFour" HorizontalAlignment="Left" VerticalAlignment="Top" Width="85" Margin="15,76,0,0" Height="52" Background="#FF007ACF" Foreground="White" Click="btnFour_Click"/>
+		<Button Content="5" Grid.Column="1" Name="btnFive" HorizontalAlignment="Left" VerticalAlignment="Top" Width="85" Margin="106,76,0,0" Height="52" Background="#FF007ACF" Foreground="White" Click="btnFive_Click"/>
+		<Button Content="6" Grid.Column="1" Name="btnSix" HorizontalAlignment="Left" VerticalAlignment="Top" Width="85" Margin="197,76,0,0" Height="52" Background="#FF007ACF" Foreground="White" Click="btnSix_Click"/>
+		<Button Content="7" Grid.Column="1" Name="btnSeven" HorizontalAlignment="Left" VerticalAlignment="Top" Width="85" Margin="15,10,0,0" Height="52" Background="#FF007ACF" Foreground="White" Click="btnSeven_Click"/>
+		<Button Content="8" Grid.Column="1" Name="btnEight" HorizontalAlignment="Left" VerticalAlignment="Top" Width="85" Margin="106,10,0,0" Height="52" Background="#FF007ACF" Foreground="White" Click="btnEight_Click"/>
+		<Button Content="9" Grid.Column="1" Name="btnNine" HorizontalAlignment="Left" VerticalAlignment="Top" Width="85" Margin="197,10,0,0" Height="52" Background="#FF007ACF" Foreground="White" Click="btnNine_Click"/>
+		<TextBox HorizontalAlignment="Left" Height="23" Name="txtEntry" Margin="10,25,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="276"/>
 		<Label Content="Data Entry:" HorizontalAlignment="Left" Margin="8,1,0,0" VerticalAlignment="Top"/>
-		<Button Content="Enter" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="85" Margin="197,205,0,0" Height="52" Background="#FF007ACF" Foreground="White"/>
-		<Button Content="Cancel" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="85" Margin="14,205,0,0" Height="52" Background="#FF007ACF" Foreground="White"/>
+		<Button Content="Enter" Grid.Column="1" Name="btnEnter" HorizontalAlignment="Left" VerticalAlignment="Top" Width="85" Margin="197,205,0,0" Height="52" Background="#FF007ACF" Foreground="White"/>
+		<Button Content="Cancel" Grid.Column="1" Name="btnCancel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="85" Margin="14,205,0,0" Height="52" Background="#FF007ACF" Foreground="White"/>
 	</Grid>
 
 </Window>
