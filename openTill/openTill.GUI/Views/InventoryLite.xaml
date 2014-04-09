@@ -127,7 +127,7 @@
                 <!--The Min Age text box-->
                 <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding SelectedProduct.MinimumAge}" FontSize="18" Margin="5"/>
             </Grid>
-            
+
             <DockPanel Grid.Row="8" Grid.ColumnSpan="2">
                 <!--The New Product button-->
                 <Button Content="New Product" FontSize="18" Padding="5" Margin="5" Command="{Binding AddCommand}" DockPanel.Dock="Left"/>

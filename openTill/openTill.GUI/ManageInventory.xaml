@@ -34,64 +34,64 @@
         <!--Name text box-->
 		<TextBox Grid.Column="0" Text="{Binding Source={StaticResource viewModel}, Path=SelectedProduct.Name}" Name="txtItemName" ToolTip="Type an Item Name" Margin="87,157,0,0" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="214" Height="23" />
 		<!--Item Description text box-->
-        <TextBox Grid.Column="0" Text="{Binding Source={StaticResource viewModel}, Path=SelectedProduct.Description}" Name="txtItemDescription" ToolTip="type an Item Description" Margin="6,60,0,0" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Left" Height="89" Width="337" />
+		<TextBox Grid.Column="0" Text="{Binding Source={StaticResource viewModel}, Path=SelectedProduct.Description}" Name="txtItemDescription" ToolTip="type an Item Description" Margin="6,60,0,0" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Left" Height="89" Width="337" />
         <!--Brand label-->
 		<Label Grid.Row="1"  Content="Brand:&#xD;&#xA;" Grid.Column="0" Margin="6,224,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="76" Height="29" />
 		<!--Select Button-->
-        <Button Content="Select" Width="106" Height="28" x:Name="btnAddInv_Copy" HorizontalAlignment="Left" VerticalAlignment="Top" ToolTip="Browse Items in Inventory" Margin="245,24,0,0" Foreground="White" Background="#FF007ACF" Grid.Row="1" Command="{Binding Source={StaticResource viewModel}, Path=SelectCommand}" />
+		<Button Content="Select" Width="106" Height="28" x:Name="btnAddInv_Copy" HorizontalAlignment="Left" VerticalAlignment="Top" ToolTip="Browse Items in Inventory" Margin="245,24,0,0" Foreground="White" Background="#FF007ACF" Grid.Row="1" Command="{Binding Source={StaticResource viewModel}, Path=SelectCommand}" />
 		<!--Edit Item heading-->
-        <Label Content="EDIT ITEM" Name="lblContextName" Margin="133,0,0,0" VerticalAlignment="Top" Width="140" FontWeight="Bold" HorizontalAlignment="Left" Grid.Row="1" />
+		<Label Content="EDIT ITEM" Name="lblContextName" Margin="133,0,0,0" VerticalAlignment="Top" Width="140" FontWeight="Bold" HorizontalAlignment="Left" Grid.Row="1" />
 		<!--UPC label-->
-        <Label x:Name="Lb_UPC_" Content="UPC #:" HorizontalAlignment="Left" Margin="12,23,0,0" VerticalAlignment="Top" Width="81" Grid.Row="1" />
+		<Label x:Name="Lb_UPC_" Content="UPC #:" HorizontalAlignment="Left" Margin="12,23,0,0" VerticalAlignment="Top" Width="81" Grid.Row="1" />
         <!--UPC combobox-->
         <ComboBox x:Name="txtUPC" DataContext="{Binding Source={StaticResource viewModel}, Path=ProductUPCs}" HorizontalAlignment="Left" Height="23" ToolTip="Type a UPC code" Margin="89,26,0,0" VerticalAlignment="Top" Grid.Row="1" Width="151"/>
 		<!--Category label-->
-        <Label x:Name="Lb_Category" Content="Category:" 
+		<Label x:Name="Lb_Category" Content="Category:" 
 		  HorizontalAlignment="Left" Grid.Row="1"  Margin="6,186,0,0" VerticalAlignment="Top" Width="81"/>
         <!--Minimum Age text box-->
         <TextBox x:Name="txtMinAge" Text="{Binding Source={StaticResource viewModel}, Path=SelectedProduct.MinimumAge}" Grid.Row="1" ToolTip="Some items (such as alcoholic beverages, require a minimum age." HorizontalAlignment="Left" Height="23" Margin="99,359,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78"/>
 		<!--Brand combobox-->
-        <ComboBox Grid.Column="0" Grid.Row="1" DataContext="{Binding Source={StaticResource viewModel}, Path=SelectedProduct.Brand}" ItemsSource="{Binding Source={StaticResource viewModel}, Path=Brands}" DisplayMemberPath="{Binding Path=Name}" x:Name="cboItem_Brand" HorizontalAlignment="Left" Margin="87,224,0,0" VerticalAlignment="Top" Width="215" ToolTip="Select the Brand of an item" Background="#FF007ACF" Foreground="White"/>
+		<ComboBox Grid.Column="0" Grid.Row="1" DataContext="{Binding Source={StaticResource viewModel}, Path=SelectedProduct.Brand}" ItemsSource="{Binding Source={StaticResource viewModel}, Path=Brands}" DisplayMemberPath="{Binding Path=Name}" x:Name="cboItem_Brand" HorizontalAlignment="Left" Margin="87,224,0,0" VerticalAlignment="Top" Width="215" ToolTip="Select the Brand of an item" Background="#FF007ACF" Foreground="White"/>
 		<!--Store Price: label-->
-        <Label Grid.Row="1"  x:Name="Lb_StorePrice" Content="Store Price:" HorizontalAlignment="Left" Margin="6,258,0,0" VerticalAlignment="Top" Width="81"/>
+		<Label Grid.Row="1"  x:Name="Lb_StorePrice" Content="Store Price:" HorizontalAlignment="Left" Margin="6,258,0,0" VerticalAlignment="Top" Width="81"/>
         <!--Store price textbox-->
         <TextBox Grid.Row="1"  x:Name="txtStorePrice" Text="{Binding Source={StaticResource viewModel}, Path=SelectedProduct.StoreCost}" ToolTip="Cost of the Item to the Store" HorizontalAlignment="Left" Height="23" Margin="87,260,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75"/>
 		<!--Selling Price label-->
-        <Label x:Name="Lb_SellingPrice" Content="Selling Price:" HorizontalAlignment="Left" Margin="185,260,0,0" Grid.Row="1"   VerticalAlignment="Top" Width="81"/>
+		<Label x:Name="Lb_SellingPrice" Content="Selling Price:" HorizontalAlignment="Left" Margin="185,260,0,0" Grid.Row="1"   VerticalAlignment="Top" Width="81"/>
         <!--On Hand textbox-->
         <TextBox x:Name="txtOnHand" ToolTip="Quantity of Items" Text="{Binding Source={StaticResource viewModel}, Path=SelectedProduct.OnHand}" Grid.Row="1" HorizontalAlignment="Left" Height="23" Margin="87,297,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="151"/>
         <!--Selling Price textbox-->
         <TextBox Grid.Row="1" x:Name="txtSellingPrice" Text="{Binding Source={StaticResource viewModel}, Path=SelectedProduct.SellingPrice}" ToolTip="Price of an item to be sold to a Customer" HorizontalAlignment="Left" Height="23" Margin="266,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75"/>
 		<!--On Hand label-->
-        <Label x:Name="Lb_OnHand" Grid.Row="1" Content="On Hand:" HorizontalAlignment="Left" Margin="6,296,0,0" VerticalAlignment="Top" Width="81"/>
+		<Label x:Name="Lb_OnHand" Grid.Row="1" Content="On Hand:" HorizontalAlignment="Left" Margin="6,296,0,0" VerticalAlignment="Top" Width="81"/>
 		<!--Is Taxable label-->
-        <Label x:Name="Lb_UPC__Copy3" Grid.Row="1" ToolTip="Is this Item Tax Exempt?" Content="Is Taxable:" HorizontalAlignment="Left" Margin="200,328,0,0" VerticalAlignment="Top" Width="66"/>
+		<Label x:Name="Lb_UPC__Copy3" Grid.Row="1" ToolTip="Is this Item Tax Exempt?" Content="Is Taxable:" HorizontalAlignment="Left" Margin="200,328,0,0" VerticalAlignment="Top" Width="66"/>
 		<!--Has deposit label-->
-        <Label x:Name="Lb_HasDeposit" Grid.Row="1" ToolTip="Does this item have a recyclible deposit (such as Soda Pop)" Content="Has Deposit:" HorizontalAlignment="Left" Margin="6,328,0,0" VerticalAlignment="Top" Width="81"/>
+		<Label x:Name="Lb_HasDeposit" Grid.Row="1" ToolTip="Does this item have a recyclible deposit (such as Soda Pop)" Content="Has Deposit:" HorizontalAlignment="Left" Margin="6,328,0,0" VerticalAlignment="Top" Width="81"/>
 		<!--Minimum Age label-->
-        <Label x:Name="Lb_MinimumAge" Content="Minimum Age:" HorizontalAlignment="Left" Grid.Row="1" Margin="6,359,0,0" VerticalAlignment="Top" Width="99"/>
+		<Label x:Name="Lb_MinimumAge" Content="Minimum Age:" HorizontalAlignment="Left" Grid.Row="1" Margin="6,359,0,0" VerticalAlignment="Top" Width="99"/>
 		<!--Yes Deposit radio button-->
-        <RadioButton x:Name="Radbtn_YesDeposit" Grid.Row="1" Content="Yes" HorizontalAlignment="Left" Margin="88,335,0,0" VerticalAlignment="Top"/>
+		<RadioButton x:Name="Radbtn_YesDeposit" Grid.Row="1" Content="Yes" HorizontalAlignment="Left" Margin="88,335,0,0" VerticalAlignment="Top"/>
 		<!--No Deposit radio button-->
-        <RadioButton Grid.Row="1" x:Name="Radbtn_NoDeposit_Copy" Content="No" HorizontalAlignment="Left" Margin="133,335,0,0" VerticalAlignment="Top"/>
+		<RadioButton Grid.Row="1" x:Name="Radbtn_NoDeposit_Copy" Content="No" HorizontalAlignment="Left" Margin="133,335,0,0" VerticalAlignment="Top"/>
 		<!--Yes Taxable radio button-->
-        <RadioButton x:Name="Radbtn_YesTaxble" Grid.Row="1" Content="Yes" HorizontalAlignment="Left" Margin="266,335,0,0" VerticalAlignment="Top"/>
+		<RadioButton x:Name="Radbtn_YesTaxble" Grid.Row="1" Content="Yes" HorizontalAlignment="Left" Margin="266,335,0,0" VerticalAlignment="Top"/>
 		<!--No Taxable radio button-->
-        <RadioButton Grid.Row="1" x:Name="Radbtn_NoTaxble" Content="No" HorizontalAlignment="Left" Margin="311,335,0,0" VerticalAlignment="Top"/>
+		<RadioButton Grid.Row="1" x:Name="Radbtn_NoTaxble" Content="No" HorizontalAlignment="Left" Margin="311,335,0,0" VerticalAlignment="Top"/>
 		<!--Label in top right of form-->
-        <Label Grid.Row="1" Content="ADD NEW ITEM" HorizontalAlignment="Center" Margin="154,10,105.333,0" VerticalAlignment="Top" Width="116" FontWeight="Bold" Visibility="Hidden"/>
+		<Label Grid.Row="1" Content="ADD NEW ITEM" HorizontalAlignment="Center" Margin="154,10,105.333,0" VerticalAlignment="Top" Width="116" FontWeight="Bold" Visibility="Hidden"/>
 		<!--Save button-->
-        <Button Grid.Row="1" Content="Save" ToolTip="Save changes to item" Width="66" Height="28" x:Name="btnInvSave" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,399,0,0" Foreground="White" Background="#FF007ACF"/>
+		<Button Grid.Row="1" Content="Save" ToolTip="Save changes to item" Width="66" Height="28" x:Name="btnInvSave" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,399,0,0" Foreground="White" Background="#FF007ACF"/>
 		<!--Cancel button-->
-        <Button Content="Cancel" Width="66" Grid.Row="1" Height="28" x:Name="btnInvCancel" HorizontalAlignment="Left" VerticalAlignment="Top" ToolTip="Cancel Changes to Item" Margin="83,399,0,0" Foreground="White" Background="#FF007ACF"/>
+		<Button Content="Cancel" Width="66" Grid.Row="1" Height="28" x:Name="btnInvCancel" HorizontalAlignment="Left" VerticalAlignment="Top" ToolTip="Cancel Changes to Item" Margin="83,399,0,0" Foreground="White" Background="#FF007ACF"/>
 		<!--Clear button-->
-        <Button Content="Clear" Grid.Row="1" Width="66" Height="28" x:Name="btnInvClear" HorizontalAlignment="Left" VerticalAlignment="Top" ToolTip="Clear above fields" Margin="154,399,0,0" Foreground="White" Background="#FF007ACF"/>
+		<Button Content="Clear" Grid.Row="1" Width="66" Height="28" x:Name="btnInvClear" HorizontalAlignment="Left" VerticalAlignment="Top" ToolTip="Clear above fields" Margin="154,399,0,0" Foreground="White" Background="#FF007ACF"/>
 		<!--Button top right corner...search?-->
-        <Button Grid.Row="0" Grid.Column="1" Width="20px" Height="20px" Name="btnSearch" Margin="0,1,28,0" HorizontalAlignment="Right" VerticalAlignment="Top" OpacityMask="#FF007ACF" Background="#FF007ACF" Panel.ZIndex="1">
+		<Button Grid.Row="0" Grid.Column="1" Width="20px" Height="20px" Name="btnSearch" Margin="0,1,28,0" HorizontalAlignment="Right" VerticalAlignment="Top" OpacityMask="#FF007ACF" Background="#FF007ACF" Panel.ZIndex="1">
 			<Image Source="search_glass.png" OpacityMask="#FF007ACF"></Image>
 		</Button>
 		<!--Settings button-->
-        <Button Grid.Row="0" Grid.Column="1" Width="20px" Margin="0,1,2,0" Name="btnSettings" VerticalAlignment="Top" HorizontalAlignment="Right" Background="#FF007ACF" Panel.ZIndex="1">
+		<Button Grid.Row="0" Grid.Column="1" Width="20px" Margin="0,1,2,0" Name="btnSettings" VerticalAlignment="Top" HorizontalAlignment="Right" Background="#FF007ACF" Panel.ZIndex="1">
 			<Image Source="gear.png" VerticalAlignment="Top" HorizontalAlignment="Right" OpacityMask="#FF007ACF"/>
 		</Button>
 		<Rectangle Stretch="UniformToFill"

@@ -18,9 +18,10 @@ using Microsoft.Practices.ServiceLocation;
 using openTill.Domain.Interface.Repository;
 using openTill.Domain.Interface.Service;
 using openTill.Domain.Services;
+using openTill.GUI.ViewModel;
 using openTill.Persistence;
 
-namespace openTill.GUI.ViewModel
+namespace openTill.GUI
 {
     /// <summary>
     /// This class contains static references to all the view models in the
