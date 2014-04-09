@@ -71,7 +71,7 @@ namespace openTill.GUI
 
 		private void btnNine_Click(object sender, RoutedEventArgs e)
 		{
-			txtEntry.Text = txtEntry.Text = "9";
+			txtEntry.Text = txtEntry.Text + "9";
 		}
 	}
 }
