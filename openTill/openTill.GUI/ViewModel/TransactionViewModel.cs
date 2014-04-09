@@ -6,6 +6,7 @@ using openTill.GUI.Models;
 using openTill.Persistence;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Windows;
 
 namespace openTill.GUI.ViewModel
 {
@@ -123,6 +124,24 @@ namespace openTill.GUI.ViewModel
             set
             {
                 Set(FilterStringPropertyName, ref _filterString, value);
+            }
+        }
+        private RelayCommand _openDatPadCommand;
+
+        /// <summary>
+        /// Gets the OpenDatPadCommand.
+        /// </summary>
+        public RelayCommand OpenDatPadCommand
+        {
+            get
+            {
+                return _openDatPadCommand
+                    ?? (_openDatPadCommand = new RelayCommand(
+                                          () =>
+                                          {
+                                              NoScan datnoScan = new NoScan();
+                                              datnoScan.Show();
+                                          }));
             }
         }
     }
