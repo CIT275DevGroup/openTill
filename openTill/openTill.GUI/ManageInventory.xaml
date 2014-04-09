@@ -21,21 +21,14 @@
 
 			</RowDefinition>
 		</Grid.RowDefinitions>
-
-
-		<Button Grid.Column="1" Grid.Row="1" Content="Add to Inventory" Width="150px" Height="30px" Name="btnAddInv" HorizontalAlignment="Right" VerticalAlignment="Top" ToolTip="Add Item to Inventory" Margin="0,50,10,0" Foreground="White" Background="#FF007ACF" Command="{Binding Source={StaticResource viewModel}, Path=AddCommand}"/>
-        <Button Grid.Column="1"  Grid.Row="1" Content="Remove from Inventory" Width="150px" Height="30px" Name="btnRemoveInv" HorizontalAlignment="Right" VerticalAlignment="Top" ToolTip="Remove Item from Inventory" Margin="0,111,10,0" Foreground="White" Background="#FF007ACF" Command="{Binding Source={StaticResource viewModel}, Path=RemoveCommand}"/>
-		<Button Grid.Column="1" Grid.Row="1" Content="Edit Inventory Item" Width="150px" Height="30px" Name="btnEditInv" HorizontalAlignment="Right" VerticalAlignment="Top" ToolTip="Edit Item in Inventory" Margin="0,178,10,0" Foreground="White" Background="#FF007ACF"/>
-		<Button Grid.Column="1" Grid.Row="1" Content="Find in Inventory" Width="150px" Height="30px" Name="btnFindItem" HorizontalAlignment="Right" VerticalAlignment="Top" ToolTip="Find Item in Inventory" Margin="0,243,10,0" Foreground="White" Background="#FF007ACF"/>
-		<TextBox Grid.Column="0" Text="{Binding Source={StaticResource viewModel}, Path=SelectedProduct.Name}" Name="txtItemName" ToolTip="Type an Item Name" Margin="87,157,0,0" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="214" Height="23" />
+        <TextBox Grid.Column="0" Text="{Binding Source={StaticResource viewModel}, Path=SelectedProduct.Name}" Name="txtItemName" ToolTip="Type an Item Name" Margin="87,157,0,0" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="214" Height="23" />
 		<TextBox Grid.Column="0" Text="{Binding Source={StaticResource viewModel}, Path=SelectedProduct.Description}" Name="txtItemDescription" ToolTip="type an Item Description" Margin="6,60,0,0" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Left" Height="89" Width="337" />
 
 		<Label Grid.Row="1"  Content="Brand:&#xD;&#xA;" Grid.Column="0" Margin="6,224,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="76" Height="29" />
 		<Button Content="Select" Width="106" Height="28" x:Name="btnAddInv_Copy" HorizontalAlignment="Left" VerticalAlignment="Top" ToolTip="Browse Items in Inventory" Margin="245,24,0,0" Foreground="White" Background="#FF007ACF" Grid.Row="1" Command="{Binding Source={StaticResource viewModel}, Path=SelectCommand}" />
 		<Label Content="EDIT ITEM" Name="lblContextName" Margin="133,0,0,0" VerticalAlignment="Top" Width="140" FontWeight="Bold" HorizontalAlignment="Left" Grid.Row="1" />
 		<Label x:Name="Lb_UPC_" Content="UPC #:" HorizontalAlignment="Left" Margin="12,23,0,0" VerticalAlignment="Top" Width="81" Grid.Row="1" />
-        <ComboBox x:Name="txtUPC" DataContext="{Binding Source={StaticResource viewModel}, Path=ProductUPCs}" HorizontalAlignment="Left" Height="23" ToolTip="Type a UPC code" Margin="89,26,0,0" VerticalAlignment="Top" Grid.Row="1" Width="151"/>
-		<Label x:Name="Lb_Category" Content="Category:" 
+        <Label x:Name="Lb_Category" Content="Category:" 
 		  HorizontalAlignment="Left" Grid.Row="1"  Margin="6,186,0,0" VerticalAlignment="Top" Width="81"/>
         <TextBox x:Name="txtMinAge" Text="{Binding Source={StaticResource viewModel}, Path=SelectedProduct.MinimumAge}" Grid.Row="1" ToolTip="Some items (such as alcoholic beverages, require a minimum age." HorizontalAlignment="Left" Height="23" Margin="99,359,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78"/>
 		<ComboBox Grid.Column="0" Grid.Row="1" DataContext="{Binding Source={StaticResource viewModel}, Path=SelectedProduct.Brand}" ItemsSource="{Binding Source={StaticResource viewModel}, Path=Brands}" DisplayMemberPath="{Binding Path=Name}" x:Name="cboItem_Brand" HorizontalAlignment="Left" Margin="87,224,0,0" VerticalAlignment="Top" Width="215" ToolTip="Select the Brand of an item" Background="#FF007ACF" Foreground="White"/>

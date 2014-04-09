@@ -44,7 +44,7 @@
             <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding SelectedProduct.Description}" FontSize="18" Margin="5"/>
 
             <TextBlock Grid.Row="3" Grid.Column="0" Text="Brand:" FontSize="18" VerticalAlignment="Center"/>
-            <ComboBox Grid.Row="3" Grid.Column="1" FontSize="18" Margin="5" ItemsSource="{Binding Brands}" SelectedValuePath="Id" SelectedValue="{Binding SelectedProduct.BrandID}">
+            <ComboBox Grid.Row="3" Grid.Column="1" FontSize="18" Margin="5" ItemsSource="{Binding Brands}" SelectedValuePath="Id" SelectedValue="{Binding SelectedProduct.BrandID}" Foreground="White" Background="#FF007ACF">
                 <ComboBox.ItemTemplate>
                     <DataTemplate>
                         <TextBlock Text="{Binding BrandName}"/>
@@ -53,7 +53,7 @@
             </ComboBox>
 
             <TextBlock Grid.Row="4" Grid.Column="0" Text="Category:" FontSize="18" VerticalAlignment="Center"/>
-            <ComboBox Grid.Row="4" Grid.Column="1" FontSize="18" Margin="5" ItemsSource="{Binding Categories}" SelectedValuePath="Id" SelectedValue="{Binding SelectedProduct.CategoryListID}">
+            <ComboBox Grid.Row="4" Grid.Column="1" FontSize="18" Margin="5" ItemsSource="{Binding Categories}" SelectedValuePath="Id" SelectedValue="{Binding SelectedProduct.CategoryListID}" Foreground="White" Background="#FF007ACF">
                 <ComboBox.ItemTemplate>
                     <DataTemplate>
                         <Grid>
@@ -112,8 +112,8 @@
             </Grid>
 
             <DockPanel Grid.Row="8" Grid.ColumnSpan="2">
-                <Button Content="New Product" FontSize="18" Padding="5" Margin="5" Command="{Binding AddCommand}" DockPanel.Dock="Left"/>
-                <Button Content="Update Product" FontSize="18" Padding="5" Margin="5" Command="{Binding UpdateCommand}" DockPanel.Dock="Right"/>
+                <Button Content="New Product" FontSize="18" Padding="5" Margin="5" Command="{Binding AddCommand}" DockPanel.Dock="Left" Foreground="White" Background="#FF007ACF"/>
+                <Button Content="Update Product" FontSize="18" Padding="5" Margin="5" Command="{Binding UpdateCommand}" DockPanel.Dock="Right" Foreground="White" Background="#FF007ACF"/>
             </DockPanel>
         </Grid>
 

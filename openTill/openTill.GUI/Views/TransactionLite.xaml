@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:ignore="http://www.ignore.com"
         mc:Ignorable="d ignore"
-        DataContext="{Binding TransactionViewModel, Source={StaticResource Locator}}">
+        DataContext="{Binding Transaction, Source={StaticResource Locator}}">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -21,8 +21,19 @@
         
         <DockPanel Grid.Row="1" Margin="5">
             <TextBlock Text="Purchase Items" FontSize="24" HorizontalAlignment="Center" DockPanel.Dock="Top"/>
-            <ListBox DockPanel.Dock="Top">
-                
+            <ListBox DockPanel.Dock="Top" ItemsSource="{Binding TransactionProducts}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{Binding Name}" FontSize="18"/>
+                            <TextBlock Text="{Binding SellingPrice}" FontSize="18"/>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
             </ListBox>
         </DockPanel>
 
@@ -32,7 +43,9 @@
 
             <DockPanel DockPanel.Dock="Top" LastChildFill="True">
                 <TextBlock Text="Search:" FontSize="18" VerticalAlignment="Center"/>
-                <TextBox FontSize="18" Padding="5" Margin="5" Text="Not Yet Functional" IsEnabled="False"/>
+                <Button Content="Search" FontSize="18" Margin="5" DockPanel.Dock="Right" Command="{Binding SearchProductsCommand}"/>
+                <Button Content="Dat Scan Yo" Command="{Binding }" DockPanel.Dock="Right" FontSize="18"/>
+                <TextBox Grid.Column="1" FontSize="18" Padding="5" Margin="5" VerticalAlignment="Center" Text="{Binding FilterString, StringFormat='c'}"/>
             </DockPanel>
 
             <ItemsControl ItemsSource="{Binding Products}">
@@ -41,10 +54,12 @@
                         <Grid Margin="5">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition/>
+                                <ColumnDefinition/>
                                 <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
-                            <TextBlock Text="{Binding Name}" Grid.Column="0" FontSize="18" VerticalAlignment="Center"/>
-                            <Button Content="Select" Grid.Column="1" Command="{Binding Source={StaticResource Locator}, Path=Main.SelectCommand}" CommandParameter="{Binding}" FontSize="18" Padding="5"/>
+                            <TextBlock Text="{Binding UPC}" Grid.Column="0" FontSize="18" VerticalAlignment="Center"/>
+                            <TextBlock Text="{Binding Name}" Grid.Column="1" FontSize="18" VerticalAlignment="Center"/>
+                            <Button Content="Select" Grid.Column="2" Command="{Binding Source={StaticResource Locator}, Path=Transaction.AddToTransactionCommand}" CommandParameter="{Binding}" FontSize="18" Padding="5"/>
                         </Grid>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
