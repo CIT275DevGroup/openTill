@@ -22,7 +22,7 @@
 		<TextBox HorizontalAlignment="Left" Height="23" Name="txtEntry" Margin="10,25,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="276"/>
 		<Label Content="Data Entry:" HorizontalAlignment="Left" Margin="8,1,0,0" VerticalAlignment="Top"/>
 		<Button Content="Enter" Grid.Column="1" Name="btnEnter" HorizontalAlignment="Left" VerticalAlignment="Top" Width="85" Margin="197,205,0,0" Height="52" Background="#FF007ACF" Foreground="White"/>
-		<Button Content="Cancel" Grid.Column="1" Name="btnCancel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="85" Margin="14,205,0,0" Height="52" Background="#FF007ACF" Foreground="White"/>
+		<Button Content="Cancel" Grid.Column="1" Name="btnCancel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="85" Margin="14,205,0,0" Height="52" Background="#FF007ACF" Foreground="White" Click="btnCancel_Click"/>
 	</Grid>
 
 </Window>
