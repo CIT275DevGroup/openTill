@@ -85,6 +85,9 @@
     </ApplicationDefinition>
     <Compile Include="Models\ObservableBrand.cs" />
     <Compile Include="Models\ObservableCategory.cs" />
+    <Compile Include="NoScan.xaml.cs">
+      <DependentUpon>NoScan.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\InventoryViewModel.cs" />
     <Compile Include="ViewModelLocator.cs" />
     <Compile Include="ViewModel\TransactionViewModel.cs" />
@@ -137,6 +140,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="ManageInventory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NoScan.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
