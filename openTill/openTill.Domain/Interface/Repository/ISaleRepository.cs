@@ -16,6 +16,5 @@ namespace openTill.Domain.Interface.Repository
         void Insert(SaleDTO sale);
         void Update(SaleDTO sale);
         IEnumerable<SaleDTO> GetSalesByEmployee(string userName);
-        SaleDTO FinalizeSale(SaleDTO sale);
     }
 }

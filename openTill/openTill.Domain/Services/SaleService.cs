@@ -12,7 +12,14 @@ using openTill.Domain.Interface.Service;
 //Author:  Morgan W. Davis III
 //Project:  openTill Point of Sale System
 //Date:  03 Mar 2014
-//Revisions:
+
+#region [ Updates ]
+
+// Author: Ryan Redburn
+// Date: 4/9/2014
+// Revisions: Added missing sale validation, simplified GetSalesByemployee() method, added additional commenting.
+
+#endregion
 
 namespace openTill.Domain.Services
 {
@@ -21,13 +28,14 @@ namespace openTill.Domain.Services
     /// </summary>   
     public class SaleService : ISaleService
     {
-        #region fields
+        #region Fields
 
         private readonly ISaleRepository _saleRepository;
 
         #endregion
 
         #region Constructors
+
         /// <summary>
         /// A constructor that requires a repository as a parameter.
         /// </summary>
@@ -47,7 +55,11 @@ namespace openTill.Domain.Services
         /// <param name="sale">Takes a single SaleDTO as an argument.</param>
         public void Insert(SaleDTO sale)
         {
-            _saleRepository.Insert(sale);
+            // Validate new sale
+            var newSale = Mapper.Map<Sale>(sale);
+
+            // Commit new sale for persistence
+            _saleRepository.Insert(Mapper.Map<SaleDTO>(newSale));
         }
 
         /// <summary>
@@ -56,7 +68,11 @@ namespace openTill.Domain.Services
         /// <param name="sale">Takes a single SaleDTO as an argument.</param>
         public void Update(SaleDTO sale)
         {
-            _saleRepository.Update(sale);
+            // Validate updated sale
+            var newSale = Mapper.Map<Sale>(sale);
+
+            // Commit updated sale for persistence
+            _saleRepository.Update(Mapper.Map<SaleDTO>(newSale));
         }
 
         /// <summary>
@@ -66,8 +82,8 @@ namespace openTill.Domain.Services
         /// <returns></returns>
         public List<SaleDTO> GetSalesByEmployee(string userName)
         {
-            var saleList = Mapper.Map<List<SaleDTO>>(_saleRepository.GetSalesByEmployee(userName));
-            return saleList;
+            // Map and return sale list received from persistence
+            return Mapper.Map<List<SaleDTO>>(_saleRepository.GetSalesByEmployee(userName));
         }
 
         /// <summary>
@@ -77,12 +93,19 @@ namespace openTill.Domain.Services
         /// <returns></returns>
         public SaleDTO FinalizeSale(SaleDTO sale)
         {
+            // Validate the given sale
+            var saleFinal = Mapper.Map<Sale>(sale);
+
+            // Perform logic for finalizing a sale
             var saleTotal = sale.SaleItems.Aggregate(0m, (current, item) => current + item.SellingPrice);
-            saleTotal = saleTotal + saleTotal * .06m;
-            sale.DateOfSale = DateTime.Now;
-            sale.Total = saleTotal;
-            return sale;
+            saleTotal = saleTotal + (saleTotal * .06m);
+            saleFinal.DateOfSale = DateTime.Now;
+            saleFinal.Total = saleTotal;
+
+            // Return the finalized sale
+            return Mapper.Map<SaleDTO>(saleFinal);
         }
+
         #endregion
     }     
 }

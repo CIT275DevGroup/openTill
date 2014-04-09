@@ -14,12 +14,17 @@ namespace openTill.Persistence
     
     public partial class Sale
     {
+        public Sale()
+        {
+            this.SaleItems = new HashSet<SaleItem>();
+        }
+    
         public int Id { get; set; }
         public System.DateTime DateOfSale { get; set; }
         public decimal Total { get; set; }
         public int EmployeeId { get; set; }
     
         public virtual Employee Employee { get; set; }
-        public virtual SaleItem SaleItem { get; set; }
+        public virtual ICollection<SaleItem> SaleItems { get; set; }
     }
 }
