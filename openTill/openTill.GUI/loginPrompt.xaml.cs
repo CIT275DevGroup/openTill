@@ -19,6 +19,9 @@ namespace openTill.GUI
 	/// </summary>
 	public partial class loginPrompt : Window
 	{
+        /// <summary>
+        /// Login Prompt Form
+        /// </summary>
 		public loginPrompt()
 		{
 			InitializeComponent();

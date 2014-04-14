@@ -13,10 +13,31 @@ namespace openTill.Domain.Interface.Repository
     /// </summary>
     public interface ICategoryRepository
     {
+        /// <summary>
+        /// Updates a category
+        /// </summary>
+        /// <param name="givenCategory">Category</param>
         void Update(CategoryDTO givenCategory);
+        /// <summary>
+        /// Deletes a category
+        /// </summary>
+        /// <param name="givenCategory">Category</param>
         void Delete(CategoryDTO givenCategory);
+        /// <summary>
+        /// Inserts a category
+        /// </summary>
+        /// <param name="givenCategory">Category</param>
         void Insert(CategoryDTO givenCategory);
+        /// <summary>
+        /// Get category by name
+        /// </summary>
+        /// <param name="givenName">name</param>
+        /// <returns>Category</returns>
         CategoryDTO GetByName(string givenName);
+        /// <summary>
+        /// Gets all categories
+        /// </summary>
+        /// <returns>List of categories</returns>
         IEnumerable<CategoryDTO> GetAll();
     }
 }

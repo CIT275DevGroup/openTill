@@ -17,7 +17,13 @@ namespace openTill.Domain.DTO
     public class BrandDTO
     {
         #region Properties
+        /// <summary>
+        /// Brand ID
+        /// </summary>
         public int Id;
+        /// <summary>
+        /// Brand Name
+        /// </summary>
         public string Name;
         #endregion
     }

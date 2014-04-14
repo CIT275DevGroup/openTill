@@ -17,8 +17,17 @@ namespace openTill.Domain.DTO
     public class ProductCategoryDTO
     {
         #region Properties
+        /// <summary>
+        /// Category ID
+        /// </summary>
         public int ID;
+        /// <summary>
+        /// Product UPC
+        /// </summary>
         public string ProductUPC;
+        /// <summary>
+        /// Category ID
+        /// </summary>
         public int CategoryID;
         #endregion
     }

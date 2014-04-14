@@ -11,17 +11,29 @@ namespace openTill.Persistence
 {
     using System;
     using System.Collections.Generic;
-    
+    /// <summary>
+    /// Zip Code
+    /// </summary>
     public partial class ZipCode
     {
+        /// <summary>
+        /// Zip Code
+        /// </summary>
         public ZipCode()
         {
             this.Addresses = new HashSet<Address>();
         }
-    
+        /// <summary>
+        /// Zip Code ID
+        /// </summary>
         public int Id { get; set; }
+        /// <summary>
+        /// Zip Code
+        /// </summary>
         public string ZipCode1 { get; set; }
-    
+        /// <summary>
+        /// Address
+        /// </summary>
         public virtual ICollection<Address> Addresses { get; set; }
     }
 }

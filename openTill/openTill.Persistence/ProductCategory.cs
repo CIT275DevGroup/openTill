@@ -11,14 +11,30 @@ namespace openTill.Persistence
 {
     using System;
     using System.Collections.Generic;
-    
+    /// <summary>
+    /// Product Category
+    /// </summary>
     public partial class ProductCategory
     {
+        /// <summary>
+        /// Product Category ID
+        /// </summary>
         public int Id { get; set; }
+        /// <summary>
+        /// Product UPC
+        /// </summary>
         public string ProductUPC { get; set; }
+        /// <summary>
+        /// Category ID
+        /// </summary>
         public int CategoryId { get; set; }
-    
+        /// <summary>
+        /// Category
+        /// </summary>
         public virtual Category Category { get; set; }
+        /// <summary>
+        /// Product
+        /// </summary>
         public virtual Product Product { get; set; }
     }
 }

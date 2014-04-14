@@ -11,17 +11,29 @@ namespace openTill.Persistence
 {
     using System;
     using System.Collections.Generic;
-    
+    /// <summary>
+    /// Employee Phone
+    /// </summary>
     public partial class Phone
     {
+        /// <summary>
+        /// Employee Phone
+        /// </summary>
         public Phone()
         {
             this.Employees = new HashSet<Employee>();
         }
-    
+        /// <summary>
+        /// Phone ID
+        /// </summary>
         public int Id { get; set; }
+        /// <summary>
+        /// Phone Number
+        /// </summary>
         public string PhoneNumber { get; set; }
-    
+        /// <summary>
+        /// Employee
+        /// </summary>
         public virtual ICollection<Employee> Employees { get; set; }
     }
 }

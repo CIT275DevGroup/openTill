@@ -19,7 +19,8 @@ namespace openTill.Domain.Interface.Service
         /// <summary>
         /// Method calls on repository to return a single Employee from the database based on SSN.
         /// </summary>
-        /// <param name="ssn">Social Security Number to be looked up.</param>
+        /// <param name="userName">Username of the employee.</param>
+        /// <param name="password">Password of the employee.</param>
         /// <returns>Employee Data Transfer Object</returns>
         bool ValidateUser(string userName, string password);
     }

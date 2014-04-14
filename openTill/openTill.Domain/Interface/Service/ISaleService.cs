@@ -13,9 +13,27 @@ namespace openTill.Domain.Interface.Service
     /// </summary>
     public interface ISaleService
     {
+        /// <summary>
+        /// Inserts a sale
+        /// </summary>
+        /// <param name="sale"></param>
         void Insert(SaleDTO sale);
+        /// <summary>
+        /// Updates a sale
+        /// </summary>
+        /// <param name="sale"></param>
         void Update(SaleDTO sale);
+        /// <summary>
+        /// Gets sales by employee      
+        /// </summary>
+        /// <param name="userName">Employee username</param>
+        /// <returns>List of Sales</returns>
         List<SaleDTO> GetSalesByEmployee(string userName);
+        /// <summary>
+        /// Finalize the sale
+        /// </summary>
+        /// <param name="sale">Sale</param>
+        /// <returns>SaleDTO</returns>
         SaleDTO FinalizeSale(SaleDTO sale);
     }
 }

@@ -17,8 +17,17 @@ namespace openTill.Domain.DTO
     public class CategoryDTO
     {
         #region Properties
+        /// <summary>
+        /// Category ID
+        /// </summary>
         public int Id;
+        /// <summary>
+        /// Category Name
+        /// </summary>
         public string Name;
+        /// <summary>
+        /// Category Description
+        /// </summary>
         public string Description;
         #endregion
     }

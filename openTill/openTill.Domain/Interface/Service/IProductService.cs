@@ -29,8 +29,15 @@ namespace openTill.Domain.Interface.Service
         /// <param name="givenBrand">Name of the brand for lookup.</param>
         /// <returns>Returns a list of Product Data Transfer Objects.</returns>
         List<ProductDTO> GetProductsByBrand(string givenBrand);
+        /// <summary>
+        /// Save a product
+        /// </summary>
+        /// <param name="product">Product</param>
         void SaveProduct(ProductDTO product);
-
+        /// <summary>
+        /// Remove a product
+        /// </summary>
+        /// <param name="product">Product</param>
         void RemoveProduct(ProductDTO product);
     }
 }

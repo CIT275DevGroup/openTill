@@ -17,7 +17,13 @@ namespace openTill.Domain.DTO
     public class PhoneDTO
     {
         #region Properties
+        /// <summary>
+        /// Phone ID
+        /// </summary>
         public int ID;
+        /// <summary>
+        /// Phone Number
+        /// </summary>
         public string PhoneNumber;
         #endregion
     }

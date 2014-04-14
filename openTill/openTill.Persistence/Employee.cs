@@ -11,32 +11,89 @@ namespace openTill.Persistence
 {
     using System;
     using System.Collections.Generic;
-    
+    /// <summary>
+    /// Employee
+    /// </summary>
     public partial class Employee
     {
+        /// <summary>
+        /// Employee
+        /// </summary>
         public Employee()
         {
             this.Sales = new HashSet<Sale>();
         }
-    
+        /// <summary>
+        /// Employee ID
+        /// </summary>
         public int Id { get; set; }
+        /// <summary>
+        /// Employee First Name
+        /// </summary>
         public string FName { get; set; }
+        /// <summary>
+        /// Employee Last Name
+        /// </summary>
         public string LName { get; set; }
+        /// <summary>
+        /// Position ID
+        /// </summary>
         public int PositionId { get; set; }
+        /// <summary>
+        /// Address ID
+        /// </summary>
         public int AddressId { get; set; }
+        /// <summary>
+        /// Phone ID
+        /// </summary>
         public int PhoneId { get; set; }
+        /// <summary>
+        /// Employee wage
+        /// </summary>
         public decimal Wage { get; set; }
+        /// <summary>
+        /// Employee SSN
+        /// </summary>
         public int SSN { get; set; }
+        /// <summary>
+        /// Birth Date
+        /// </summary>
         public System.DateTime BirthDate { get; set; }
+        /// <summary>
+        /// Start Date
+        /// </summary>
         public System.DateTime StartDate { get; set; }
+        /// <summary>
+        /// End Date
+        /// </summary>
         public System.DateTime EndDate { get; set; }
+        /// <summary>
+        /// Employee Username
+        /// </summary>
         public string UserName { get; set; }
+        /// <summary>
+        /// Password Hash
+        /// </summary>
         public Nullable<System.Guid> PasswordHash { get; set; }
+        /// <summary>
+        /// Pin Hash
+        /// </summary>
         public Nullable<System.Guid> PinHash { get; set; }
-    
+        /// <summary>
+        /// Address
+        /// </summary>
         public virtual Address Address { get; set; }
+        /// <summary>
+        /// Phone
+        /// </summary>
         public virtual Phone Phone { get; set; }
+        /// <summary>
+        /// Position
+        /// </summary>
         public virtual Position Position { get; set; }
+        /// <summary>
+        /// Sales
+        /// </summary>
         public virtual ICollection<Sale> Sales { get; set; }
     }
 }

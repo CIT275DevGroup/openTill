@@ -19,6 +19,9 @@ namespace openTill.GUI
 	/// </summary>
 	public partial class NoScan : Window
 	{
+        /// <summary>
+        /// No Scan For
+        /// </summary>
 		public NoScan()
 		{
 			InitializeComponent();

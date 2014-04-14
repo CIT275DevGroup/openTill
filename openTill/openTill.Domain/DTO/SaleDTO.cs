@@ -14,10 +14,25 @@ namespace openTill.Domain.DTO
     public class SaleDTO
     {
         #region Properties
+        /// <summary>
+        /// Sale ID
+        /// </summary>
         public int Id;
+        /// <summary>
+        /// Sale Total
+        /// </summary>
         public decimal Total;
+        /// <summary>
+        /// Employee ID
+        /// </summary>
         public int EmployeeID;
+        /// <summary>
+        /// Date of Sale
+        /// </summary>
         public DateTime DateOfSale;
+        /// <summary>
+        /// List of Sale Items
+        /// </summary>
         public List<SaleItemDTO> SaleItems;
         #endregion
     }

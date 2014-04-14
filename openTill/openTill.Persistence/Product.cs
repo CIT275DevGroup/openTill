@@ -11,29 +11,74 @@ namespace openTill.Persistence
 {
     using System;
     using System.Collections.Generic;
-    
+    /// <summary>
+    /// Product
+    /// </summary>
     public partial class Product
     {
+        /// <summary>
+        /// Product
+        /// </summary>
         public Product()
         {
             this.ProductCategories = new HashSet<ProductCategory>();
             this.SaleItems = new HashSet<SaleItem>();
         }
-    
+        /// <summary>
+        /// Product UPC
+        /// </summary>
         public string UPC { get; set; }
+        /// <summary>
+        /// Brand ID
+        /// </summary>
         public int BrandId { get; set; }
+        /// <summary>
+        /// Product Name
+        /// </summary>
         public string Name { get; set; }
+        /// <summary>
+        /// Product description
+        /// </summary>
         public string Description { get; set; }
+        /// <summary>
+        /// Store Cost
+        /// </summary>
         public decimal StoreCost { get; set; }
+        /// <summary>
+        /// Selling Price
+        /// </summary>
         public decimal SellingPrice { get; set; }
+        /// <summary>
+        /// On Hand
+        /// </summary>
         public int OnHand { get; set; }
+        /// <summary>
+        /// Minimum On Hand
+        /// </summary>
         public int MinOnHand { get; set; }
+        /// <summary>
+        /// Has Deposit?
+        /// </summary>
         public bool HasDeposit { get; set; }
+        /// <summary>
+        /// Is Taxable?
+        /// </summary>
         public bool IsTaxable { get; set; }
+        /// <summary>
+        /// Minimum Age
+        /// </summary>
         public Nullable<byte> MinimumAge { get; set; }
-    
+        /// <summary>
+        /// Brand
+        /// </summary>
         public virtual Brand Brand { get; set; }
+        /// <summary>
+        /// Product Categories
+        /// </summary>
         public virtual ICollection<ProductCategory> ProductCategories { get; set; }
+        /// <summary>
+        /// Sale Items
+        /// </summary>
         public virtual ICollection<SaleItem> SaleItems { get; set; }
     }
 }

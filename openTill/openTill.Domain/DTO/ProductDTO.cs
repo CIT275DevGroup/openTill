@@ -17,18 +17,57 @@ namespace openTill.Domain.DTO
     public class ProductDTO
     {
         #region Properties
+        /// <summary>
+        /// Product UPC
+        /// </summary>
         public string UPC;
+        /// <summary>
+        /// Category List ID
+        /// </summary>
         public int CategoryListID;
+        /// <summary>
+        /// Brand ID
+        /// </summary>
         public int BrandID;
+        /// <summary>
+        /// Brand Name
+        /// </summary>
         public string Name;
+        /// <summary>
+        /// Brand Description
+        /// </summary>
         public string Description;
+        /// <summary>
+        /// Store Cost
+        /// </summary>
         public decimal StoreCost;
+        /// <summary>
+        /// Selling Price
+        /// </summary>
         public decimal SellingPrice;
+        /// <summary>
+        /// Minimum On Hand
+        /// </summary>
         public int MinOnHand;
+        /// <summary>
+        /// Amount on Hand
+        /// </summary>
         public int OnHand;
+        /// <summary>
+        /// Does it have a deposit?
+        /// </summary>
         public bool HasDeposit;
+        /// <summary>
+        /// Is it taxable?
+        /// </summary>
         public bool IsTaxable;
+        /// <summary>
+        /// Minimum Age?
+        /// </summary>
         public int MinimumAge;
+        /// <summary>
+        /// List of Categories
+        /// </summary>
         public List<CategoryDTO> CategoryList;
         #endregion
     }

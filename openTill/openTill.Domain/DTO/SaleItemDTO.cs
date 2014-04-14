@@ -17,10 +17,25 @@ namespace openTill.Domain.DTO
     public class SaleItemDTO
     {
         #region Properties
+        /// <summary>
+        /// Sale Item ID
+        /// </summary>
         public int ID;
+        /// <summary>
+        /// Sale ID
+        /// </summary>
         public int SaleID;
+        /// <summary>
+        /// Product ID
+        /// </summary>
         public int ProductID;
+        /// <summary>
+        /// Selling Price
+        /// </summary>
         public decimal SellingPrice;
+        /// <summary>
+        /// How Many Sale Items
+        /// </summary>
         public int Quantity;
         #endregion
     }

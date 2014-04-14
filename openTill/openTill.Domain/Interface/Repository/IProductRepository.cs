@@ -13,11 +13,37 @@ namespace openTill.Domain.Interface.Repository
     /// </summary>
     public interface IProductRepository
     {
+        /// <summary>
+        /// Update a Product
+        /// </summary>
+        /// <param name="givenProduct">Produt</param>
         void Update(ProductDTO givenProduct);
+        /// <summary>
+        /// Delete a Product
+        /// </summary>
+        /// <param name="givenProduct">Product</param>
         void Delete(ProductDTO givenProduct);
+        /// <summary>
+        /// Insert a product
+        /// </summary>
+        /// <param name="givenProdcut">Product</param>
         void Insert(ProductDTO givenProdcut);
+        /// <summary>
+        /// Insert a product
+        /// </summary>
+        /// <param name="givenUPC">UPC</param>
+        /// <returns></returns>
         ProductDTO GetByUPC(string givenUPC);
+        /// <summary>
+        /// Get all products
+        /// </summary>
+        /// <returns>List of products</returns>
         IEnumerable<ProductDTO> GetAll();
+        /// <summary>
+        /// Get a list of products by brand
+        /// </summary>
+        /// <param name="givenBrand">Brand</param>
+        /// <returns>List of products by brand</returns>
         IEnumerable<ProductDTO> GetByBrand(string givenBrand);
     }
 }

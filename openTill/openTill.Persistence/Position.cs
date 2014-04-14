@@ -11,18 +11,33 @@ namespace openTill.Persistence
 {
     using System;
     using System.Collections.Generic;
-    
+    /// <summary>
+    /// Employee Position
+    /// </summary>
     public partial class Position
     {
+        /// <summary>
+        /// Position
+        /// </summary>
         public Position()
         {
             this.Employees = new HashSet<Employee>();
         }
-    
+        /// <summary>
+        /// Position ID
+        /// </summary>
         public int Id { get; set; }
+        /// <summary>
+        /// Position Name
+        /// </summary>
         public string Name { get; set; }
+        /// <summary>
+        /// Position Description
+        /// </summary>
         public string Description { get; set; }
-    
+        /// <summary>
+        /// Employees
+        /// </summary>
         public virtual ICollection<Employee> Employees { get; set; }
     }
 }

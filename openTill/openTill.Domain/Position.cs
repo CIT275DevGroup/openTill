@@ -23,7 +23,9 @@ namespace openTill.Domain
         #endregion
 
         #region Properties
-        //Position ID.
+        /// <summary>
+        /// Position ID
+        /// </summary>
         public int ID
         {
             get { return _id; }

@@ -11,17 +11,29 @@ namespace openTill.Persistence
 {
     using System;
     using System.Collections.Generic;
-    
+    /// <summary>
+    /// Brand
+    /// </summary>
     public partial class Brand
     {
+        /// <summary>
+        /// Product brand
+        /// </summary>
         public Brand()
         {
             this.Products = new HashSet<Product>();
         }
-    
+        /// <summary>
+        /// Brand ID
+        /// </summary>
         public int Id { get; set; }
+        /// <summary>
+        /// Brand name
+        /// </summary>
         public string Name { get; set; }
-    
+        /// <summary>
+        /// Products
+        /// </summary>
         public virtual ICollection<Product> Products { get; set; }
     }
 }

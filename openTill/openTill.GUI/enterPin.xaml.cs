@@ -19,6 +19,9 @@ namespace openTill.GUI
 	/// </summary>
 	public partial class enterPin : Window
 	{
+        /// <summary>
+        /// Enter Pin Forms
+        /// </summary>
 		public enterPin()
 		{
 			InitializeComponent();

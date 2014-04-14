@@ -11,22 +11,49 @@ namespace openTill.Persistence
 {
     using System;
     using System.Collections.Generic;
-    
+    /// <summary>
+    /// Employee Address
+    /// </summary>
     public partial class Address
     {
+        /// <summary>
+        /// Employee Address
+        /// </summary>
         public Address()
         {
             this.Employees = new HashSet<Employee>();
         }
-    
+        /// <summary>
+        /// Address ID
+        /// </summary>
         public int Id { get; set; }
+        /// <summary>
+        /// Street Address
+        /// </summary>
         public string Street { get; set; }
+        /// <summary>
+        /// Street City
+        /// </summary>
         public string City { get; set; }
+        /// <summary>
+        /// State ID
+        /// </summary>
         public int StateId { get; set; }
+        /// <summary>
+        /// Zip ID
+        /// </summary>
         public int ZipId { get; set; }
-    
+        /// <summary>
+        /// State
+        /// </summary>
         public virtual State State { get; set; }
+        /// <summary>
+        /// Zip Code
+        /// </summary>
         public virtual ZipCode ZipCode { get; set; }
+        /// <summary>
+        /// Employees
+        /// </summary>
         public virtual ICollection<Employee> Employees { get; set; }
     }
 }

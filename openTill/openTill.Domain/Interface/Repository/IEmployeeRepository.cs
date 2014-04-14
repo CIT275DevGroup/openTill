@@ -13,7 +13,17 @@ namespace openTill.Domain.Interface.Repository
     /// </summary>
     public interface IEmployeeRepository
     {
+        /// <summary>
+        /// Gets all employees
+        /// </summary>
+        /// <returns>List of Employees</returns>
         IEnumerable<EmployeeDTO> GetAll();
+        /// <summary>
+        /// Validates the user
+        /// </summary>
+        /// <param name="userName">Employee User Name</param>
+        /// <param name="password">Employee Password</param>
+        /// <returns></returns>
         bool ValidateUser(string userName, string password);
     }
 }

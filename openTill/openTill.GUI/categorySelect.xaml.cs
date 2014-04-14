@@ -19,6 +19,9 @@ namespace openTill.GUI
 	/// </summary>
 	public partial class categorySelect : Window
 	{
+        /// <summary>
+        /// Category Select form
+        /// </summary>
 		public categorySelect()
 		{
 			InitializeComponent();

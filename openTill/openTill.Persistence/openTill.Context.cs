@@ -12,30 +12,73 @@ namespace openTill.Persistence
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-    
+    /// <summary>
+    /// Open Till Entities
+    /// </summary>
     public partial class openTillEntities : DbContext
     {
+        /// <summary>
+        /// Open Till Entities
+        /// </summary>
         public openTillEntities()
             : base("name=openTillEntities")
         {
         }
-    
+        /// <summary>
+        /// On Model Creating
+        /// </summary>
+        /// <param name="modelBuilder"></param>
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
         }
-    
+        /// <summary>
+        /// Addresses
+        /// </summary>
         public virtual DbSet<Address> Addresses { get; set; }
+        /// <summary>
+        /// Brands
+        /// </summary>
         public virtual DbSet<Brand> Brands { get; set; }
+        /// <summary>
+        /// Categories
+        /// </summary>
         public virtual DbSet<Category> Categories { get; set; }
+        /// <summary>
+        /// Employees
+        /// </summary>
         public virtual DbSet<Employee> Employees { get; set; }
+        /// <summary>
+        /// Phones
+        /// </summary>
         public virtual DbSet<Phone> Phones { get; set; }
+        /// <summary>
+        /// Positions
+        /// </summary>
         public virtual DbSet<Position> Positions { get; set; }
+        /// <summary>
+        /// Products
+        /// </summary>
         public virtual DbSet<Product> Products { get; set; }
+        /// <summary>
+        /// Product Categories
+        /// </summary>
         public virtual DbSet<ProductCategory> ProductCategories { get; set; }
+        /// <summary>
+        /// Sales
+        /// </summary>
         public virtual DbSet<Sale> Sales { get; set; }
+        /// <summary>
+        /// Sales Items
+        /// </summary>
         public virtual DbSet<SaleItem> SaleItems { get; set; }
+        /// <summary>
+        /// States
+        /// </summary>
         public virtual DbSet<State> States { get; set; }
+        /// <summary>
+        /// Zip Codes
+        /// </summary>
         public virtual DbSet<ZipCode> ZipCodes { get; set; }
     }
 }

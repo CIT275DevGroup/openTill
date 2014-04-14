@@ -13,9 +13,25 @@ namespace openTill.Domain.Interface.Repository
     /// </summary>
     public interface IBrandRepository
     {
+        /// <summary>
+        /// Get a list of all brands
+        /// </summary>
+        /// <returns>List of Brands</returns>
         IEnumerable<BrandDTO> GetAll();
+        /// <summary>
+        /// Inserts a brand
+        /// </summary>
+        /// <param name="givenBrand">Brand</param>
         void Insert(BrandDTO givenBrand);
+        /// <summary>
+        /// Updates a brand
+        /// </summary>
+        /// <param name="givenBrand">Brand</param>
         void Update(BrandDTO givenBrand);
+        /// <summary>
+        /// Deletes a brand
+        /// </summary>
+        /// <param name="givenBrand">Brand</param>
         void Delete(BrandDTO givenBrand);
     }
 }

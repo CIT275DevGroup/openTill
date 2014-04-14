@@ -137,9 +137,23 @@ namespace openTill.GUI.Models
             ProductState = State.Unmodified;
         }
         /// <summary>
-        /// Created a State enumeration
+        /// Created a State enum
         /// </summary>
-        public enum State { Unmodified, Modified, New };
+        public enum State 
+        { 
+            /// <summary>
+            /// Unmodified
+            /// </summary>
+            Unmodified, 
+            /// <summary>
+            /// Modified
+            /// </summary>
+            Modified, 
+            /// <summary>
+            /// New
+            /// </summary>
+            New 
+        };
 
         /// <summary>
         /// Sets and gets the BrandID property.

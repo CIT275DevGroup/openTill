@@ -14,6 +14,10 @@ namespace openTill.GUI
 	/// </summary>
 	public partial class App : Application
 	{
+        /// <summary>
+        /// On Startup
+        /// </summary>
+        /// <param name="e">e</param>
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);

@@ -11,20 +11,41 @@ namespace openTill.Persistence
 {
     using System;
     using System.Collections.Generic;
-    
+    /// <summary>
+    /// Sale
+    /// </summary>
     public partial class Sale
     {
+        /// <summary>
+        /// Sale
+        /// </summary>
         public Sale()
         {
             this.SaleItems = new HashSet<SaleItem>();
         }
-    
+        /// <summary>
+        /// Sale ID
+        /// </summary>
         public int Id { get; set; }
+        /// <summary>
+        /// Date of Sale
+        /// </summary>
         public System.DateTime DateOfSale { get; set; }
+        /// <summary>
+        /// Sale Total
+        /// </summary>
         public decimal Total { get; set; }
+        /// <summary>
+        /// Employee ID
+        /// </summary>
         public int EmployeeId { get; set; }
-    
+        /// <summary>
+        /// Employee
+        /// </summary>
         public virtual Employee Employee { get; set; }
+        /// <summary>
+        /// Sale Items
+        /// </summary>
         public virtual ICollection<SaleItem> SaleItems { get; set; }
     }
 }

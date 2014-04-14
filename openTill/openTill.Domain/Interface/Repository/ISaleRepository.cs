@@ -13,8 +13,21 @@ namespace openTill.Domain.Interface.Repository
     /// </summary>
     public interface ISaleRepository
     {
+        /// <summary>
+        /// Inserts a sale
+        /// </summary>
+        /// <param name="sale">Sale</param>
         void Insert(SaleDTO sale);
+        /// <summary>
+        /// Updates a sale
+        /// </summary>
+        /// <param name="sale">Sale</param>
         void Update(SaleDTO sale);
+        /// <summary>
+        /// List of Sales by Employee
+        /// </summary>
+        /// <param name="userName">Employee User Name</param>
+        /// <returns>List of Sales</returns>
         IEnumerable<SaleDTO> GetSalesByEmployee(string userName);
     }
 }

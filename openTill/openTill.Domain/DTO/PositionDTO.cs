@@ -17,8 +17,17 @@ namespace openTill.Domain.DTO
     public class PositionDTO
     {
         #region Properties
+        /// <summary>
+        /// Position ID
+        /// </summary>
         public int ID;
+        /// <summary>
+        /// Name of Position
+        /// </summary>
         public string Name;
+        /// <summary>
+        /// Description of Position
+        /// </summary>
         public string Description;
         #endregion
     }

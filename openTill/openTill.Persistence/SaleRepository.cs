@@ -12,9 +12,16 @@ namespace openTill.Persistence
     // Author: Ryan Redburn
     // Project: openTill
     // Date: 4/9/2014
-
+    /// <summary>
+    /// Sale Repository
+    /// </summary>
     public class SaleRepository : ISaleRepository
     {
+        /// <summary>
+        /// Get Sales By Employee
+        /// </summary>
+        /// <param name="employee">Employee</param>
+        /// <returns></returns>
         public IEnumerable<SaleDTO> GetSalesByEmployee(string employee)
         {
             // Throw exception for invalid employee value
@@ -32,7 +39,10 @@ namespace openTill.Persistence
 
             return sales;
         }
-
+        /// <summary>
+        /// Insert Sale
+        /// </summary>
+        /// <param name="sale">Sale</param>
         public void Insert(SaleDTO sale)
         {
             // Throws an exception for an invalid sale value
@@ -49,7 +59,10 @@ namespace openTill.Persistence
                 context.SaveChanges();
             }
         }
-
+        /// <summary>
+        /// Update Sale
+        /// </summary>
+        /// <param name="sale"></param>
         public void Update(SaleDTO sale)
         {
             // Throws an exception for an invalid sale value
