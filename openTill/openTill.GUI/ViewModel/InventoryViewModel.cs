@@ -234,5 +234,25 @@ namespace openTill.GUI.ViewModel
         {
             Products = new ObservableCollection<ObservableProduct>(productService.GetAllProducts().Select(x => new ObservableProduct(x)));
         }
+
+
+        // Command to select multiple items in combo box
+        private ComboSelectCommand _commandComboSelect;
+
+        /// <summary>
+        /// Gets the _commandComboSelect.
+        /// </summary>
+        public RelayCommand _commandComboSelect
+        {
+            get
+            {
+                return _commandComboSelect
+                    ?? (_commandComboSelect = new RelayCommand(
+                                          () =>
+                                          {
+                                              
+                                          }));
+            }
+        }
     }
 }
