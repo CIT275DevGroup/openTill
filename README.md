@@ -4,6 +4,17 @@ openTill
 openTill is an open source Point of Sales System developed around a user friendly environment for easy management of sales and inventory. Included is a database used for data collection and a User interface meant to be clean and easy to use.
 
 >Copyright (C) &lt;2014&gt;  &lt;NMC Student Developer Consortium&gt;
+openTill was created by the following students in course CIT275 under the leadership of instructor Jeff Straw:
+-Bethany Beery
+-Blaine Simcox	
+-Cameron VanHouzen	
+-Curtis Reinhold	
+-Jeff Straw	
+-Morgan Davis	
+-Ryan Redburn	
+-Shane Johnson	
+-Steven Starlin	
+-Zachary Tremain
 
 >This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
