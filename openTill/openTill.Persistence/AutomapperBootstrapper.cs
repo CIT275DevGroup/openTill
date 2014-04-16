@@ -22,10 +22,13 @@ namespace openTill.Persistence
             Mapper.CreateMap<openTill.Persistence.Brand, BrandDTO>();
             Mapper.CreateMap<openTill.Persistence.Category, CategoryDTO>();
             Mapper.CreateMap<openTill.Persistence.Employee, EmployeeDTO>();
+            Mapper.CreateMap<openTill.Persistence.Sale, SaleDTO>();
             Mapper.CreateMap<ProductDTO, openTill.Persistence.Product>();
             Mapper.CreateMap<BrandDTO, openTill.Persistence.Brand>();
             Mapper.CreateMap<CategoryDTO, openTill.Persistence.Category>();
             Mapper.CreateMap<EmployeeDTO, openTill.Persistence.Employee>();
+            Mapper.CreateMap<SaleDTO, openTill.Persistence.Sale>();
+
         }
     }
 }
