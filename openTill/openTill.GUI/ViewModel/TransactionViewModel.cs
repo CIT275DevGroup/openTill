@@ -85,6 +85,7 @@ namespace openTill.GUI.ViewModel
             set
             {
                 Set(TransactionProductsPropertyName, ref _transactionProducts, value);
+                Total = TransactionProducts.Select(x => x.SellingPrice).Sum();
             }
         }
         private RelayCommand _searchProductsCommand;
@@ -142,6 +143,29 @@ namespace openTill.GUI.ViewModel
                                               NoScan datnoScan = new NoScan();
                                               datnoScan.Show();
                                           }));
+            }
+        }
+        
+        /// <summary>
+        /// The <see cref="Total" /> property's name.
+        /// </summary>
+        public const string TotalPropertyName = "Total";
+
+        private decimal _total;
+
+        /// <summary>
+        /// Sets and gets the Total property.
+        /// Changes to that property's value raise the PropertyChanged event. 
+        /// </summary>
+        public decimal Total
+        {
+            get
+            {
+                return _total;
+            }
+            set
+            {
+                Set(TotalPropertyName, ref _total, value);
             }
         }
     }
