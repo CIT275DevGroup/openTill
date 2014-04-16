@@ -19,6 +19,7 @@ namespace openTill.GUI.ViewModel
     public class TransactionViewModel : ViewModelBase
     {
         private IProductService productService;
+        private ISaleService saleService;
         private ObservableCollection<ObservableProduct> _products;
         /// <summary>
         /// Initializes a new instance of the TransactionViewModel class.
@@ -27,6 +28,7 @@ namespace openTill.GUI.ViewModel
         {
             AutomapperBootstrapper.Initialize();
             productService = ServiceLocator.Current.GetInstance<IProductService>();
+            saleService = ServiceLocator.Current.GetInstance<ISaleService>();
             TransactionProducts = new ObservableCollection<ObservableProduct>();
         }
         /// <summary>

@@ -39,9 +39,11 @@ namespace openTill.GUI
             SimpleIoc.Default.Register<IProductRepository, ProductRepository>();
             SimpleIoc.Default.Register<IBrandRepository, BrandRepository>();
             SimpleIoc.Default.Register<ICategoryRepository, CategoryRepository>();
+            SimpleIoc.Default.Register<ISaleRepository, SaleRepository>();
             SimpleIoc.Default.Register<IProductService>(() => new ProductService(SimpleIoc.Default.GetInstance<IProductRepository>()));
             SimpleIoc.Default.Register<IBrandService>(() => new BrandService(SimpleIoc.Default.GetInstance<IBrandRepository>()));
             SimpleIoc.Default.Register<ICategoryService>(() => new CategoryService(SimpleIoc.Default.GetInstance<ICategoryRepository>()));
+            SimpleIoc.Default.Register<ISaleService>(() => new SaleService(SimpleIoc.Default.GetInstance<ISaleRepository>()));
 
             if (ViewModelBase.IsInDesignModeStatic)
             {
