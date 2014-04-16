@@ -11,6 +11,7 @@ namespace openTill.Persistence
 {
     using System;
     using System.Collections.Generic;
+    using System.Diagnostics.CodeAnalysis;
     /// <summary>
     /// State
     /// </summary>
@@ -19,6 +20,7 @@ namespace openTill.Persistence
         /// <summary>
         /// State Address
         /// </summary>
+        [ExcludeFromCodeCoverage]
         public State()
         {
             this.Addresses = new HashSet<Address>();

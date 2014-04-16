@@ -11,6 +11,7 @@ namespace openTill.Persistence
 {
     using System;
     using System.Collections.Generic;
+    using System.Diagnostics.CodeAnalysis;
     /// <summary>
     /// Brand
     /// </summary>
@@ -19,6 +20,7 @@ namespace openTill.Persistence
         /// <summary>
         /// Product brand
         /// </summary>
+        [ExcludeFromCodeCoverage]
         public Brand()
         {
             this.Products = new HashSet<Product>();

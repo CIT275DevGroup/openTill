@@ -12,6 +12,7 @@ namespace openTill.Persistence
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Diagnostics.CodeAnalysis;
     /// <summary>
     /// Open Till Entities
     /// </summary>
@@ -20,6 +21,7 @@ namespace openTill.Persistence
         /// <summary>
         /// Open Till Entities
         /// </summary>
+        [ExcludeFromCodeCoverage]
         public openTillEntities()
             : base("name=openTillEntities")
         {
@@ -28,6 +30,7 @@ namespace openTill.Persistence
         /// On Model Creating
         /// </summary>
         /// <param name="modelBuilder"></param>
+        [ExcludeFromCodeCoverage]
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();

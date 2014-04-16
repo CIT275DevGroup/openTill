@@ -7,6 +7,7 @@ using AutoMapper;
 using openTill.Domain.DTO;
 using openTill.Domain.Interface;
 using openTill.Domain.Interface.Repository;
+using System.Diagnostics.CodeAnalysis;
 
 namespace openTill.Persistence
 {
@@ -26,6 +27,7 @@ namespace openTill.Persistence
         /// Returns all employees.
         /// </summary>
         /// <returns>IEnumerable of EmployeeDto</returns>
+        [ExcludeFromCodeCoverage]
         public IEnumerable<EmployeeDTO> GetAll()
         {
             IEnumerable<EmployeeDTO> employees;
@@ -44,6 +46,7 @@ namespace openTill.Persistence
         /// <param name="userName">String username</param>
         /// <param name="password">String password</param>
         /// <returns>Bool authenticated</returns>
+        [ExcludeFromCodeCoverage]
         public bool ValidateUser(string userName, string password)
         {
             Employee employee;

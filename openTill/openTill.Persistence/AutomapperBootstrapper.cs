@@ -2,6 +2,7 @@
 using openTill.Domain.DTO;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,7 @@ namespace openTill.Persistence
         /// <summary>
         /// Creates the road maps for CRUD operations throughout the entire program
         /// </summary>
+        [ExcludeFromCodeCoverage]
         public static void Initialize()
         {
             Mapper.CreateMap<openTill.Persistence.Product, ProductDTO>();

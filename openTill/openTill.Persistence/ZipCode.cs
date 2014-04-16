@@ -11,6 +11,7 @@ namespace openTill.Persistence
 {
     using System;
     using System.Collections.Generic;
+    using System.Diagnostics.CodeAnalysis;
     /// <summary>
     /// Zip Code
     /// </summary>
@@ -19,6 +20,7 @@ namespace openTill.Persistence
         /// <summary>
         /// Zip Code
         /// </summary>
+        [ExcludeFromCodeCoverage]
         public ZipCode()
         {
             this.Addresses = new HashSet<Address>();

@@ -86,6 +86,7 @@
     <Compile Include="Persistence.BrandRepositoryTest.cs" />
     <Compile Include="Persistence.CategoryRepositoryTest.cs" />
     <Compile Include="Persistence.ProductRepositoryTest.cs" />
+    <Compile Include="Persistence.SaleRepositoryTest.cs" />
     <Compile Include="[Section].[ClassBeingTested]Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
