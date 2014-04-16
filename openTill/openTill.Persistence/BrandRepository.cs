@@ -5,6 +5,7 @@ using AutoMapper;
 using openTill.Domain.DTO;
 using openTill.Domain.Interface;
 using openTill.Domain.Interface.Repository;
+using System.Diagnostics.CodeAnalysis;
 
 namespace openTill.Persistence
 {
@@ -31,6 +32,7 @@ namespace openTill.Persistence
         /// Returns all brands.
         /// </summary>
         /// <returns>IEnumerable of BrandDTO</returns>
+        [ExcludeFromCodeCoverage]
         public IEnumerable<BrandDTO> GetAll()
         {
             IEnumerable<BrandDTO> brands;
@@ -53,7 +55,7 @@ namespace openTill.Persistence
             if (newBrand == null)
                 throw new ArgumentNullException("newBrand",
                     "newBrand does not accept a null dot as an argument.");
-
+            
             using (var context = new openTillEntities())
             {
                 // Throws an exception if a brand with the given name already exists
@@ -75,7 +77,7 @@ namespace openTill.Persistence
             if (brandUpdate == null)
                 throw new ArgumentNullException("brandUpdate",
                     "brandUpdate does not accept a null dot as an argument.");
-
+            
             using (var context = new openTillEntities())
             {
                 var brand = context.Brands.SingleOrDefault(b => b.Id == brandUpdate.Id);

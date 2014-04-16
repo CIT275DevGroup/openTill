@@ -4,6 +4,9 @@ using openTill.Persistence;
 
 namespace openTill.Testing
 {
+    /// <summary>
+    /// TestClass
+    /// </summary>
     [TestClass]
     public class SaleRepositoryTest
     {

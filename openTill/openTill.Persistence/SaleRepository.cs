@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
+using System.Diagnostics.CodeAnalysis;
 
 namespace openTill.Persistence
 {
@@ -30,7 +31,6 @@ namespace openTill.Persistence
                     "employee does not accept a null or empty string as an argument.");
 
             IEnumerable<SaleDTO> sales;
-
             // Open entity connection
             using (var context = new openTillEntities())
             {
