@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,7 @@ namespace openTill.Domain
     /// <summary>
     /// A class of a Position for an employee.
     /// </summary>
+    [ExcludeFromCodeCoverage]
     public class Position
     {
         #region Fields

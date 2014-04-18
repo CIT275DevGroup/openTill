@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,7 @@ namespace openTill.Domain.DTO
     /// <summary>
     /// Address Data Transfer Object used to move an address around the layers of the program.
     /// </summary>
+    [ExcludeFromCodeCoverage ]  //Added By Blaine 4/18/2014
     public class AddressDTO
     {
         #region Properties

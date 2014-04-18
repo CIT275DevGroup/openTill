@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using openTill.Domain.DTO;
 using openTill.Domain.Interface;
+using System.Diagnostics.CodeAnalysis;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,6 +23,7 @@ namespace openTill.Domain.Services
     public class CategoryService : ICategoryService
     {
         #region fields
+        
         private readonly ICategoryRepository _categoryRepository;
         #endregion
 

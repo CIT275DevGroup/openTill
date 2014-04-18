@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.30110.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "openTill.GUI", "openTill.GUI\openTill.GUI.csproj", "{30F43254-4BE8-41B2-9846-8179116B1DE0}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "openTill.Persistence", "openTill.Persistence\openTill.Persistence.csproj", "{E02E5BE5-B386-483C-8590-26C6AC792D60}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "openTill.Domain", "openTill.Domain\openTill.Domain.csproj", "{3BE0E974-D39F-4A68-8B61-20DA78B023D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainUnitTestProject", "DomainUnitTestProject\DomainUnitTestProject.csproj", "{13E7B338-8A49-4EF6-867D-58F858BA9CFD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{3BE0E974-D39F-4A68-8B61-20DA78B023D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3BE0E974-D39F-4A68-8B61-20DA78B023D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3BE0E974-D39F-4A68-8B61-20DA78B023D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13E7B338-8A49-4EF6-867D-58F858BA9CFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13E7B338-8A49-4EF6-867D-58F858BA9CFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13E7B338-8A49-4EF6-867D-58F858BA9CFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13E7B338-8A49-4EF6-867D-58F858BA9CFD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

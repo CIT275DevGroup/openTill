@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,7 @@ namespace openTill.Domain
     /// <summary>
     /// A class that associates a products UPC with the ID of a Category.
     /// </summary>
+    [ExcludeFromCodeCoverage]//added by Blaine 4/18/2014
     public class ProductCategory
     {
         #region Fields

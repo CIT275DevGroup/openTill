@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics.CodeAnalysis;
 
 //Author:  Morgan W. Davis III
 //Project:  openTill Point of Sale System
@@ -14,6 +15,7 @@ namespace openTill.Domain.DTO
     /// <summary>
     /// Product data transfer object that moves a product around the layers of the program.
     /// </summary>
+    [ExcludeFromCodeCoverage ]  //Added By Blaine 4/18/2014
     public class ProductDTO
     {
         #region Properties

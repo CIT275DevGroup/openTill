@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,7 @@ namespace openTill.Domain
     /// <summary>
     /// A class for a product.
     /// </summary>
+    [ExcludeFromCodeCoverage]//added by Blaine 4/18/2014
     public class Product
     {
         #region Fields
