@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics.CodeAnalysis;
 
 //Author:  Morgan W. Davis III
 //Project:  openTill Point of Sale System
@@ -14,6 +15,7 @@ namespace openTill.Domain
     /// <summary>
     /// A class of a phone number for an employee.
     /// </summary>
+    [ExcludeFromCodeCoverage] //Blaine Added Exclusion from coverage 4/18/2014
     public class Phone
     {
         #region Fields

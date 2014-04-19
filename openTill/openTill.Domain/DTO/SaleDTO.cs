@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 
 //Author:  Morgan W. Davis III
 //Project:  openTill Point of Sale System
@@ -11,6 +12,7 @@ namespace openTill.Domain.DTO
     /// <summary>
     /// Sale data transfer object that moves a sale object around the layers of the program.
     /// </summary>
+    [ExcludeFromCodeCoverage] //Blaine Added Exclusion from coverage 4/18/2014
     public class SaleDTO
     {
         #region Properties
