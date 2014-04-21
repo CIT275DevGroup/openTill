@@ -3,6 +3,36 @@ openTill
 
 openTill is an open source Point of Sales System developed around a user friendly environment for easy management of sales and inventory. Included is a database used for data collection and a User interface meant to be clean and easy to use.
 
+>Installation instructions
+--------------------------
+
+>1.	Navigate to https://github.com/CIT275DevGroup/openTill and download the .zip folder. Typically this will be automatically downloaded to the download(s) folder. See below to find the download(s) folder on the system that OpenTillTM will be installed on.
+>In Windows Vista Operating System or higher –
+•	Click  Start > Computer > C: > Users > Username of the account being used > Downloads
+In Windows XP –
+•	Click Start > computer > C: > Documents and Settings > Username of the account being used > downloads
+
+>If you have changed your default target folder for downloads, navigate to your default downloads folder.
+>If you do not remember where that default location is, navigate to the browser that was used to download OpenTillTM zip file and find the downloads location.
+>In Chrome:
+•	Click 3 Horizontal Lines > Settings > Downloads > Show In Folder
+In Firefox:
+•	Click ALT Key > Tools > Downloads
+
+>In Internet Explorer:
+•	Click Gear (Settings) > View Downloads > Click downloads Link
+In anything else see below
+•	Open your browser > navigate to http://www.google.com/chrome > Click download
+
+>2.	Unzip the downloaded and located .zip by right clicking and selecting ‘Extract Files’ and Extract all to the current location. 
+
+>Within the newly unzipped folder, select file ‘Setup.exe’ or ‘Setup.msi’ which will open the ClickOnceTM installer default to Microsoft programs.
+
+>Allow the installer to complete and create an icon on the desktop. 
+
+>Thank you for purchasing and installing OpenTillTM.
+
+
 >Operating Instructions
 ======================
 Main Window
