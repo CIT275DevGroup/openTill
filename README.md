@@ -6,7 +6,7 @@ openTill is an open source Point of Sales System developed around a user friendl
 >Operating Instructions
 ======================
 Main Window
-===========
+-----------
 - Search Text Box: Let's you search for a particular item.
 - No Scan Button: Pulls up a number pad window in case the UPC barcode isn't working properly.
 - Price Override Button: Allows you to override the price in case a price rang up wrong.
@@ -22,14 +22,14 @@ Main Window
 - Total: The total amount of money on the sale.
 
 >No Scan Window
-==============
+---------------
 - Data Entry Text Box: This is where the number appears when you click on the number buttons.
 - 0-9 Buttons: Enters the corresponding number into the data entry text box.
 - Enter Button: Submits the number into the Main Window.
 - Cancel Button: Exits the window
 
 >Inventory Window
-================
+-----------------
 - UPC Combo Box: A place to insert UPC's.
 - Select Button: Pulls product information from a UPC
 - Item Description Text Box: Displays/allows editing of information about a product.
@@ -43,14 +43,14 @@ Main Window
 - Minimum Age Text Box: Displays/allows the editing of the minimum age requirements of the item.
 
 >Login Window
-============
+-------------
 - User Name Text Box: The place to enter your user name.
 - Password Text Box: The place to enter your password.
 - Submit Button: Validates your credentials.
 - Cancel Button: Exits the window.
 
 >Enter Pin Window
-================
+-----------------
 - Pin Text Box: The place to enter your pin.
 - Submit Button: Validates the pin number.
 - Cancel Button: Exits the window.
