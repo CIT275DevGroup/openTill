@@ -5,6 +5,7 @@ using AutoMapper;
 using openTill.Domain.DTO;
 using openTill.Domain.Interface;
 using openTill.Domain.Interface.Repository;
+using System.Diagnostics.CodeAnalysis;
 
 namespace openTill.Persistence
 {
@@ -31,6 +32,7 @@ namespace openTill.Persistence
         /// Returns all brands.
         /// </summary>
         /// <returns>IEnumerable of BrandDTO</returns>
+        [ExcludeFromCodeCoverage]
         public IEnumerable<BrandDTO> GetAll()
         {
             IEnumerable<BrandDTO> brands;

@@ -5,6 +5,7 @@ using AutoMapper;
 using openTill.Domain.DTO;
 using openTill.Domain.Interface;
 using openTill.Domain.Interface.Repository;
+using System.Diagnostics.CodeAnalysis;
 
 namespace openTill.Persistence
 {
@@ -30,6 +31,7 @@ namespace openTill.Persistence
         /// Returns all categories.
         /// </summary>
         /// <returns>IEnumerable of CategoryDTO</returns>
+        [ExcludeFromCodeCoverage]
         public IEnumerable<CategoryDTO> GetAll()
         {
             IEnumerable<CategoryDTO> categories;
